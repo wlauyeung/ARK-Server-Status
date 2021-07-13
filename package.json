@@ -1,0 +1,16 @@
+{
+  "name": "arkserverstatus",
+  "version": "1.0.0",
+  "description": "A Discord bot designed to track ark servers",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "author": "Jacky Au Yeung",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "gamedig": "^3.0.5",
+    "toad-scheduler": "^1.4.0"
+  }
+}
