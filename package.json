@@ -7,7 +7,7 @@
     "test": "node bot.js"
   },
   "author": "Jacky Au Yeung",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "discord.js": "^12.5.3",
     "gamedig": "^3.0.5",
