@@ -218,7 +218,7 @@ async function stalk(msg, serverName, playerName) {
     if (id !== null) {
       isOnline = await serversHandler.getServer(id).isPlayerOn(playerName);
       if (isOnline) {
-        msg.channel.send(playerName + 'is currently on ' + serverList.servers[id].name);
+        msg.channel.send(playerName + ' is currently on ' + serverList.servers[id].name);
         break;
       }
     }
@@ -250,7 +250,10 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (!msg.content.startsWith(config.prefix) 
     || msg.author.bot) return;
-  const args = msg.content.slice(1).split(' ');
+  const args = msg.content.slice(1).match(/"[^"]+"|[^\s]+/gm);
+  for (let i = 0; i < args.length; i++) {
+    args[i] = args[i].replaceAll('"', '');
+  }
   const command = args.shift().toLowerCase();
   if (command === 'setchannel' && msg.member.hasPermission('ADMINISTRATOR')) {
     if (!vaildateArgsLength(command, args, 1, msg.channel)) return;
