@@ -202,7 +202,7 @@ function listServersStatus(msg) {
   const serversStatus = serversHandler.getAllServersStatus();
   let list = 'Currently tracking:';
   for (const serverName of Object.keys(serversStatus)) {
-    const status = (serversStatus[serverName].status === 0) ? ' (Offline)' : ' (Online)';
+    const status = (serversStatus[serverName] === 0) ? ' (Offline)' : ' (Online)';
     list += '\n' + serverName + status;
   }
   msg.channel.send(list);
