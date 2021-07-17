@@ -1,9 +1,54 @@
 {
   "servers": [
     {
-      "name": "48",
+      "name": "NA-PVE-Official-GenTwo969",
+      "ip": "37.10.126.193",
+      "port": "27019"
+    },
+    {
+      "name": "NA-PVE-Official-TheIsland48",
       "ip": "95.156.213.135",
       "port": "27017"
+    },
+    {
+      "name": "NA-PVE-Official-Extinction501",
+      "ip": "37.10.127.64",
+      "port": "27019"
+    },
+    {
+      "name": "NA-PVE-Official-Aberration269",
+      "ip": "37.10.124.254",
+      "port": "27019"
+    },
+    {
+      "name": "NA-PVE-Official-ScorchedEarth87",
+      "ip": "85.190.152.81",
+      "port": "27017"
+    },
+    {
+      "name": "NA-PVE-Official-Valguero550",
+      "ip": "37.10.127.86",
+      "port": "27015"
+    },
+    {
+      "name": "NA-PVE-Official-GenOne590",
+      "ip": "85.190.158.38",
+      "port": "27019"
+    },
+    {
+      "name": "NA-PVE-Official-CrystalIsles850",
+      "ip": "95.156.213.155",
+      "port": "27019"
+    },
+    {
+      "name": "OC-PVE-Official-Ragnarok69",
+      "ip": "128.0.115.22",
+      "port": "27017"
+    },
+    {
+      "name": "Jurassic Ark: Return of the Lost Ping",
+      "ip": "14.1.30.101",
+      "port": "27050"
     }
   ]
 }

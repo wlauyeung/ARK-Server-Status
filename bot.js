@@ -166,12 +166,16 @@ function sendMessage(message) {
   }
 }
 
-function vaildateArgsLength(commandName, args, length, channel) {
+function vaildateArgsLength(commandName, args, length, channel, shouldSendMsg=true) {
   if (args.length !== length) {
     if (config.commands[commandName] !== undefined) {
-      channel.send(config.commands[commandName].usage)
+      if (shouldSendMsg) {
+        channel.send(config.commands[commandName].usage)
+      }
     } else {
-      console.error('Unable to find command \"' + commandName + "\"");
+      if (shouldSendMsg) {
+        console.error('Unable to find command \"' + commandName + "\"");
+      }
     }
     return false;
   } else {
@@ -208,8 +212,9 @@ function listServersStatus(msg) {
   msg.channel.send(list);
 }
 
-async function stalk(msg, serverName, playerName) {
-  const ids = serversHandler.getIdsFromName(serverName);
+async function stalk(msg, playerName, serverName=null) {
+  const ids = (serverName !== null) ? 
+    serversHandler.getIdsFromName(serverName) : [...Array(serversHandler.servers.length).keys()];
   let isOnline = false;
   if (ids.length < 1) {
     msg.channel.send('Unknown server');
@@ -224,7 +229,11 @@ async function stalk(msg, serverName, playerName) {
     }
   }
   if (!isOnline) {
-    msg.channel.send(playerName + ' is not on any severs containing ' + serverName);
+    if(serverName !== null) {
+      msg.channel.send(playerName + ' is not on any severs containing ' + serverName);
+    } else {
+      msg.channel.send(playerName + ' is not on any tracked severs');
+    }
   }
 }
 
@@ -238,6 +247,23 @@ function checkServerStatus(msg, serverName) {
     const status = (serversHandler.getServerStatus(id) === 0) ? 'offline' : 'online';
     found = true;
     msg.channel.send(serversHandler.getServer(id).name + ' is ' + status);
+  }
+}
+
+function listPlayers(msg, serverName) {
+  const ids = serversHandler.getIdsFromName(serverName);
+  if (ids.length > 0) {
+    let str = '';
+    for (const id of ids) {
+      const server = serversHandler.getServer(id);
+      str += '\nList of players on ' + server.name + ':';
+      for (const player of server.data.players) {
+        str += '\n' + player.name;
+      }
+    }
+    msg.channel.send(str.substring(1));
+  } else {
+    msg.channel.send('Unknown Server');
   }
 }
 
@@ -268,11 +294,17 @@ client.on('message', msg => {
   } else if (command === 'list') {
     listServersStatus(msg);
   } else if (command === 'stalk') {
-    if (!vaildateArgsLength(command, args, 2, msg.channel)) return;
-    stalk(msg, args[0], args[1]);
+    if (vaildateArgsLength(command, args, 2, msg.channel, false)) {
+      stalk(msg, args[1], args[0]);
+    } else if (vaildateArgsLength(command, args, 1, msg.channel)) {
+      stalk(msg, args[0]);
+    }
   } else if (command === 'status') {
     if (!vaildateArgsLength(command, args, 1, msg.channel)) return;
     checkServerStatus(msg, args[0]);
+  } else if (command === 'listplayers') {
+    if (!vaildateArgsLength(command, args, 1, msg.channel)) return;
+    listPlayers(msg, args[0]);
   }
 });
 
