@@ -50,15 +50,19 @@ class Server {
   }
 
   async isPlayerOn(playerName) {
-    if (this.data === null && this.status === 1) {
-      this.update();
-    }
-    for (const player of this.data.players) {
+    for (const player of this.getData().players) {
       if (player.name === playerName) {
         return true;
       }
     }
     return false;
+  }
+
+  async getData() {
+    if (this.data === null) {
+      await this.update();
+    }
+    return this.data;
   }
 }
 
@@ -250,14 +254,14 @@ function checkServerStatus(msg, serverName) {
   }
 }
 
-function listPlayers(msg, serverName) {
+async function listPlayers(msg, serverName) {
   const ids = serversHandler.getIdsFromName(serverName);
   if (ids.length > 0) {
     let str = '';
     for (const id of ids) {
       const server = serversHandler.getServer(id);
       str += '\nList of players on ' + server.name + ':';
-      for (const player of server.data.players) {
+      for (const player of (await server.getData()).players) {
         str += '\n' + player.name;
       }
     }
