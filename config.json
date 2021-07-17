@@ -1,7 +1,7 @@
 {
   "prefix": "!",
-  "token": "",
-  "channelID": "",
+  "token": "ODU5OTk2NDE5MDE1NDQyNDUy.YN00FA.LAdcM5Z6BY4ZJKrxS5P5DcShJWM",
+  "channelID": "745471382888120350",
   "queryInterval": 10,
   "offlineCounterThreshold": 2,
   "commands": {
@@ -19,6 +19,9 @@
     },
     "status": {
       "usage": "!status <server_name>"
+    },
+    "listplayers": {
+      "uage": "!listplayers <server_name>"
     }
   }
 }
