@@ -49,6 +49,11 @@
       "name": "Jurassic Ark: Return of the Lost Ping",
       "ip": "14.1.30.101",
       "port": "27050"
+    },
+    {
+      "name": "OC-PVE-Official-Valguero581",
+      "ip": "128.0.115.23",
+      "port": "27021"
     }
   ]
 }
