@@ -1,59 +1,70 @@
 {
-  "servers": [
-    {
+  "servers": {
+    "48c31717-5443-4084-acae-871d8158d321": {
       "name": "NA-PVE-Official-GenTwo969",
       "ip": "37.10.126.193",
-      "port": "27019"
+      "port": "27019",
+      "channelID": "866912387386966076"
     },
-    {
-      "name": "NA-PVE-Official-TheIsland48",
-      "ip": "95.156.213.135",
-      "port": "27017"
-    },
-    {
+    "3473f7d2-cebd-43ae-9d01-111c566e325a": {
       "name": "NA-PVE-Official-Extinction501",
       "ip": "37.10.127.64",
-      "port": "27019"
+      "port": "27019",
+      "channelID": "866912388997185556"
     },
-    {
+    "58086222-d0a4-4408-98e9-1e4779cb3ec2": {
       "name": "NA-PVE-Official-Aberration269",
       "ip": "37.10.124.254",
-      "port": "27019"
+      "port": "27019",
+      "channelID": "866912389928321054"
     },
-    {
+    "96b82c37-00cd-4ccf-b362-035cdeca90bc": {
       "name": "NA-PVE-Official-ScorchedEarth87",
       "ip": "85.190.152.81",
-      "port": "27017"
+      "port": "27017",
+      "channelID": "866912390386024459"
     },
-    {
+    "ff87bc92-0d24-4b4a-b598-99c83654d29e": {
       "name": "NA-PVE-Official-Valguero550",
       "ip": "37.10.127.86",
-      "port": "27015"
+      "port": "27015",
+      "channelID": "866912391476019210"
     },
-    {
+    "65b16a3a-bd93-4219-abab-97d12bb0d5c7": {
       "name": "NA-PVE-Official-GenOne590",
       "ip": "85.190.158.38",
-      "port": "27019"
+      "port": "27019",
+      "channelID": "866912392302559232"
     },
-    {
-      "name": "NA-PVE-Official-CrystalIsles850",
-      "ip": "95.156.213.155",
-      "port": "27019"
-    },
-    {
+    "5af67ef6-82da-4942-bdcb-9dde8b044dbf": {
       "name": "OC-PVE-Official-Ragnarok69",
       "ip": "128.0.115.22",
-      "port": "27017"
+      "port": "27017",
+      "channelID": "866912393190703134"
     },
-    {
-      "name": "Jurassic Ark: Return of the Lost Ping",
-      "ip": "14.1.30.101",
-      "port": "27050"
+    "183dbcc3-83b5-45f2-9d5f-b568d26be2e0": {
+      "name": "NA-PVE-Official-TheIsland50",
+      "ip": "85.190.157.157",
+      "port": "27015",
+      "channelID": "866912394012917780"
     },
-    {
-      "name": "OC-PVE-Official-Valguero581",
-      "ip": "128.0.115.23",
-      "port": "27021"
+    "16fda22d-370d-41f3-867e-2b5526854a06": {
+      "name": "Jurassic Ark: Lag Extinction",
+      "ip": "104.192.227.54",
+      "port": "27056",
+      "channelID": "866912394818486272"
+    },
+    "66001149-78fe-4111-8bef-1a0e2875efb8": {
+      "name": "NA-PVE-Official-CrystalIsles850",
+      "ip": "95.156.213.155",
+      "port": "27019",
+      "channelID": "866912395677794354"
+    },
+    "ba588bfc-3c9b-46cf-bd9f-c0733ab119f0": {
+      "name": "NA-PVE-Official-TheIsland48",
+      "ip": "95.156.213.135",
+      "port": "27017",
+      "channelID": "866917094531661854"
     }
-  ]
+  }
 }
