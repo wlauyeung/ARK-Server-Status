@@ -21,7 +21,7 @@
       "usage": "!status <server_name>"
     },
     "listplayers": {
-      "uage": "!listplayers <server_name>"
+      "usage": "!listplayers <server_name>"
     }
   }
 }
