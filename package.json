@@ -9,6 +9,7 @@
   "author": "Jacky Au Yeung",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.1",
     "discord.js": "^12.5.3",
     "gamedig": "^3.0.5",
     "toad-scheduler": "^1.4.0",

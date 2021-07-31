@@ -22,9 +22,6 @@
     },
     "listplayers": {
       "usage": "!listplayers <server_name>"
-    },
-    "setupchannels": {
-      "usage": "!setupchannels "
     }
   }
 }

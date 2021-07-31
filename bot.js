@@ -5,6 +5,7 @@ const fs = require('fs');
 const config = require('./config.json');
 const serverList = require('./servers.json');
 const client = new Discord.Client();
+const axios = require('axios').default;
 const { v4: uuidv4 } = require('uuid');
 
 class Server {
@@ -21,12 +22,7 @@ class Server {
     if (this.status !== status) {
       const statusText = (status === 0) ? 'offline' : 'online';
       sendMessage(this.name + ' is now ' + statusText + '!');
-      if (serverList.servers[this.uuid].channelID !== undefined) {
-        const channel = client.channels.cache.get(serverList.servers[this.uuid].channelID);
-        if (channel !== undefined) {
-          channel.setName(getServerDisplayName(this.name, status));
-        }
-      }
+      updateChannel(this.uuid, this.name, status);
       this.status = status;
     }
   }
@@ -338,21 +334,45 @@ async function setupchannels(msg) {
 }
 
 function getServerDisplayName(serverName, status) {
-  const statusText = (status === 0) ? 'off' : 'on';
+  const statusText = (status === 0) ? 'Off' : 'On';
   const names = serverName.split('-');
   return names[names.length - 1].slice(-16) + ': ' + statusText
+}
+
+function updateChannel(uuid, name, status) {
+  if (serverList.servers[uuid].channelID !== undefined) {
+    const channel = client.channels.cache.get(serverList.servers[uuid].channelID);
+    if (channel !== undefined) {
+      channel.setName(getServerDisplayName(name, status));
+    }
+  }
+}
+
+async function getRates(msg) {
+  try {
+    const res = await axios.get('http://arkdedicated.com/dynamicconfig.ini');
+    msg.channel.send(res.data);
+  } catch(e) {
+    msg.channel.send('Unable to fetch data');
+  }
 }
 
 const serversHandler = new ServersHandler();
 
 client.on('ready', () => {
   console.log('Logged in as ' + client.user.tag);
+  for (const server of serversHandler.getServersAsList()) {
+    updateChannel(server.uuid, server.name, server.status);
+  }
 });
 
 client.on('message', msg => {
   if (!msg.content.startsWith(config.prefix) 
     || msg.author.bot) return;
   const args = msg.content.slice(1).match(/"[^"]+"|[^\s]+/gm);
+  if (args === null) {
+    return;
+  }
   for (let i = 0; i < args.length; i++) {
     args[i] = args[i].replaceAll('"', '');
   }
@@ -383,6 +403,8 @@ client.on('message', msg => {
     listPlayers(msg, args[0]);
   } else if (command === 'setupchannels') {
     setupchannels(msg);
+  } else if (command === 'rates') {
+    getRates(msg);
   }
 });
 
