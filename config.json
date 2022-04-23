@@ -1,27 +1,27 @@
 {
   "prefix": "!",
-  "token": "ODU5OTk2NDE5MDE1NDQyNDUy.YN00FA.wbHYjo2gCPSOXiLiGxKYw8bck0M",
-  "channelID": "863916860613722142",
+  "token": "",
+  "serverListUpdateInterval": 1,
   "queryInterval": 10,
   "offlineCounterThreshold": 2,
   "commands": {
     "setchannel": {
-      "usage": "!setchannel <channel_id>"
+      "usage": "<channel_id>"
     },
     "track": {
-      "usage": "!track <server_name> <ip> <port>"
+      "usage": "<server_name>"
     },
     "untrack": {
-      "usage": "!untrack <server_name>"
+      "usage": "<server_name>"
     },
     "stalk": {
-      "usage": "!stalk <server_name> <player_name>"
+      "usage": "<player_name>"
     },
     "status": {
-      "usage": "!status <server_name>"
+      "usage": "<server_name>"
     },
     "listplayers": {
-      "usage": "!listplayers <server_name>"
+      "usage": "<server_name>"
     }
   }
 }
