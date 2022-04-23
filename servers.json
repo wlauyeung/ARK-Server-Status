@@ -1,70 +1,7864 @@
 {
   "servers": {
-    "48c31717-5443-4084-acae-871d8158d321": {
-      "name": "NA-PVE-Official-GenTwo969",
-      "ip": "37.10.126.193",
-      "port": "27019",
-      "channelID": "866912387386966076"
+    "EU-PVE-TheIsland-PrimPlusCrossArk2": {
+      "ip": "46.251.235.174",
+      "port": 27015,
+      "tracked": false
     },
-    "3473f7d2-cebd-43ae-9d01-111c566e325a": {
-      "name": "NA-PVE-Official-Extinction501",
-      "ip": "37.10.127.64",
-      "port": "27019",
-      "channelID": "866912388997185556"
+    "EU-PVE-TheCenter-PrimPlusCrossArk2": {
+      "ip": "46.251.235.174",
+      "port": 27017,
+      "tracked": false
     },
-    "58086222-d0a4-4408-98e9-1e4779cb3ec2": {
-      "name": "NA-PVE-Official-Aberration269",
-      "ip": "37.10.124.254",
-      "port": "27019",
-      "channelID": "866912389928321054"
+    "LEGACY-The-Asia-PVE-OfficialServer493": {
+      "ip": "128.0.113.53",
+      "port": 27015,
+      "tracked": false
     },
-    "96b82c37-00cd-4ccf-b362-035cdeca90bc": {
-      "name": "NA-PVE-Official-ScorchedEarth87",
-      "ip": "85.190.152.81",
-      "port": "27017",
-      "channelID": "866912390386024459"
+    "LEGACY-The-Asia-PVE-OfficialServer494": {
+      "ip": "128.0.113.53",
+      "port": 27017,
+      "tracked": false
     },
-    "ff87bc92-0d24-4b4a-b598-99c83654d29e": {
-      "name": "NA-PVE-Official-Valguero550",
-      "ip": "37.10.127.86",
-      "port": "27015",
-      "channelID": "866912391476019210"
+    "LEGACY-The-Asia-PVE-OfficialServer495": {
+      "ip": "128.0.113.53",
+      "port": 27019,
+      "tracked": false
     },
-    "65b16a3a-bd93-4219-abab-97d12bb0d5c7": {
-      "name": "NA-PVE-Official-GenOne590",
-      "ip": "85.190.158.38",
-      "port": "27019",
-      "channelID": "866912392302559232"
+    "LEGACY-The-OC-PVE-OfficialServer147": {
+      "ip": "128.0.115.14",
+      "port": 27015,
+      "tracked": false
     },
-    "5af67ef6-82da-4942-bdcb-9dde8b044dbf": {
-      "name": "OC-PVE-Official-Ragnarok69",
+    "OC-PVE-Official-Aberration393": {
+      "ip": "128.0.115.14",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-Ragnarok205": {
+      "ip": "128.0.115.14",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-TheCenter206": {
+      "ip": "128.0.115.14",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVP-Official-Ragnarok-Hardcore3": {
+      "ip": "128.0.115.16",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVP-Official-ScorchedEarth99": {
+      "ip": "128.0.115.16",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-Ragnarok100": {
+      "ip": "128.0.115.16",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVE-Official-Aberration319": {
+      "ip": "128.0.115.16",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVP-Official-Aberration323": {
+      "ip": "128.0.115.17",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVP-Official-Aberration324": {
+      "ip": "128.0.115.17",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-Aberration325": {
+      "ip": "128.0.115.17",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-Aberration326": {
+      "ip": "128.0.115.17",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-The-PVE-OC-OfficialServer86": {
+      "ip": "128.0.115.18",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-TheCenter394": {
+      "ip": "128.0.115.18",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-Aberration-Hardcore6": {
+      "ip": "128.0.115.18",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-Aberration315": {
+      "ip": "128.0.115.18",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-Ragnarok390": {
+      "ip": "128.0.115.19",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-TheIsland391": {
+      "ip": "128.0.115.19",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVE-Official-ScorchedEarth392": {
+      "ip": "128.0.115.19",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-TheIsland91": {
+      "ip": "128.0.115.19",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-The-OC-PVE-OfficialServer146": {
+      "ip": "128.0.115.20",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-ScorchedEarth98": {
+      "ip": "128.0.115.20",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-TheIsland94": {
+      "ip": "128.0.115.20",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-Ragnarok95": {
+      "ip": "128.0.115.20",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-The-OC-PVE-OfficialServer173": {
+      "ip": "128.0.115.21",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-OC-PVE-TheCenter638": {
+      "ip": "128.0.115.21",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-OC-PVE-TheCenter639": {
+      "ip": "128.0.115.21",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVE-Official-TheIsland97": {
+      "ip": "128.0.115.21",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-TheCenter100": {
       "ip": "128.0.115.22",
-      "port": "27017",
-      "channelID": "866912393190703134"
+      "port": 27015,
+      "tracked": false
     },
-    "183dbcc3-83b5-45f2-9d5f-b568d26be2e0": {
-      "name": "NA-PVE-Official-TheIsland50",
-      "ip": "85.190.157.157",
-      "port": "27015",
-      "channelID": "866912394012917780"
+    "OC-PVE-Official-Ragnarok69": {
+      "ip": "128.0.115.22",
+      "port": 27017,
+      "tracked": false
     },
-    "16fda22d-370d-41f3-867e-2b5526854a06": {
-      "name": "Jurassic Ark: Lag Extinction",
-      "ip": "104.192.227.54",
-      "port": "27056",
-      "channelID": "866912394818486272"
+    "OC-PVP-Official-TheIsland93": {
+      "ip": "128.0.115.22",
+      "port": 27019,
+      "tracked": false
     },
-    "66001149-78fe-4111-8bef-1a0e2875efb8": {
-      "name": "NA-PVE-Official-CrystalIsles850",
-      "ip": "95.156.213.155",
-      "port": "27019",
-      "channelID": "866912395677794354"
+    "OC-PVE-Official-Aberration318": {
+      "ip": "128.0.115.22",
+      "port": 27021,
+      "tracked": false
     },
-    "ba588bfc-3c9b-46cf-bd9f-c0733ab119f0": {
-      "name": "NA-PVE-Official-TheIsland48",
+    "LEGACY-PVE-OC-Valguero941": {
+      "ip": "128.0.115.23",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVP-Official-Valguero579": {
+      "ip": "128.0.115.23",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-Valguero580": {
+      "ip": "128.0.115.23",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVE-Official-Valguero581": {
+      "ip": "128.0.115.23",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-PVE-OC-Extinction924": {
+      "ip": "128.0.115.24",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-Extinction486": {
+      "ip": "128.0.115.24",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVE-Official-Extinction487": {
+      "ip": "128.0.115.24",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-Extinction488": {
+      "ip": "128.0.115.24",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-Ragnarok70": {
+      "ip": "128.0.115.31",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVP-Official-TheCenter95": {
+      "ip": "128.0.115.31",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-ScorchedEarth-Hardcore9": {
+      "ip": "128.0.115.31",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-TheCenter-Hardcore10": {
+      "ip": "128.0.115.31",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-Ragnarok208": {
+      "ip": "128.0.115.32",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-OC-PVE-Ragnarok39": {
+      "ip": "128.0.115.32",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-SmallTribes34": {
+      "ip": "31.214.160.243",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-SmallTribes35": {
+      "ip": "31.214.160.243",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-SmallTribes36": {
+      "ip": "46.251.238.244",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-NoTek-TheIsland-CrossArk6": {
+      "ip": "31.214.160.132",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-NoTek-ScorchedEarth-CrossArk6": {
+      "ip": "31.214.160.132",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-NoTek-Ragnarok-CrossArk6": {
+      "ip": "31.214.160.132",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-NoTek-Aberration-CrossArk6": {
+      "ip": "31.214.160.132",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland5": {
+      "ip": "85.190.155.35",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero544": {
+      "ip": "85.190.155.35",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok42": {
+      "ip": "85.190.154.103",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok210": {
+      "ip": "85.190.154.103",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-ScorchedEarth201": {
+      "ip": "85.190.154.103",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland7": {
+      "ip": "85.190.155.70",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland8": {
+      "ip": "85.190.155.70",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland9": {
+      "ip": "85.190.155.70",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-ScorchedEarth692": {
+      "ip": "85.190.155.78",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-ScorchedEarth694": {
+      "ip": "85.190.155.78",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-ScorchedEarth701": {
+      "ip": "85.190.155.78",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne642": {
+      "ip": "85.190.155.78",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-ScorchedEarth699": {
+      "ip": "85.190.155.80",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland10": {
+      "ip": "85.190.155.80",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter362": {
+      "ip": "85.190.155.80",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne643": {
+      "ip": "85.190.155.80",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland11": {
+      "ip": "85.190.155.82",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland12": {
+      "ip": "85.190.155.82",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter363": {
+      "ip": "85.190.155.82",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne644": {
+      "ip": "85.190.155.82",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland13": {
+      "ip": "85.190.155.84",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter364": {
+      "ip": "85.190.155.84",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter365": {
+      "ip": "85.190.155.84",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland14": {
+      "ip": "85.190.155.87",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland15": {
+      "ip": "85.190.155.87",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter366": {
+      "ip": "85.190.155.87",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne645": {
+      "ip": "85.190.155.87",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland16": {
+      "ip": "85.190.155.90",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland17": {
+      "ip": "85.190.155.90",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheCenter192": {
+      "ip": "85.190.155.90",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter367": {
+      "ip": "85.190.155.138",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth368": {
+      "ip": "85.190.155.138",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne646": {
+      "ip": "85.190.155.138",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter18": {
+      "ip": "85.190.155.139",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth9": {
+      "ip": "85.190.155.139",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth369": {
+      "ip": "85.190.155.139",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne647": {
+      "ip": "85.190.155.139",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-Conquest40": {
+      "ip": "85.190.155.140",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-Conquest41": {
+      "ip": "85.190.155.140",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-Conquest42": {
+      "ip": "85.190.155.140",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration374": {
+      "ip": "85.190.155.141",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration375": {
+      "ip": "85.190.155.141",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland44": {
+      "ip": "85.190.155.143",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration376": {
+      "ip": "85.190.155.143",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-ScorchedEarth193": {
+      "ip": "85.190.155.144",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-EU-PVE-TheCenter627": {
+      "ip": "85.190.155.145",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration377b": {
+      "ip": "85.190.155.145",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok386": {
+      "ip": "85.190.155.145",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-EU-PVE-TheCenter628": {
+      "ip": "31.214.160.4",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok386b": {
+      "ip": "31.214.160.4",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok387": {
+      "ip": "31.214.160.4",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne649": {
+      "ip": "31.214.160.4",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-EU-PVE-TheCenter634": {
+      "ip": "85.190.155.148",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-EU-PVE-TheCenter636": {
+      "ip": "85.190.155.148",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer271 (on Nitrado)": {
+      "ip": "85.190.155.148",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok389b": {
+      "ip": "85.190.155.149",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok73": {
+      "ip": "85.190.155.150",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-TheIsland-CrossArk13": {
+      "ip": "85.190.155.150",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-TheIsland-CrossArk11": {
+      "ip": "85.190.155.150",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne650": {
+      "ip": "85.190.155.150",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok74": {
+      "ip": "85.190.155.151",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok75": {
+      "ip": "85.190.155.151",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok76": {
+      "ip": "85.190.155.151",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne651": {
+      "ip": "85.190.155.151",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne676": {
+      "ip": "85.190.155.152",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne677": {
+      "ip": "85.190.155.152",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne678": {
+      "ip": "85.190.155.152",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne679": {
+      "ip": "46.251.238.166",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne680": {
+      "ip": "46.251.238.166",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne681": {
+      "ip": "46.251.238.166",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne682": {
+      "ip": "85.190.155.154",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne683": {
+      "ip": "85.190.155.154",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne684": {
+      "ip": "85.190.155.154",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok167": {
+      "ip": "5.101.166.99",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne652": {
+      "ip": "5.101.166.99",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne653": {
+      "ip": "5.101.166.99",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-OfflineRaidProtection-GenOne-CrossArk5": {
+      "ip": "5.101.166.100",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-GenOne-CrossArk1": {
+      "ip": "5.101.166.100",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-GenOne-CrossArk2": {
+      "ip": "5.101.166.100",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok388": {
+      "ip": "5.101.166.101",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-Isolated-Ragnarok31": {
+      "ip": "5.101.166.102",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-Isolated-Ragnarok32": {
+      "ip": "5.101.166.102",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-OfflineRaidProtection-Extinction-CrossArk5": {
+      "ip": "5.101.166.102",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-Ragnarok33": {
+      "ip": "5.101.166.103",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-Ragnarok34": {
+      "ip": "5.101.166.103",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-ScorchedEarth-CrossArk13": {
+      "ip": "5.101.166.103",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-SmallTribes88": {
+      "ip": "5.101.166.104",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-SmallTribes89": {
+      "ip": "5.101.166.104",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-SmallTribes90": {
+      "ip": "5.101.166.104",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-GenOne-CrossArk11": {
+      "ip": "5.101.166.105",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-GenOne-CrossArk13": {
+      "ip": "5.101.166.105",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero532": {
+      "ip": "5.101.166.106",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero533": {
+      "ip": "5.101.166.106",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero534": {
+      "ip": "5.101.166.106",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok196": {
+      "ip": "5.101.166.136",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheCenter197": {
+      "ip": "5.101.166.136",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland199": {
+      "ip": "5.101.166.137",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheCenter200": {
+      "ip": "5.101.166.137",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok202": {
+      "ip": "5.101.166.138",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter203": {
+      "ip": "5.101.166.138",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth204": {
+      "ip": "5.101.166.138",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-Conquest43": {
+      "ip": "5.101.166.118",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-Conquest44": {
+      "ip": "5.101.166.118",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth-Conquest45": {
+      "ip": "5.101.166.118",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Aberration-CrossArk13": {
+      "ip": "5.101.166.141",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-Ragnarok35": {
+      "ip": "5.101.166.141",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne654": {
+      "ip": "5.101.166.141",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok709": {
+      "ip": "85.190.155.172",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok710": {
+      "ip": "85.190.155.172",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero711": {
+      "ip": "85.190.155.172",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Aberration-CrossArk1": {
+      "ip": "85.190.155.173",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Aberration-CrossArk2": {
+      "ip": "85.190.155.173",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Aberration-PrimPlusCrossArk1": {
+      "ip": "85.190.155.173",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne655": {
+      "ip": "85.190.155.173",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Aberration-PrimPlusCrossArk2": {
+      "ip": "85.190.155.174",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-OfflineRaidProtection-Aberration-CrossArk5": {
+      "ip": "85.190.155.174",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration-Hardcore5": {
+      "ip": "85.190.155.174",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne656": {
+      "ip": "85.190.155.174",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-Aberration904": {
+      "ip": "85.190.155.183",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-Aberration905": {
+      "ip": "85.190.155.183",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration215": {
+      "ip": "85.190.155.184",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration216": {
+      "ip": "85.190.155.184",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration217": {
+      "ip": "85.190.155.184",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration219": {
+      "ip": "85.190.155.185",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration221": {
+      "ip": "85.190.155.185",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration223": {
+      "ip": "85.190.155.186",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration224": {
+      "ip": "85.190.155.186",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration225": {
+      "ip": "85.190.155.186",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration226": {
+      "ip": "85.190.155.186",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration227": {
+      "ip": "85.190.155.187",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration228": {
+      "ip": "85.190.155.187",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration229": {
+      "ip": "85.190.155.187",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration230": {
+      "ip": "85.190.155.187",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration231": {
+      "ip": "85.190.155.189",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration232": {
+      "ip": "85.190.155.189",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration233": {
+      "ip": "85.190.155.189",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration234": {
+      "ip": "85.190.155.189",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration235": {
+      "ip": "85.190.155.188",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration236": {
+      "ip": "85.190.155.188",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration237": {
+      "ip": "85.190.155.188",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration238": {
+      "ip": "85.190.155.188",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration239": {
+      "ip": "85.190.155.190",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration240": {
+      "ip": "85.190.155.190",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration241": {
+      "ip": "85.190.155.190",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration242": {
+      "ip": "85.190.155.190",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration243": {
+      "ip": "85.190.155.191",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration244": {
+      "ip": "85.190.155.191",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration245": {
+      "ip": "85.190.155.191",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration246": {
+      "ip": "85.190.155.191",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration247": {
+      "ip": "85.190.155.192",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration248": {
+      "ip": "85.190.155.192",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration249": {
+      "ip": "85.190.155.192",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration250": {
+      "ip": "85.190.155.192",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration251": {
+      "ip": "85.190.155.193",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration252": {
+      "ip": "85.190.155.193",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration253": {
+      "ip": "85.190.155.193",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration254": {
+      "ip": "85.190.155.193",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration255": {
+      "ip": "85.190.155.194",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration256": {
+      "ip": "85.190.155.194",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration257": {
+      "ip": "85.190.155.194",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration258": {
+      "ip": "85.190.155.194",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration259": {
+      "ip": "85.190.155.195",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration260": {
+      "ip": "85.190.155.195",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration261": {
+      "ip": "85.190.155.195",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration262": {
+      "ip": "85.190.155.195",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland45": {
+      "ip": "5.101.166.183",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration218": {
+      "ip": "5.101.166.183",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-TheCenter-CrossArk13": {
+      "ip": "5.101.166.183",
+      "port": 27019,
+      "tracked": false
+    },
+    "*Beginner*EU-PVP-Official-TheIsland426": {
+      "ip": "85.190.154.179",
+      "port": 27017,
+      "tracked": false
+    },
+    "*Beginner*EU-PVE-Official-TheIsland427": {
+      "ip": "85.190.154.179",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero527": {
+      "ip": "85.190.154.112",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero528": {
+      "ip": "85.190.154.112",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok434": {
+      "ip": "46.251.238.192",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth435": {
+      "ip": "46.251.238.192",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-SmallTribes10": {
+      "ip": "5.101.166.54",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-SmallTribes11": {
+      "ip": "5.101.166.54",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-SmallTribes12": {
+      "ip": "5.101.166.54",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-SmallTribes99": {
+      "ip": "5.101.166.54",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-SmallTribes16": {
+      "ip": "5.101.166.55",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-SmallTribes17": {
+      "ip": "5.101.166.55",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-SmallTribes18": {
+      "ip": "5.101.166.55",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-SmallTribes100": {
+      "ip": "5.101.166.55",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-SmallTribes19": {
+      "ip": "5.101.166.131",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth-SmallTribes20": {
+      "ip": "5.101.166.131",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-SmallTribes21": {
+      "ip": "5.101.166.131",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-SmallTribes101": {
+      "ip": "5.101.166.131",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration-SmallTribes22": {
+      "ip": "5.101.166.120",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-SmallTribes23": {
+      "ip": "5.101.166.120",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-SmallTribes24": {
+      "ip": "5.101.166.120",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-Conquest1": {
+      "ip": "85.190.154.30",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-Conquest3": {
+      "ip": "85.190.154.30",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-Conquest4": {
+      "ip": "85.190.154.31",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-Conquest5": {
+      "ip": "85.190.154.31",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-Conquest6": {
+      "ip": "85.190.154.31",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-Conquest7": {
+      "ip": "85.190.154.33",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-Conquest8": {
+      "ip": "85.190.154.33",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-Conquest9": {
+      "ip": "85.190.154.33",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-Conquest10": {
+      "ip": "5.101.166.5",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-Conquest11": {
+      "ip": "5.101.166.5",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-Conquest12": {
+      "ip": "5.101.166.5",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth-Conquest13": {
+      "ip": "5.101.166.5",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration222": {
+      "ip": "5.101.166.7",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction462": {
+      "ip": "85.190.154.187",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction468": {
+      "ip": "85.190.154.187",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero713": {
+      "ip": "5.101.166.11",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter714": {
+      "ip": "5.101.166.11",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok715": {
+      "ip": "5.101.166.11",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero716": {
+      "ip": "5.101.166.11",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction-SmallTribes57": {
+      "ip": "5.101.166.12",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction-SmallTribes58": {
+      "ip": "5.101.166.12",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-SmallTribes102": {
+      "ip": "5.101.166.12",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-GenOne944": {
+      "ip": "5.101.166.190",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-GenOne945": {
+      "ip": "5.101.166.190",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-Extinction918": {
+      "ip": "5.101.166.192",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-Extinction919": {
+      "ip": "5.101.166.192",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction463": {
+      "ip": "5.101.166.193",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction464": {
+      "ip": "5.101.166.193",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction466": {
+      "ip": "5.101.166.194",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction467": {
+      "ip": "5.101.166.194",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction470": {
+      "ip": "5.101.166.195",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction471": {
+      "ip": "5.101.166.195",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction472": {
+      "ip": "5.101.166.195",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction473": {
+      "ip": "5.101.166.195",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction478": {
+      "ip": "5.101.166.197",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction479": {
+      "ip": "5.101.166.197",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction480": {
+      "ip": "5.101.166.197",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction481": {
+      "ip": "5.101.166.197",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction482": {
+      "ip": "5.101.166.198",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction483": {
+      "ip": "5.101.166.198",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction484": {
+      "ip": "5.101.166.198",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction485": {
+      "ip": "5.101.166.198",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction491": {
+      "ip": "5.101.166.199",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction492": {
+      "ip": "5.101.166.199",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction495": {
+      "ip": "5.101.166.200",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-Extinction925": {
+      "ip": "5.101.166.200",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction-SmallTribes62": {
+      "ip": "5.101.166.201",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction-SmallTribes63": {
+      "ip": "5.101.166.201",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction-SmallTribes64": {
+      "ip": "5.101.166.201",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-SmallTribes103": {
+      "ip": "5.101.166.201",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction-SmallTribes71": {
+      "ip": "5.101.166.202",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction-SmallTribes72": {
+      "ip": "5.101.166.202",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction507": {
+      "ip": "5.101.166.203",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction508": {
+      "ip": "5.101.166.203",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne658": {
+      "ip": "5.101.166.204",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne660": {
+      "ip": "5.101.166.204",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero526": {
+      "ip": "5.101.166.205",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero517": {
+      "ip": "5.101.166.206",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction509": {
+      "ip": "5.101.166.206",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-SmallTribes109": {
+      "ip": "5.101.166.207",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-SmallTribes110": {
+      "ip": "5.101.166.207",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-SmallTribes111": {
+      "ip": "5.101.166.207",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer123 (on Nitrado)": {
+      "ip": "5.101.166.208",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration380": {
+      "ip": "5.101.166.208",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero520": {
+      "ip": "5.101.166.209",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero521": {
+      "ip": "5.101.166.209",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero522": {
+      "ip": "5.101.166.209",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheCenter350": {
+      "ip": "5.101.166.210",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland77": {
+      "ip": "5.101.166.210",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction474": {
+      "ip": "5.101.166.231",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction475": {
+      "ip": "5.101.166.231",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction476": {
+      "ip": "5.101.166.231",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction477": {
+      "ip": "5.101.166.231",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction494": {
+      "ip": "5.101.166.233",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction469": {
+      "ip": "5.101.166.233",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-Extinction926": {
+      "ip": "5.101.166.234",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction510": {
+      "ip": "5.101.166.234",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-TheCenter-PrimPlusCrossArk1": {
+      "ip": "5.101.166.234",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer124 (on Nitrado)": {
+      "ip": "5.101.166.97",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer430 (on Nitrado)": {
+      "ip": "5.101.166.97",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer282 (on Nitrado)": {
+      "ip": "5.101.166.97",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland436": {
+      "ip": "5.101.166.212",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration377": {
+      "ip": "5.101.166.212",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero535": {
+      "ip": "85.190.154.25",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero536": {
+      "ip": "85.190.154.25",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero537": {
+      "ip": "85.190.154.25",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne671": {
+      "ip": "85.190.154.25",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero538": {
+      "ip": "85.190.155.246",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero539": {
+      "ip": "85.190.155.246",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero540": {
+      "ip": "85.190.155.246",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne672": {
+      "ip": "85.190.155.246",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero541": {
+      "ip": "5.101.166.215",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero542": {
+      "ip": "5.101.166.215",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero543": {
+      "ip": "5.101.166.215",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland79": {
+      "ip": "31.214.160.228",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok211": {
+      "ip": "31.214.160.228",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-SmallTribes82": {
+      "ip": "5.101.166.196",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-SmallTribes83": {
+      "ip": "5.101.166.196",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-SmallTribes84": {
+      "ip": "5.101.166.196",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-SmallTribes85": {
+      "ip": "85.190.154.79",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-SmallTribes86": {
+      "ip": "85.190.154.79",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-SmallTribes87": {
+      "ip": "85.190.154.79",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero524": {
+      "ip": "5.101.166.214",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero513": {
+      "ip": "5.101.166.214",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland198": {
+      "ip": "46.251.238.147",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland43": {
+      "ip": "46.251.238.147",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok189": {
+      "ip": "46.251.238.147",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok397": {
+      "ip": "46.251.238.147",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer262 (on Nitrado)": {
+      "ip": "46.251.238.148",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland333": {
+      "ip": "46.251.238.148",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland343": {
+      "ip": "46.251.238.148",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheCenter349": {
+      "ip": "46.251.238.148",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer272 (on Nitrado)": {
+      "ip": "46.251.238.149",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland346": {
+      "ip": "46.251.238.149",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland347": {
+      "ip": "46.251.238.149",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland344": {
+      "ip": "46.251.238.149",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland395": {
+      "ip": "46.251.238.150",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheCenter396": {
+      "ip": "46.251.238.150",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer263 (on Nitrado)": {
+      "ip": "46.251.238.150",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero523": {
+      "ip": "46.251.238.151",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero525": {
+      "ip": "46.251.238.151",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer265 (on Nitrado)": {
+      "ip": "46.251.238.151",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-EU-PVE-TheCenter633": {
+      "ip": "46.251.238.152",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok389": {
+      "ip": "46.251.238.152",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-Isolated-Ragnarok60": {
+      "ip": "46.251.238.152",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland78": {
+      "ip": "46.251.238.152",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne662": {
+      "ip": "46.251.238.153",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne663": {
+      "ip": "46.251.238.153",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-Ragnarok59": {
+      "ip": "46.251.238.153",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland705": {
+      "ip": "46.251.238.154",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheCenter706": {
+      "ip": "46.251.238.154",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland707": {
+      "ip": "46.251.238.154",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter708": {
+      "ip": "46.251.238.154",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero518": {
+      "ip": "46.251.238.155",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero519": {
+      "ip": "46.251.238.155",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero516": {
+      "ip": "46.251.238.155",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer31": {
+      "ip": "85.190.157.69",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer32": {
+      "ip": "85.190.157.69",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth53": {
+      "ip": "85.190.157.69",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration380": {
+      "ip": "85.190.158.28",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok382": {
+      "ip": "85.190.158.28",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland27": {
+      "ip": "85.190.158.29",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne584": {
+      "ip": "85.190.158.29",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok177": {
+      "ip": "85.190.158.30",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok178": {
+      "ip": "85.190.158.30",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland179": {
+      "ip": "85.190.158.30",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne585": {
+      "ip": "85.190.158.30",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-TheCenter-PrimPlusCrossArk3": {
+      "ip": "85.190.158.31",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne586": {
+      "ip": "85.190.158.31",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok180": {
+      "ip": "85.190.158.32",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland181": {
+      "ip": "85.190.158.32",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland182": {
+      "ip": "85.190.158.32",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland183": {
+      "ip": "85.190.158.32",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok384": {
+      "ip": "85.190.158.34",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne587": {
+      "ip": "85.190.158.34",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne588": {
+      "ip": "85.190.158.34",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok190": {
+      "ip": "85.190.158.37",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Ragnarok-PrimPlusCrossArk3": {
+      "ip": "85.190.158.37",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok385": {
+      "ip": "85.190.158.37",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne589": {
+      "ip": "85.190.158.37",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-TheIsland-PrimPlusCrossArk4": {
+      "ip": "85.190.158.38",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-TheCenter-PrimPlusCrossArk4": {
+      "ip": "85.190.158.38",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne590": {
+      "ip": "85.190.158.38",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne591": {
+      "ip": "85.190.158.38",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok191": {
+      "ip": "85.190.158.41",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Ragnarok-PrimPlusCrossArk4": {
+      "ip": "85.190.158.41",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-TheIsland-CrossArk6": {
+      "ip": "85.190.158.41",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland31": {
+      "ip": "85.190.158.42",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland32": {
+      "ip": "85.190.158.42",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne592": {
+      "ip": "85.190.158.42",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland33": {
+      "ip": "85.190.158.44",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland34": {
+      "ip": "85.190.158.44",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne593": {
+      "ip": "85.190.158.44",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland35": {
+      "ip": "85.190.158.47",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-Ragnarok-CrossArk6": {
+      "ip": "85.190.158.47",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne594": {
+      "ip": "85.190.158.47",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-SmallTribes13": {
+      "ip": "85.190.158.48",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-SmallTribes14": {
+      "ip": "85.190.158.48",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-SmallTribes15": {
+      "ip": "85.190.158.48",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-SmallTribes95": {
+      "ip": "85.190.158.48",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland38": {
+      "ip": "85.190.158.49",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland39": {
+      "ip": "85.190.158.49",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-TheCenter-CrossArk6": {
+      "ip": "85.190.158.49",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne595": {
+      "ip": "85.190.158.49",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero577": {
+      "ip": "85.190.158.51",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero578": {
+      "ip": "85.190.158.51",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne596": {
+      "ip": "85.190.158.51",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer367": {
+      "ip": "85.190.158.53",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer368": {
+      "ip": "85.190.158.53",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer369": {
+      "ip": "85.190.158.53",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer370": {
+      "ip": "85.190.158.54",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer371": {
+      "ip": "85.190.158.54",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer372": {
+      "ip": "85.190.158.54",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer376": {
+      "ip": "85.190.158.56",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer377": {
+      "ip": "85.190.158.56",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer378": {
+      "ip": "85.190.158.56",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero560": {
+      "ip": "85.190.158.57",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero561": {
+      "ip": "85.190.158.57",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth54": {
+      "ip": "85.190.158.60",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-Aberration-CrossArk6": {
+      "ip": "85.190.158.60",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne597": {
+      "ip": "85.190.158.60",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-ScorchedEarth55": {
+      "ip": "85.190.158.62",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter56": {
+      "ip": "85.190.158.62",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer440": {
+      "ip": "85.190.158.63",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer441": {
+      "ip": "85.190.158.63",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-NA-PVE-Ragnarok14": {
+      "ip": "85.190.158.63",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero556": {
+      "ip": "85.190.158.64",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero557": {
+      "ip": "85.190.158.64",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer485": {
+      "ip": "85.190.158.67",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter57": {
+      "ip": "85.190.158.67",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok68": {
+      "ip": "95.156.213.133",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok37": {
+      "ip": "95.156.213.134",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter720": {
+      "ip": "95.156.213.134",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter406": {
+      "ip": "95.156.213.134",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction456": {
+      "ip": "95.156.213.134",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction443": {
       "ip": "95.156.213.135",
-      "port": "27017",
-      "channelID": "866917094531661854"
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland48": {
+      "ip": "95.156.213.135",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth-SmallTribes25": {
+      "ip": "85.190.159.30",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-SmallTribes26": {
+      "ip": "85.190.159.30",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-SmallTribes27": {
+      "ip": "85.190.159.30",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-SmallTribes92": {
+      "ip": "85.190.159.30",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Valguero-CrossArk9": {
+      "ip": "85.190.159.40",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-Valguero932": {
+      "ip": "85.190.159.40",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth-SmallTribes52": {
+      "ip": "85.190.159.135",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration-SmallTribes54": {
+      "ip": "85.190.159.135",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-SmallTribes55": {
+      "ip": "85.190.159.135",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-SmallTribes93": {
+      "ip": "85.190.159.135",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok63": {
+      "ip": "85.190.159.136",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter358": {
+      "ip": "85.190.159.136",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok64": {
+      "ip": "85.190.159.137",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok65": {
+      "ip": "85.190.159.137",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter359": {
+      "ip": "85.190.159.137",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne600": {
+      "ip": "85.190.159.137",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok66": {
+      "ip": "85.190.159.138",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter360": {
+      "ip": "85.190.159.138",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter361": {
+      "ip": "85.190.159.138",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth370": {
+      "ip": "85.190.159.139",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth371": {
+      "ip": "85.190.159.139",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok67": {
+      "ip": "85.190.159.41",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok71": {
+      "ip": "85.190.159.41",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-ScorchedEarth370": {
+      "ip": "85.190.159.153",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-ScorchedEarth371": {
+      "ip": "85.190.159.153",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne602": {
+      "ip": "85.190.159.153",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok383": {
+      "ip": "85.190.159.42",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland80": {
+      "ip": "85.190.159.160",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration378": {
+      "ip": "85.190.159.160",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration379": {
+      "ip": "85.190.159.160",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland82": {
+      "ip": "85.190.159.162",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-NA-PVE-TheCenter602": {
+      "ip": "85.190.159.162",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland83": {
+      "ip": "85.190.159.163",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok61": {
+      "ip": "85.190.159.163",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok62": {
+      "ip": "85.190.159.163",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter84": {
+      "ip": "95.156.213.169",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-ScorchedEarth85": {
+      "ip": "95.156.213.169",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer374": {
+      "ip": "95.156.213.169",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-NA-PVE-TheCenter591": {
+      "ip": "85.190.159.165",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland404": {
+      "ip": "85.190.159.165",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok195": {
+      "ip": "85.190.153.58",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration381": {
+      "ip": "85.190.153.59",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-NA-PVE-Ragnarok13": {
+      "ip": "85.190.153.62",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok194": {
+      "ip": "85.190.153.62",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland21": {
+      "ip": "85.190.153.97",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland22": {
+      "ip": "85.190.153.97",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok205": {
+      "ip": "85.190.153.97",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne611": {
+      "ip": "85.190.153.97",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero551": {
+      "ip": "85.190.153.7",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero552": {
+      "ip": "85.190.153.7",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-TheIsland-CrossArk8": {
+      "ip": "85.190.157.163",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-TheCenter-CrossArk8": {
+      "ip": "85.190.157.163",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Aberration-CrossArk12": {
+      "ip": "85.190.157.163",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne583": {
+      "ip": "85.190.157.163",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-NoTek-TheIsland-CrossArk6": {
+      "ip": "85.190.157.164",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-NoTek-ScorchedEarth-CrossArk6": {
+      "ip": "85.190.157.164",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-NoTek-Ragnarok-CrossArk6": {
+      "ip": "85.190.157.164",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-NoTek-Aberration-CrossArk6": {
+      "ip": "85.190.157.164",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-ScorchedEarth-CrossArk8": {
+      "ip": "85.190.157.165",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Ragnarok-CrossArk8": {
+      "ip": "85.190.157.165",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-TheCenter-CrossArk12": {
+      "ip": "85.190.157.165",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-TheIsland-CrossArk12": {
+      "ip": "85.190.157.165",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-SmallTribes40": {
+      "ip": "85.190.157.166",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-SmallTribes41": {
+      "ip": "85.190.157.166",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration-SmallTribes42": {
+      "ip": "85.190.157.166",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Valguero-PrimPlusCrossArk3": {
+      "ip": "85.190.157.167",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Valguero-PrimPlusCrossArk4": {
+      "ip": "85.190.157.167",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-Valguero-CrossArk6": {
+      "ip": "85.190.157.167",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-ScorchedEarth-CrossArk9": {
+      "ip": "85.190.157.168",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Ragnarok-CrossArk9": {
+      "ip": "85.190.157.168",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Ragnarok-CrossArk12": {
+      "ip": "85.190.157.168",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-ScorchedEarth-CrossArk12": {
+      "ip": "85.190.157.168",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland23": {
+      "ip": "85.190.157.169",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok408": {
+      "ip": "85.190.157.169",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-SmallTribes43": {
+      "ip": "85.190.157.170",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-SmallTribes44": {
+      "ip": "85.190.157.170",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-SmallTribes45": {
+      "ip": "85.190.157.170",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-SmallTribes94": {
+      "ip": "85.190.157.170",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-Conquest14": {
+      "ip": "85.190.157.171",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-Conquest15": {
+      "ip": "85.190.157.171",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-Conquest16": {
+      "ip": "85.190.157.171",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer331": {
+      "ip": "85.190.157.156",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer333": {
+      "ip": "85.190.157.156",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland336": {
+      "ip": "85.190.157.156",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland50": {
+      "ip": "85.190.157.157",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland185": {
+      "ip": "85.190.157.157",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok160": {
+      "ip": "85.190.157.158",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok161": {
+      "ip": "85.190.157.158",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok162": {
+      "ip": "85.190.157.158",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne609": {
+      "ip": "85.190.157.158",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland24": {
+      "ip": "85.190.157.159",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland25": {
+      "ip": "85.190.157.159",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction506": {
+      "ip": "85.190.157.159",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok163": {
+      "ip": "37.10.127.13",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok164": {
+      "ip": "37.10.127.13",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland165": {
+      "ip": "37.10.127.13",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne610": {
+      "ip": "37.10.127.13",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland46": {
+      "ip": "85.190.157.178",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland47": {
+      "ip": "85.190.157.178",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland49": {
+      "ip": "85.190.157.181",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer336": {
+      "ip": "85.190.157.181",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland337b": {
+      "ip": "85.190.157.183",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland338": {
+      "ip": "85.190.157.183",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter58": {
+      "ip": "85.190.157.185",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter60": {
+      "ip": "85.190.157.185",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-Valguero929": {
+      "ip": "85.190.157.188",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-Valguero930": {
+      "ip": "85.190.157.188",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-Valguero931": {
+      "ip": "85.190.157.188",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland40": {
+      "ip": "37.10.127.11",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth41": {
+      "ip": "37.10.127.11",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth51": {
+      "ip": "37.10.127.11",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland341": {
+      "ip": "37.10.127.182",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland342": {
+      "ip": "37.10.127.182",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction497": {
+      "ip": "37.10.127.182",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter352": {
+      "ip": "85.190.156.173",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter353": {
+      "ip": "85.190.156.173",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-GenOne942": {
+      "ip": "85.190.156.173",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-GenOne943": {
+      "ip": "85.190.156.173",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter86": {
+      "ip": "85.190.152.81",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-ScorchedEarth87": {
+      "ip": "85.190.152.81",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland337": {
+      "ip": "85.190.152.81",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter88": {
+      "ip": "85.190.152.82",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth89": {
+      "ip": "85.190.152.82",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter354": {
+      "ip": "85.190.152.82",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-ScorchedEarth90": {
+      "ip": "109.230.214.52",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter355": {
+      "ip": "109.230.214.52",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland335": {
+      "ip": "109.230.214.52",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero565": {
+      "ip": "85.190.152.73",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero566": {
+      "ip": "85.190.152.73",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero567": {
+      "ip": "85.190.152.73",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland717": {
+      "ip": "85.190.152.84",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter718": {
+      "ip": "85.190.152.84",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland719": {
+      "ip": "85.190.152.84",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer323": {
+      "ip": "85.190.152.85",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne612": {
+      "ip": "85.190.152.85",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne613": {
+      "ip": "85.190.152.85",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-NA-PVE-Isolated-Ragnarok11": {
+      "ip": "85.190.152.86",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-NA-PVE-Isolated-Ragnarok12": {
+      "ip": "85.190.152.86",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne614": {
+      "ip": "85.190.152.86",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok721": {
+      "ip": "85.190.152.250",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok722": {
+      "ip": "85.190.152.250",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero723": {
+      "ip": "85.190.152.250",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland724": {
+      "ip": "85.190.152.250",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero562": {
+      "ip": "85.190.152.252",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero563": {
+      "ip": "85.190.152.252",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero564": {
+      "ip": "85.190.152.252",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne615": {
+      "ip": "85.190.152.252",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-NA-PVE-Ragnarok50": {
+      "ip": "85.190.152.253",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-NA-PVE-Isolated-Ragnarok51": {
+      "ip": "85.190.152.253",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne617": {
+      "ip": "85.190.152.253",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok212": {
+      "ip": "37.10.124.113",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok213": {
+      "ip": "37.10.124.113",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok214": {
+      "ip": "37.10.124.113",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero725": {
+      "ip": "37.10.124.238",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter726": {
+      "ip": "37.10.124.238",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok727": {
+      "ip": "37.10.124.238",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero728": {
+      "ip": "37.10.124.238",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Aberration-CrossArk8": {
+      "ip": "37.10.124.239",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Aberration-CrossArk9": {
+      "ip": "37.10.124.239",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland405": {
+      "ip": "37.10.124.239",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Aberration-PrimPlusCrossArk3": {
+      "ip": "37.10.124.240",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Aberration-PrimPlusCrossArk4": {
+      "ip": "37.10.124.240",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration-Hardcore4": {
+      "ip": "37.10.124.240",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-ScorchedEarth-CrossArk10": {
+      "ip": "37.10.124.240",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-TheIsland-CrossArk10": {
+      "ip": "37.10.124.241",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-TheCenter-CrossArk10": {
+      "ip": "37.10.124.241",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Ragnarok-CrossArk10": {
+      "ip": "37.10.124.241",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne620": {
+      "ip": "37.10.124.241",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Aberration-CrossArk10": {
+      "ip": "37.10.124.242",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration316": {
+      "ip": "37.10.124.242",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration317": {
+      "ip": "37.10.124.242",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration318": {
+      "ip": "37.10.124.242",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-Aberration900": {
+      "ip": "37.10.124.252",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-Aberration901": {
+      "ip": "37.10.124.252",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration263": {
+      "ip": "37.10.124.253",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration264": {
+      "ip": "37.10.124.253",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration265": {
+      "ip": "37.10.124.253",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration267": {
+      "ip": "37.10.124.254",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration268": {
+      "ip": "37.10.124.254",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration269": {
+      "ip": "37.10.124.254",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration271": {
+      "ip": "37.10.124.114",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration272": {
+      "ip": "37.10.124.114",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration273": {
+      "ip": "37.10.124.114",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration274": {
+      "ip": "37.10.124.114",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration275": {
+      "ip": "37.10.124.115",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration276": {
+      "ip": "37.10.124.115",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration277": {
+      "ip": "37.10.124.115",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration278": {
+      "ip": "37.10.124.115",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration279": {
+      "ip": "37.10.124.116",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration280": {
+      "ip": "37.10.124.116",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration281": {
+      "ip": "37.10.124.116",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration282": {
+      "ip": "37.10.124.116",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration283": {
+      "ip": "37.10.124.117",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration284": {
+      "ip": "37.10.124.117",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration285": {
+      "ip": "37.10.124.117",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration286": {
+      "ip": "37.10.124.117",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration287": {
+      "ip": "37.10.124.118",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration288": {
+      "ip": "37.10.124.118",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration289": {
+      "ip": "37.10.124.118",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration290": {
+      "ip": "37.10.124.118",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration291": {
+      "ip": "37.10.124.119",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration292": {
+      "ip": "37.10.124.119",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration293": {
+      "ip": "37.10.124.119",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration294": {
+      "ip": "37.10.124.119",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration295": {
+      "ip": "37.10.124.120",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration296": {
+      "ip": "37.10.124.120",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration297": {
+      "ip": "37.10.124.120",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration298": {
+      "ip": "37.10.124.120",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration299": {
+      "ip": "37.10.124.121",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration300": {
+      "ip": "37.10.124.121",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration301": {
+      "ip": "37.10.124.121",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration302": {
+      "ip": "37.10.124.121",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration303": {
+      "ip": "37.10.124.122",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration304": {
+      "ip": "37.10.124.122",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration305": {
+      "ip": "37.10.124.122",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration306": {
+      "ip": "37.10.124.122",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration307": {
+      "ip": "37.10.124.123",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration308": {
+      "ip": "37.10.124.123",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration309": {
+      "ip": "37.10.124.123",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration310": {
+      "ip": "37.10.124.123",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration311": {
+      "ip": "37.10.124.124",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration312": {
+      "ip": "37.10.124.124",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration313": {
+      "ip": "37.10.124.124",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration314": {
+      "ip": "37.10.124.124",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer36": {
+      "ip": "85.190.152.140",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter356": {
+      "ip": "85.190.152.140",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland334": {
+      "ip": "85.190.152.140",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer39": {
+      "ip": "85.190.152.139",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter357": {
+      "ip": "85.190.152.139",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-TheIsland-CrossArk9": {
+      "ip": "85.190.152.139",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero553": {
+      "ip": "85.190.152.3",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero554": {
+      "ip": "85.190.152.3",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland407": {
+      "ip": "85.190.152.48",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration409": {
+      "ip": "85.190.152.48",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland410": {
+      "ip": "85.190.152.59",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland411": {
+      "ip": "85.190.152.59",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter412": {
+      "ip": "85.190.152.59",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne623": {
+      "ip": "85.190.152.59",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland413": {
+      "ip": "85.190.152.33",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland414": {
+      "ip": "85.190.152.33",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter415": {
+      "ip": "85.190.152.33",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter417": {
+      "ip": "85.190.156.73",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok418": {
+      "ip": "85.190.156.73",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne624": {
+      "ip": "85.190.156.73",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland419": {
+      "ip": "85.190.157.61",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok420": {
+      "ip": "85.190.157.61",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth421": {
+      "ip": "85.190.157.61",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland422": {
+      "ip": "85.190.157.147",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok423": {
+      "ip": "85.190.157.147",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration424": {
+      "ip": "85.190.157.147",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne625": {
+      "ip": "85.190.157.147",
+      "port": 27021,
+      "tracked": false
+    },
+    "*Beginner*NA-PVP-Official-TheIsland428": {
+      "ip": "85.190.156.30",
+      "port": 27015,
+      "tracked": false
+    },
+    "*Beginner*NA-PVE-Official-TheIsland429": {
+      "ip": "85.190.156.30",
+      "port": 27017,
+      "tracked": false
+    },
+    "*Beginner*NA-PVE-Official-TheIsland430": {
+      "ip": "85.190.156.30",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth36": {
+      "ip": "37.10.127.14",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland340": {
+      "ip": "37.10.127.14",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-TheCenter-CrossArk9": {
+      "ip": "37.10.127.14",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero547": {
+      "ip": "37.10.127.15",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero548": {
+      "ip": "37.10.127.15",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-SmallTribes1": {
+      "ip": "85.190.156.5",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-SmallTribes2": {
+      "ip": "85.190.156.5",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth-SmallTribes3": {
+      "ip": "85.190.156.5",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-SmallTribes96": {
+      "ip": "85.190.156.5",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland431": {
+      "ip": "85.190.152.4",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration432": {
+      "ip": "85.190.152.4",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok433": {
+      "ip": "85.190.152.4",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-SmallTribes7": {
+      "ip": "85.190.156.33",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-SmallTribes8": {
+      "ip": "85.190.156.33",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-SmallTribes9": {
+      "ip": "85.190.156.33",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-SmallTribes97": {
+      "ip": "85.190.156.33",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration-SmallTribes31": {
+      "ip": "37.10.127.12",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-SmallTribes32": {
+      "ip": "37.10.127.12",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-SmallTribes33": {
+      "ip": "37.10.127.12",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-Conquest17": {
+      "ip": "85.190.156.28",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-Conquest18": {
+      "ip": "85.190.156.28",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-Conquest19": {
+      "ip": "85.190.156.28",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-Conquest20": {
+      "ip": "85.190.152.9",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-Conquest21": {
+      "ip": "85.190.152.9",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-Conquest22": {
+      "ip": "85.190.152.9",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction449": {
+      "ip": "85.190.152.10",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero558": {
+      "ip": "85.190.152.10",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-ScorchedEarth-CrossArk6": {
+      "ip": "85.190.152.11",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne626": {
+      "ip": "85.190.152.11",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland339": {
+      "ip": "85.190.156.27",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction502": {
+      "ip": "85.190.156.27",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne-FreeBuildNoMissions708": {
+      "ip": "85.190.156.53",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-FreeBuildNoMissions709": {
+      "ip": "85.190.156.53",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-FreeBuildNoMissions710": {
+      "ip": "85.190.156.53",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne-FreeBuildNoMissions705": {
+      "ip": "85.190.156.58",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne-FreeBuildNoMissions706": {
+      "ip": "85.190.156.58",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-FreeBuildNoMissions707": {
+      "ip": "85.190.156.58",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne606": {
+      "ip": "85.190.156.63",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne607": {
+      "ip": "85.190.156.63",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne608": {
+      "ip": "85.190.156.63",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Extinction-CrossArk12": {
+      "ip": "85.190.152.12",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Extinction-CrossArk10": {
+      "ip": "85.190.152.12",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Extinction-CrossArk8": {
+      "ip": "85.190.152.12",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Extinction-CrossArk9": {
+      "ip": "85.190.152.12",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok81": {
+      "ip": "85.190.152.13",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-Hardcore7": {
+      "ip": "85.190.152.14",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-Extinction-CrossArk6": {
+      "ip": "85.190.152.14",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland26": {
+      "ip": "85.190.152.14",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-SmallTribes59": {
+      "ip": "85.190.152.15",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-SmallTribes60": {
+      "ip": "85.190.152.15",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-SmallTribes61": {
+      "ip": "85.190.152.15",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne603": {
+      "ip": "85.190.152.16",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne604": {
+      "ip": "85.190.152.16",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne605": {
+      "ip": "85.190.152.16",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-Extinction914": {
+      "ip": "85.190.152.25",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-Extinction915": {
+      "ip": "85.190.152.25",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne628": {
+      "ip": "85.190.152.25",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction437": {
+      "ip": "85.190.152.28",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction438": {
+      "ip": "85.190.152.28",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction439": {
+      "ip": "85.190.152.28",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction440": {
+      "ip": "85.190.152.28",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction441": {
+      "ip": "85.190.156.21",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction445": {
+      "ip": "85.190.156.23",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction446": {
+      "ip": "85.190.156.23",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction447": {
+      "ip": "85.190.156.23",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction448": {
+      "ip": "85.190.156.23",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction450": {
+      "ip": "85.190.156.24",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction451": {
+      "ip": "85.190.156.24",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction452": {
+      "ip": "85.190.156.24",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction453": {
+      "ip": "85.190.156.51",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction454": {
+      "ip": "85.190.156.51",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction457": {
+      "ip": "85.190.156.52",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction458": {
+      "ip": "85.190.156.52",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-SmallTribes65": {
+      "ip": "37.10.127.62",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-SmallTribes66": {
+      "ip": "37.10.127.62",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-SmallTribes67": {
+      "ip": "37.10.127.62",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-SmallTribes106": {
+      "ip": "37.10.127.62",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction498": {
+      "ip": "37.10.127.63",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-Extinction927": {
+      "ip": "37.10.127.63",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-Extinction928": {
+      "ip": "37.10.127.63",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-GenOne-CrossArk6": {
+      "ip": "37.10.127.63",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction499": {
+      "ip": "37.10.127.64",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction500": {
+      "ip": "37.10.127.64",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction501": {
+      "ip": "37.10.127.64",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-SmallTribes73": {
+      "ip": "37.10.127.65",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-SmallTribes68": {
+      "ip": "37.10.127.65",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-SmallTribes69": {
+      "ip": "37.10.127.65",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-SmallTribes107": {
+      "ip": "37.10.127.65",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction503": {
+      "ip": "37.10.127.66",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction504": {
+      "ip": "37.10.127.66",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction505": {
+      "ip": "37.10.127.66",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-GenOne-CrossArk12": {
+      "ip": "37.10.127.66",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-Conquest23": {
+      "ip": "37.10.127.67",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-Conquest24": {
+      "ip": "37.10.127.67",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-Conquest25": {
+      "ip": "37.10.127.67",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth-Conquest26": {
+      "ip": "37.10.127.67",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-SmallTribes104": {
+      "ip": "37.10.127.68",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-SmallTribes105": {
+      "ip": "37.10.127.68",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-NA-PVE-Ragnarok15": {
+      "ip": "37.10.127.69",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero549": {
+      "ip": "37.10.127.70",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok184": {
+      "ip": "37.10.127.71",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero559": {
+      "ip": "37.10.127.71",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland29": {
+      "ip": "37.10.127.72",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland30": {
+      "ip": "37.10.127.72",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok384b": {
+      "ip": "37.10.127.72",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Valguero-CrossArk10": {
+      "ip": "37.10.127.73",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Valguero-CrossArk12": {
+      "ip": "37.10.127.73",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Valguero-CrossArk8": {
+      "ip": "37.10.127.73",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction444": {
+      "ip": "37.10.127.91",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction460": {
+      "ip": "37.10.127.91",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero545": {
+      "ip": "37.10.127.92",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero546": {
+      "ip": "37.10.127.92",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero568": {
+      "ip": "85.190.152.254",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero569": {
+      "ip": "85.190.152.254",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero570": {
+      "ip": "85.190.152.254",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero571": {
+      "ip": "37.10.125.126",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero572": {
+      "ip": "37.10.125.126",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero573": {
+      "ip": "37.10.125.126",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero574": {
+      "ip": "85.190.158.36",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero575": {
+      "ip": "85.190.158.36",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero576": {
+      "ip": "85.190.158.36",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-SmallTribes74": {
+      "ip": "31.214.128.21",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-SmallTribes75": {
+      "ip": "31.214.128.21",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-SmallTribes76": {
+      "ip": "31.214.128.21",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-SmallTribes77": {
+      "ip": "37.10.127.82",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-SmallTribes78": {
+      "ip": "37.10.127.82",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-SmallTribes91": {
+      "ip": "37.10.127.82",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-SmallTribes79": {
+      "ip": "37.10.127.83",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-SmallTribes80": {
+      "ip": "37.10.127.83",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-SmallTribes81": {
+      "ip": "37.10.127.83",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland186": {
+      "ip": "37.10.127.84",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland187": {
+      "ip": "37.10.127.84",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero550": {
+      "ip": "37.10.127.86",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero555": {
+      "ip": "37.10.127.86",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-Asia-PVE-TheCenter640": {
+      "ip": "36.27.209.36",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVE-TheCenter117": {
+      "ip": "36.27.209.36",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-Official-TheIsland-ARKpocalypse1": {
+      "ip": "36.27.209.169",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-Official-Ragnarok-ARKpocalypse4": {
+      "ip": "36.27.209.170",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-Official-Aberration-ARKpocalypse5": {
+      "ip": "36.27.209.170",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-Official-Extinction-ARKpocalypse6": {
+      "ip": "36.27.209.170",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-Official-GenOne-ARKpocalypse8": {
+      "ip": "36.27.209.170",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo973": {
+      "ip": "95.156.213.132",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo978": {
+      "ip": "95.156.213.132",
+      "port": 27017,
+      "tracked": false
+    },
+    "Land of Dragons - Island": {
+      "ip": "31.214.128.22",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok72": {
+      "ip": "5.101.166.191",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles-Conquest54": {
+      "ip": "85.190.158.55",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-Conquest55": {
+      "ip": "85.190.158.55",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-Conquest56": {
+      "ip": "85.190.158.55",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration-Conquest57": {
+      "ip": "85.190.158.55",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles-Conquest58": {
+      "ip": "85.190.158.65",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-Conquest59": {
+      "ip": "85.190.158.65",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-Conquest60": {
+      "ip": "85.190.158.65",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration-Conquest61": {
+      "ip": "85.190.158.65",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration744": {
+      "ip": "46.251.238.156",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction745": {
+      "ip": "46.251.238.156",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne746": {
+      "ip": "46.251.238.156",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration781": {
+      "ip": "46.251.238.156",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-ScorchedEarth747": {
+      "ip": "46.251.238.157",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland748": {
+      "ip": "46.251.238.157",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland749": {
+      "ip": "46.251.238.157",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne783": {
+      "ip": "46.251.238.157",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland750": {
+      "ip": "46.251.238.158",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland751": {
+      "ip": "46.251.238.158",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok752": {
+      "ip": "46.251.238.158",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland785": {
+      "ip": "46.251.238.158",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok753": {
+      "ip": "46.251.238.159",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Ragnarok754": {
+      "ip": "46.251.238.159",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero755": {
+      "ip": "46.251.238.159",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland787": {
+      "ip": "46.251.238.159",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero756": {
+      "ip": "46.251.238.160",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheCenter757": {
+      "ip": "46.251.238.160",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheCenter758": {
+      "ip": "46.251.238.160",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok789": {
+      "ip": "46.251.238.160",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero791": {
+      "ip": "46.251.238.161",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter792": {
+      "ip": "46.251.238.161",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter793": {
+      "ip": "46.251.238.161",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration-SmallTribes116": {
+      "ip": "46.251.238.162",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction-SmallTribes117": {
+      "ip": "46.251.238.162",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-SmallTribes118": {
+      "ip": "46.251.238.162",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth-SmallTribes119": {
+      "ip": "46.251.238.162",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-SmallTribes120": {
+      "ip": "46.251.238.163",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-SmallTribes121": {
+      "ip": "46.251.238.163",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-SmallTribes122": {
+      "ip": "46.251.238.163",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-SmallTribes123": {
+      "ip": "46.251.238.163",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-OfflineRaidProtection-CrystalIsles-CrossArk5": {
+      "ip": "46.251.238.164",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-CrystalIsles-CrossArk1": {
+      "ip": "46.251.238.164",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-CrystalIsles-CrossArk2": {
+      "ip": "46.251.238.164",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-CrystalIsles-CrossArk11": {
+      "ip": "46.251.238.164",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles-SmallTribes114": {
+      "ip": "46.251.238.165",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles-SmallTribes115": {
+      "ip": "46.251.238.165",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles-SmallTribes116": {
+      "ip": "46.251.238.165",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles-SmallTribes117": {
+      "ip": "46.251.238.165",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles-Conquest50": {
+      "ip": "46.251.238.166",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-Conquest51": {
+      "ip": "46.251.238.166",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction-Conquest52": {
+      "ip": "46.251.238.166",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration-Conquest53": {
+      "ip": "46.251.238.166",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles815": {
+      "ip": "46.251.238.167",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles816": {
+      "ip": "46.251.238.167",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles855": {
+      "ip": "46.251.238.167",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles856": {
+      "ip": "46.251.238.167",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles817": {
+      "ip": "46.251.238.168",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles818": {
+      "ip": "46.251.238.168",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles859": {
+      "ip": "46.251.238.168",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles860": {
+      "ip": "46.251.238.168",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles819": {
+      "ip": "46.251.238.169",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles820": {
+      "ip": "46.251.238.169",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles863": {
+      "ip": "46.251.238.169",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles864": {
+      "ip": "46.251.238.169",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles821": {
+      "ip": "46.251.238.170",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles822": {
+      "ip": "46.251.238.170",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles867": {
+      "ip": "46.251.238.170",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles868": {
+      "ip": "46.251.238.170",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles823": {
+      "ip": "46.251.238.171",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles824": {
+      "ip": "46.251.238.171",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles871": {
+      "ip": "46.251.238.171",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles872": {
+      "ip": "46.251.238.171",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles825": {
+      "ip": "46.251.238.172",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles826": {
+      "ip": "46.251.238.172",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles875": {
+      "ip": "46.251.238.172",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles876": {
+      "ip": "46.251.238.172",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles877": {
+      "ip": "46.251.238.173",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles878": {
+      "ip": "46.251.238.173",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles879": {
+      "ip": "46.251.238.173",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero529": {
+      "ip": "46.251.238.174",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland20": {
+      "ip": "46.251.238.175",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-ScorchedEarth372": {
+      "ip": "46.251.238.175",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-ScorchedEarth373": {
+      "ip": "46.251.238.175",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-SmallTribes139": {
+      "ip": "46.251.238.176",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-SmallTribes140": {
+      "ip": "46.251.238.176",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles-SmallTribes141": {
+      "ip": "46.251.238.176",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles-SmallTribes142": {
+      "ip": "46.251.238.176",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-CrystalIsles940": {
+      "ip": "46.251.238.177",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland895": {
+      "ip": "46.251.238.177",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland896": {
+      "ip": "46.251.238.177",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland897": {
+      "ip": "46.251.238.177",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Aberration220": {
+      "ip": "46.251.238.178",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne661": {
+      "ip": "46.251.238.178",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo926": {
+      "ip": "46.251.238.178",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles874": {
+      "ip": "46.251.238.179",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne641": {
+      "ip": "46.251.238.179",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles870": {
+      "ip": "46.251.238.179",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration729": {
+      "ip": "95.156.213.136",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction730": {
+      "ip": "95.156.213.136",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne731": {
+      "ip": "95.156.213.136",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration768": {
+      "ip": "95.156.213.136",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-ScorchedEarth732": {
+      "ip": "95.156.213.137",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland733": {
+      "ip": "95.156.213.137",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland734": {
+      "ip": "95.156.213.137",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne770": {
+      "ip": "95.156.213.137",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland735": {
+      "ip": "95.156.213.138",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland736": {
+      "ip": "95.156.213.138",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok737": {
+      "ip": "95.156.213.138",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland772": {
+      "ip": "95.156.213.138",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok738": {
+      "ip": "95.156.213.139",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Ragnarok739": {
+      "ip": "95.156.213.139",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero740": {
+      "ip": "95.156.213.139",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland774": {
+      "ip": "95.156.213.139",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Valguero741": {
+      "ip": "95.156.213.140",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter742": {
+      "ip": "95.156.213.140",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheCenter743": {
+      "ip": "95.156.213.140",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok776": {
+      "ip": "95.156.213.140",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero778": {
+      "ip": "95.156.213.141",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter779": {
+      "ip": "95.156.213.141",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter780": {
+      "ip": "95.156.213.141",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Aberration270": {
+      "ip": "95.156.213.141",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration-SmallTribes125": {
+      "ip": "95.156.213.142",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Extinction-SmallTribes126": {
+      "ip": "95.156.213.142",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenOne-SmallTribes127": {
+      "ip": "95.156.213.142",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth-SmallTribes128": {
+      "ip": "95.156.213.142",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-SmallTribes129": {
+      "ip": "95.156.213.143",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-SmallTribes130": {
+      "ip": "95.156.213.143",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-SmallTribes131": {
+      "ip": "95.156.213.143",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-SmallTribes132": {
+      "ip": "95.156.213.143",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-TheIsland-CrossArk14": {
+      "ip": "95.156.213.144",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-TheCenter-CrossArk14": {
+      "ip": "95.156.213.144",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-ScorchedEarth-CrossArk14": {
+      "ip": "95.156.213.144",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Ragnarok-CrossArk14": {
+      "ip": "95.156.213.144",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Aberration-CrossArk14": {
+      "ip": "95.156.213.145",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Extinction-CrossArk14": {
+      "ip": "95.156.213.145",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Valguero-CrossArk14": {
+      "ip": "95.156.213.145",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-CrystalIsles-CrossArk14": {
+      "ip": "95.156.213.145",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-CrystalIsles-CrossArk6": {
+      "ip": "95.156.213.146",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-CrystalIsles-CrossArk8": {
+      "ip": "95.156.213.146",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-CrystalIsles-CrossArk12": {
+      "ip": "95.156.213.146",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-CrystalIsles-CrossArk9": {
+      "ip": "95.156.213.146",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles-SmallTribes112": {
+      "ip": "95.156.213.147",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles-SmallTribes113": {
+      "ip": "95.156.213.147",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles-SmallTribes119": {
+      "ip": "95.156.213.147",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles-SmallTribes120": {
+      "ip": "95.156.213.147",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-Conquest27": {
+      "ip": "95.156.213.148",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-Conquest2": {
+      "ip": "95.156.213.148",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-Conquest70": {
+      "ip": "95.156.213.148",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles803": {
+      "ip": "95.156.213.149",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles804": {
+      "ip": "95.156.213.149",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles830": {
+      "ip": "95.156.213.149",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles831": {
+      "ip": "95.156.213.149",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles805": {
+      "ip": "95.156.213.150",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles806": {
+      "ip": "95.156.213.150",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles833": {
+      "ip": "95.156.213.150",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles834": {
+      "ip": "95.156.213.150",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles807": {
+      "ip": "95.156.213.151",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles808": {
+      "ip": "95.156.213.151",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles836": {
+      "ip": "95.156.213.151",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles837": {
+      "ip": "95.156.213.151",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles809": {
+      "ip": "95.156.213.152",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles810": {
+      "ip": "95.156.213.152",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles839": {
+      "ip": "95.156.213.152",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles840": {
+      "ip": "95.156.213.152",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles811": {
+      "ip": "95.156.213.153",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles812": {
+      "ip": "95.156.213.153",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles842": {
+      "ip": "95.156.213.153",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles843": {
+      "ip": "95.156.213.153",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles813": {
+      "ip": "95.156.213.154",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles814": {
+      "ip": "95.156.213.154",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles845": {
+      "ip": "95.156.213.154",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles846": {
+      "ip": "95.156.213.154",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles848": {
+      "ip": "95.156.213.155",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles849": {
+      "ip": "95.156.213.155",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles850": {
+      "ip": "95.156.213.155",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter59": {
+      "ip": "95.156.213.156",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles853": {
+      "ip": "95.156.213.156",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles854": {
+      "ip": "95.156.213.156",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo966": {
+      "ip": "95.156.213.157",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-SmallTribes134": {
+      "ip": "95.156.213.158",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-SmallTribes135": {
+      "ip": "95.156.213.158",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles-SmallTribes136": {
+      "ip": "95.156.213.158",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles-SmallTribes137": {
+      "ip": "95.156.213.158",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-CrystalIsles939": {
+      "ip": "95.156.213.159",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland885": {
+      "ip": "95.156.213.159",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland886": {
+      "ip": "95.156.213.159",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland887": {
+      "ip": "95.156.213.159",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland890": {
+      "ip": "95.156.213.160",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland891": {
+      "ip": "95.156.213.160",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-TheIsland892": {
+      "ip": "95.156.213.160",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland893": {
+      "ip": "95.156.213.160",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-Aberration759": {
+      "ip": "128.0.115.33",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-Extinction760": {
+      "ip": "128.0.115.33",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVE-Official-GenOne761": {
+      "ip": "128.0.115.33",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-Aberration794": {
+      "ip": "128.0.115.33",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-ScorchedEarth762": {
+      "ip": "128.0.115.35",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-TheIsland763": {
+      "ip": "128.0.115.35",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVE-Official-TheIsland764": {
+      "ip": "128.0.115.35",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-GenOne796": {
+      "ip": "128.0.115.35",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-Ragnarok765": {
+      "ip": "128.0.115.38",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVP-Official-Ragnarok800": {
+      "ip": "128.0.115.38",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-Valguero801": {
+      "ip": "128.0.115.38",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-TheCenter802": {
+      "ip": "128.0.115.38",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-Ragnarok766": {
+      "ip": "128.0.115.39",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-Ragnarok767": {
+      "ip": "128.0.115.39",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-TheIsland798": {
+      "ip": "128.0.115.39",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-TheIsland799": {
+      "ip": "128.0.115.39",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVP-Official-CrystalIsles827": {
+      "ip": "128.0.115.40",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVP-Official-CrystalIsles828": {
+      "ip": "128.0.115.40",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-CrystalIsles829": {
+      "ip": "128.0.115.40",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVE-Official-CrystalIsles880": {
+      "ip": "128.0.115.40",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero530": {
+      "ip": "46.251.238.180",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero531": {
+      "ip": "46.251.238.180",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok788": {
+      "ip": "46.251.238.180",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne659": {
+      "ip": "46.251.238.180",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok188": {
+      "ip": "46.251.238.181",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction493": {
+      "ip": "46.251.238.181",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo991": {
+      "ip": "46.251.238.181",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles866": {
+      "ip": "46.251.238.142",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles858": {
+      "ip": "46.251.238.142",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles862": {
+      "ip": "46.251.238.143",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction442": {
+      "ip": "95.156.213.161",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles852": {
+      "ip": "95.156.213.161",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles847": {
+      "ip": "95.156.213.161",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles841": {
+      "ip": "95.156.213.161",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction459": {
+      "ip": "95.156.213.162",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Extinction455": {
+      "ip": "95.156.213.162",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland28": {
+      "ip": "95.156.213.162",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth52": {
+      "ip": "95.156.213.162",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-ScorchedEarth-CrossArk1": {
+      "ip": "46.251.238.141",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Ragnarok-CrossArk1": {
+      "ip": "46.251.238.141",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Ragnarok-CrossArk11": {
+      "ip": "46.251.238.141",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-OfflineRaidProtection-Valguero-CrossArk5": {
+      "ip": "46.251.238.141",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer114 (on Nitrado)": {
+      "ip": "46.251.238.140",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer115 (on Nitrado)": {
+      "ip": "46.251.238.140",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer116 (on Nitrado)": {
+      "ip": "46.251.238.140",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Extinction465": {
+      "ip": "46.251.238.140",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth-SmallTribes50": {
+      "ip": "5.62.127.6",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth-SmallTribes51": {
+      "ip": "5.62.127.6",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration-SmallTribes53": {
+      "ip": "5.62.127.6",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth-SmallTribes49": {
+      "ip": "5.62.127.6",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero515": {
+      "ip": "85.190.148.206",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland398": {
+      "ip": "85.190.148.206",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland399": {
+      "ip": "85.190.148.206",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok400": {
+      "ip": "85.190.148.206",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland1": {
+      "ip": "85.190.148.207",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland401": {
+      "ip": "85.190.148.207",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter402": {
+      "ip": "85.190.148.207",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration403": {
+      "ip": "85.190.148.207",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-SmallTribes4": {
+      "ip": "85.190.148.211",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration-SmallTribes5": {
+      "ip": "85.190.148.211",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-SmallTribes6": {
+      "ip": "85.190.148.211",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-SmallTribes98": {
+      "ip": "85.190.148.211",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-TheIsland-CrossArk2": {
+      "ip": "85.190.148.213",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-TheCenter-CrossArk2": {
+      "ip": "85.190.148.213",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland328": {
+      "ip": "85.190.148.213",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-Valguero938": {
+      "ip": "85.190.148.213",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-OfflineRaidProtection-TheIsland-CrossArk5": {
+      "ip": "85.190.148.214",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-OfflineRaidProtection-TheCenter-CrossArk5": {
+      "ip": "85.190.148.214",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland345": {
+      "ip": "85.190.148.214",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland332": {
+      "ip": "85.190.148.214",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-OfflineRaidProtection-ScorchedEarth-CrossArk5": {
+      "ip": "85.190.148.216",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-OfflineRaidProtection-Ragnarok-CrossArk5": {
+      "ip": "85.190.148.216",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Valguero-CrossArk1": {
+      "ip": "85.190.148.216",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Valguero-CrossArk11": {
+      "ip": "85.190.148.216",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer415 (on Nitrado)": {
+      "ip": "85.190.148.220",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer417 (on Nitrado)": {
+      "ip": "85.190.148.220",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer424 (on Nitrado)": {
+      "ip": "85.190.148.220",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer418 (on Nitrado)": {
+      "ip": "85.190.148.220",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Valguero-CrossArk2": {
+      "ip": "85.190.148.226",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Valguero-PrimPlusCrossArk2": {
+      "ip": "85.190.148.226",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Valguero-PrimPlusCrossArk1": {
+      "ip": "85.190.148.226",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Valguero511": {
+      "ip": "85.190.148.226",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok166": {
+      "ip": "85.190.148.228",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland168": {
+      "ip": "85.190.148.228",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Ragnarok-CrossArk2": {
+      "ip": "85.190.148.228",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer279 (on Nitrado)": {
+      "ip": "85.190.148.228",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok169": {
+      "ip": "85.190.148.229",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland170": {
+      "ip": "85.190.148.229",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland171": {
+      "ip": "85.190.148.229",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland172": {
+      "ip": "85.190.148.229",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok173": {
+      "ip": "85.190.148.230",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland174": {
+      "ip": "85.190.148.230",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland175": {
+      "ip": "85.190.148.230",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland176": {
+      "ip": "85.190.148.230",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Ragnarok-PrimPlusCrossArk1": {
+      "ip": "85.190.148.231",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne638": {
+      "ip": "85.190.148.231",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne639": {
+      "ip": "85.190.148.231",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland2": {
+      "ip": "85.190.148.231",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne673": {
+      "ip": "85.190.148.232",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne674": {
+      "ip": "85.190.148.232",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne675": {
+      "ip": "85.190.148.232",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo933": {
+      "ip": "46.251.238.241",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-Valguero935": {
+      "ip": "85.190.148.233",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-Valguero936": {
+      "ip": "85.190.148.233",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-Valguero937": {
+      "ip": "85.190.148.233",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Aberration-CrossArk11": {
+      "ip": "85.190.148.233",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-Hardcore1": {
+      "ip": "46.251.238.102",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-Hardcore2": {
+      "ip": "46.251.238.102",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-ScorchedEarth-CrossArk11": {
+      "ip": "46.251.238.102",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer423 (on Nitrado)": {
+      "ip": "46.251.238.102",
+      "port": 27021,
+      "tracked": false
+    },
+    "PVP-Official-TheIsland-ARKpocalypse1": {
+      "ip": "46.251.238.103",
+      "port": 27015,
+      "tracked": false
+    },
+    "PVP-Official-TheCenter-ARKpocalypse2": {
+      "ip": "46.251.238.103",
+      "port": 27017,
+      "tracked": false
+    },
+    "PVP-Official-Extinction-ARKpocalypse6": {
+      "ip": "46.251.238.103",
+      "port": 27019,
+      "tracked": false
+    },
+    "PVP-Official-GenOne-ARKpocalypse8": {
+      "ip": "46.251.238.103",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland329": {
+      "ip": "46.251.238.104",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland330": {
+      "ip": "46.251.238.104",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland331": {
+      "ip": "46.251.238.104",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland4": {
+      "ip": "46.251.238.104",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-TheIsland-CrossArk1": {
+      "ip": "46.251.238.105",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer251 (on Nitrado)": {
+      "ip": "46.251.238.105",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer253 (on Nitrado)": {
+      "ip": "46.251.238.105",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer258 (on Nitrado)": {
+      "ip": "46.251.238.105",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-SmallTribes37": {
+      "ip": "46.251.238.106",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-SmallTribes38": {
+      "ip": "46.251.238.106",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-SmallTribes39": {
+      "ip": "46.251.238.106",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration-SmallTribes28": {
+      "ip": "46.251.238.106",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-TheCenter-CrossArk1": {
+      "ip": "46.251.238.107",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer266 (on Nitrado)": {
+      "ip": "46.251.238.107",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer267 (on Nitrado)": {
+      "ip": "46.251.238.107",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer268 (on Nitrado)": {
+      "ip": "46.251.238.107",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-TheCenter-CrossArk11": {
+      "ip": "46.251.238.108",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-EU-PVE-OfficialServer127 (on Nitrado)": {
+      "ip": "46.251.238.108",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-ScorchedEarth-CrossArk2": {
+      "ip": "46.251.238.108",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Ragnarok-PrimPlusCrossArk2": {
+      "ip": "46.251.238.108",
+      "port": 27021,
+      "tracked": false
+    },
+    "PVP-Official-ScorchedEarth-ARKpocalypse3": {
+      "ip": "46.251.238.109",
+      "port": 27015,
+      "tracked": false
+    },
+    "PVP-Official-Ragnarok-ARKpocalypse4": {
+      "ip": "46.251.238.109",
+      "port": 27017,
+      "tracked": false
+    },
+    "PVP-Official-Aberration-ARKpocalypse5": {
+      "ip": "46.251.238.109",
+      "port": 27019,
+      "tracked": false
+    },
+    "PVP-Official-Valguero-ARKpocalypse7": {
+      "ip": "46.251.238.109",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles838": {
+      "ip": "95.156.213.163",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles851": {
+      "ip": "95.156.213.163",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-SA-PVE-OfficialServer504": {
+      "ip": "92.38.150.6",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-The-SA-PVE-OfficialServer505": {
+      "ip": "92.38.150.6",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-Conquest37": {
+      "ip": "5.101.166.247",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-Conquest38": {
+      "ip": "5.101.166.247",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-Conquest39": {
+      "ip": "5.101.166.247",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-Conquest28": {
+      "ip": "37.10.127.25",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-Conquest29": {
+      "ip": "37.10.127.25",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-Conquest30": {
+      "ip": "37.10.127.25",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-Conquest31": {
+      "ip": "37.10.125.125",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-Conquest32": {
+      "ip": "37.10.125.125",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-Conquest33": {
+      "ip": "37.10.125.125",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-Conquest34": {
+      "ip": "37.10.125.124",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-Conquest35": {
+      "ip": "37.10.125.124",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth-Conquest36": {
+      "ip": "37.10.125.124",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles-Conquest46": {
+      "ip": "46.251.238.192",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenOne-Conquest47": {
+      "ip": "46.251.238.192",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction-Conquest48": {
+      "ip": "46.251.238.192",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration-Conquest49": {
+      "ip": "46.251.238.192",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-GenTwo979": {
+      "ip": "128.0.115.44",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-GenTwo980": {
+      "ip": "128.0.115.44",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-GenTwo981": {
+      "ip": "128.0.115.44",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-GenTwo982": {
+      "ip": "128.0.115.44",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo974": {
+      "ip": "109.230.214.21",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo976": {
+      "ip": "109.230.214.78",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-GenTwo948": {
+      "ip": "109.230.214.21",
+      "port": 27015,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-GenTwo949": {
+      "ip": "109.230.214.21",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-SmallTribes150": {
+      "ip": "109.230.214.22",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-SmallTribes151": {
+      "ip": "109.230.214.22",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-SmallTribes152": {
+      "ip": "109.230.214.22",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-SmallTribes153": {
+      "ip": "109.230.214.22",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-GenTwo-CrossArk6": {
+      "ip": "109.230.214.23",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-GenTwo-CrossArk8": {
+      "ip": "109.230.214.23",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-GenTwo-CrossArk9": {
+      "ip": "109.230.214.23",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-GenTwo-CrossArk10": {
+      "ip": "109.230.214.23",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-Conquest62": {
+      "ip": "109.230.214.24",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-Conquest63": {
+      "ip": "109.230.214.24",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-Conquest64": {
+      "ip": "109.230.214.24",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-Conquest65": {
+      "ip": "109.230.214.24",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo1010": {
+      "ip": "109.230.214.25",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo1011": {
+      "ip": "109.230.214.25",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo1012": {
+      "ip": "109.230.214.25",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo1013": {
+      "ip": "109.230.214.25",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo939": {
+      "ip": "37.10.126.189",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo940": {
+      "ip": "37.10.126.189",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo941": {
+      "ip": "37.10.126.189",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo942": {
+      "ip": "37.10.126.189",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo946": {
+      "ip": "37.10.126.190",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo947": {
+      "ip": "37.10.126.190",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo948": {
+      "ip": "37.10.126.190",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo949": {
+      "ip": "37.10.126.190",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo953": {
+      "ip": "37.10.126.191",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo954": {
+      "ip": "37.10.126.191",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo955": {
+      "ip": "37.10.126.191",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo956": {
+      "ip": "37.10.126.191",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo960": {
+      "ip": "37.10.126.192",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo961": {
+      "ip": "37.10.126.192",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo962": {
+      "ip": "37.10.126.192",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo963": {
+      "ip": "109.230.214.77",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo967": {
+      "ip": "37.10.126.193",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo969": {
+      "ip": "37.10.126.193",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo970": {
+      "ip": "95.156.213.166",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo971": {
+      "ip": "45.159.5.203",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo899": {
+      "ip": "46.251.238.193",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo900": {
+      "ip": "46.251.238.193",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo901": {
+      "ip": "46.251.238.193",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo902": {
+      "ip": "46.251.238.193",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo906": {
+      "ip": "46.251.238.194",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo907": {
+      "ip": "46.251.238.194",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo908": {
+      "ip": "46.251.238.194",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo909": {
+      "ip": "46.251.238.194",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo913": {
+      "ip": "46.251.238.195",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo914": {
+      "ip": "46.251.238.195",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo915": {
+      "ip": "46.251.238.195",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo916": {
+      "ip": "46.251.238.195",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo920": {
+      "ip": "46.251.238.196",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo921": {
+      "ip": "46.251.238.196",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo922": {
+      "ip": "46.251.238.242",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo923": {
+      "ip": "46.251.238.240",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo927": {
+      "ip": "46.251.238.197",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo928": {
+      "ip": "46.251.238.197",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo929": {
+      "ip": "46.251.238.197",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo930": {
+      "ip": "46.251.238.197",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo934": {
+      "ip": "46.251.238.198",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo935": {
+      "ip": "46.251.238.198",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo936": {
+      "ip": "46.251.238.240",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-GenTwo946": {
+      "ip": "46.251.238.198",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-SmallTribes144": {
+      "ip": "46.251.238.199",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-SmallTribes145": {
+      "ip": "46.251.238.199",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-SmallTribes146": {
+      "ip": "46.251.238.199",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-SmallTribes147": {
+      "ip": "46.251.238.199",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-GenTwo-CrossArk1": {
+      "ip": "46.251.238.200",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-GenTwo-CrossArk2": {
+      "ip": "46.251.238.200",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-OfflineRaidProtection-GenTwo-CrossArk5": {
+      "ip": "46.251.238.200",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-GenTwo-CrossArk11": {
+      "ip": "46.251.238.200",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-Conquest71": {
+      "ip": "46.251.238.201",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-Conquest72": {
+      "ip": "46.251.238.201",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-Conquest73": {
+      "ip": "46.251.238.201",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-Conquest74": {
+      "ip": "46.251.238.201",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo1003": {
+      "ip": "46.251.238.202",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo1004": {
+      "ip": "46.251.238.202",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo1005": {
+      "ip": "95.156.239.173",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo1006": {
+      "ip": "46.251.238.241",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-SmallTribes162": {
+      "ip": "109.230.214.74",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-SmallTribes163": {
+      "ip": "109.230.214.74",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-SmallTribes164": {
+      "ip": "109.230.214.74",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-SmallTribes165": {
+      "ip": "109.230.214.74",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo992": {
+      "ip": "109.230.214.75",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo993": {
+      "ip": "109.230.214.75",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo994": {
+      "ip": "109.230.214.75",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo995": {
+      "ip": "109.230.214.78",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-SmallTribes156": {
+      "ip": "46.251.238.229",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-SmallTribes157": {
+      "ip": "46.251.238.229",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-SmallTribes158": {
+      "ip": "46.251.238.229",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-SmallTribes159": {
+      "ip": "46.251.238.229",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo985": {
+      "ip": "46.251.238.230",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo986": {
+      "ip": "46.251.238.230",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo987": {
+      "ip": "46.251.238.230",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo988": {
+      "ip": "46.251.238.230",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-GenTwo999": {
+      "ip": "128.0.115.48",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-GenTwo1000": {
+      "ip": "128.0.115.48",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo938": {
+      "ip": "46.251.238.231",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo905": {
+      "ip": "46.251.238.231",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo919": {
+      "ip": "46.251.238.231",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo912": {
+      "ip": "46.251.238.231",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo977": {
+      "ip": "37.10.126.207",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo1016": {
+      "ip": "37.10.126.207",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-GenTwo-CrossArk14": {
+      "ip": "37.10.126.207",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo959": {
+      "ip": "37.10.126.207",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo925": {
+      "ip": "46.251.238.232",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo932": {
+      "ip": "46.251.238.232",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo1008": {
+      "ip": "46.251.238.232",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo990": {
+      "ip": "46.251.238.233",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo937": {
+      "ip": "46.251.238.233",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo1015": {
+      "ip": "37.10.126.208",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo997": {
+      "ip": "37.10.126.208",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo965": {
+      "ip": "37.10.126.208",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo972": {
+      "ip": "95.156.213.167",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-GenTwo1002": {
+      "ip": "128.0.115.43",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVP-Official-GenOne701": {
+      "ip": "128.0.115.43",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne648": {
+      "ip": "46.251.238.234",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenOne657": {
+      "ip": "46.251.238.234",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Extinction496": {
+      "ip": "46.251.238.234",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland786": {
+      "ip": "46.251.238.234",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-CrystalIsles869": {
+      "ip": "46.251.238.235",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland6": {
+      "ip": "46.251.238.235",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Extinction-CrossArk1": {
+      "ip": "46.251.238.236",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Extinction-CrossArk13": {
+      "ip": "46.251.238.236",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Extinction-CrossArk11": {
+      "ip": "46.251.238.236",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Extinction-CrossArk2": {
+      "ip": "46.251.238.236",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-PVE-OfficialServer486": {
+      "ip": "37.10.127.178",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo964": {
+      "ip": "37.10.127.178",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland416": {
+      "ip": "37.10.127.180",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo968": {
+      "ip": "37.10.127.180",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenOne601": {
+      "ip": "37.10.127.180",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland888": {
+      "ip": "37.10.127.180",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo975": {
+      "ip": "37.10.127.181",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo998": {
+      "ip": "37.10.127.181",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-ClassicPVP42": {
+      "ip": "85.190.155.140",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-ClassicPVP40": {
+      "ip": "85.190.155.140",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-ClassicPVP41": {
+      "ip": "85.190.155.140",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-ClassicPVP43": {
+      "ip": "5.101.166.118",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth-ClassicPVP45": {
+      "ip": "5.101.166.118",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-ClassicPVP44": {
+      "ip": "5.101.166.118",
+      "port": 27017,
+      "tracked": false
+    },
+    "*Beginner*EU-PVP-Official-TheIsland425": {
+      "ip": "85.190.154.179",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-ClassicPVP7": {
+      "ip": "85.190.154.33",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-ClassicPVP1": {
+      "ip": "85.190.154.30",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-TheIsland-PrimPlusCrossArk3": {
+      "ip": "85.190.158.31",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-ClassicPVP5": {
+      "ip": "85.190.154.31",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-ClassicPVP6": {
+      "ip": "85.190.154.31",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-ClassicPVP4": {
+      "ip": "85.190.154.31",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-ClassicPVP11": {
+      "ip": "5.101.166.5",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-ClassicPVP10": {
+      "ip": "5.101.166.5",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-ClassicPVP12": {
+      "ip": "5.101.166.5",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth-ClassicPVP13": {
+      "ip": "5.101.166.5",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-ClassicPVP3": {
+      "ip": "85.190.154.30",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-ClassicPVP9": {
+      "ip": "85.190.154.33",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-ClassicPVP8": {
+      "ip": "85.190.154.33",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-ClassicPVP14": {
+      "ip": "85.190.157.171",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-ClassicPVP15": {
+      "ip": "85.190.157.171",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-ClassicPVP16": {
+      "ip": "85.190.157.171",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-ClassicPVP17": {
+      "ip": "85.190.156.28",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-ClassicPVP21": {
+      "ip": "85.190.152.9",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-ClassicPVP22": {
+      "ip": "85.190.152.9",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-ClassicPVP20": {
+      "ip": "85.190.152.9",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-ClassicPVP19": {
+      "ip": "85.190.156.28",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-ClassicPVP18": {
+      "ip": "85.190.156.28",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth-ClassicPVP26": {
+      "ip": "37.10.127.67",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-ClassicPVP24": {
+      "ip": "37.10.127.67",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-ClassicPVP23": {
+      "ip": "37.10.127.67",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-ClassicPVP25": {
+      "ip": "37.10.127.67",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-TheIsland142": {
+      "ip": "36.27.209.106",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-Asia-PVE-OfficialServer514": {
+      "ip": "36.27.209.106",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok113": {
+      "ip": "36.27.209.24",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-ScorchedEarth151": {
+      "ip": "36.27.209.39",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok108": {
+      "ip": "36.27.209.23",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-TheIsland132": {
+      "ip": "183.131.206.49",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-TheIsland131": {
+      "ip": "183.131.206.49",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok109": {
+      "ip": "36.27.209.23",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-ScorchedEarth152": {
+      "ip": "36.27.209.39",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVE-Extinction160": {
+      "ip": "183.131.206.32",
+      "port": 27021,
+      "tracked": false
+    },
+    "Asia-PVP-TheIsland141": {
+      "ip": "36.27.209.106",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok110": {
+      "ip": "36.27.209.23",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok112": {
+      "ip": "36.27.209.24",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok111": {
+      "ip": "36.27.209.24",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok147": {
+      "ip": "183.131.206.32",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-Aberration156": {
+      "ip": "183.131.206.52",
+      "port": 27021,
+      "tracked": false
+    },
+    "Asia-PVP-ScorchedEarth154": {
+      "ip": "183.131.206.52",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-ScorchedEarth155": {
+      "ip": "183.131.206.52",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok148": {
+      "ip": "183.131.206.32",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-ScorchedEarth149": {
+      "ip": "183.131.206.32",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-Valguero158": {
+      "ip": "183.131.206.47",
+      "port": 27021,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok103": {
+      "ip": "183.131.206.34",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-TheCenter128": {
+      "ip": "183.131.206.48",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-TheCenter125": {
+      "ip": "183.131.206.47",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-Asia-PVE-OfficialServer526": {
+      "ip": "36.27.209.27",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok107": {
+      "ip": "183.131.206.24",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-TheIsland135": {
+      "ip": "183.131.206.25",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-Extinction157": {
+      "ip": "36.27.209.39",
+      "port": 27021,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok105": {
+      "ip": "183.131.206.24",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-TheIsland134": {
+      "ip": "183.131.206.25",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-TheCenter146": {
+      "ip": "36.27.209.27",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok102": {
+      "ip": "183.131.206.34",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVE-Aberration161": {
+      "ip": "183.131.206.48",
+      "port": 27021,
+      "tracked": false
+    },
+    "Asia-PVP-ScorchedEarth153": {
+      "ip": "183.131.206.52",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-TheCenter126": {
+      "ip": "183.131.206.47",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok104": {
+      "ip": "183.131.206.34",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-TheCenter129": {
+      "ip": "183.131.206.48",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-TheCenter127": {
+      "ip": "183.131.206.48",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok106": {
+      "ip": "183.131.206.24",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-TheCenter124": {
+      "ip": "183.131.206.47",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-TheIsland133": {
+      "ip": "183.131.206.25",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-ClassicPVP2": {
+      "ip": "95.156.213.148",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-ClassicPVP27": {
+      "ip": "95.156.213.148",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVE-Ragnarok101": {
+      "ip": "36.27.209.26",
+      "port": 27017,
+      "tracked": false
+    },
+    "Asia-PVP-Official-Valguero-ARKpocalypse7": {
+      "ip": "36.27.209.169",
+      "port": 27021,
+      "tracked": false
+    },
+    "Asia-PVP-Ragnarok100": {
+      "ip": "36.27.209.26",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-Official-ScorchedEarth-ARKpocalypse3": {
+      "ip": "36.27.209.169",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-TheCenter145": {
+      "ip": "36.27.209.27",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-TheIsland130": {
+      "ip": "183.131.206.49",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-Official-TheCenter-ARKpocalypse2": {
+      "ip": "36.27.209.169",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-ClassicPVP28": {
+      "ip": "37.10.127.25",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-ClassicPVP29": {
+      "ip": "37.10.127.25",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-ClassicPVP34": {
+      "ip": "37.10.125.124",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-ClassicPVP35": {
+      "ip": "37.10.125.124",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth-ClassicPVP36": {
+      "ip": "37.10.125.124",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-ClassicPVP30": {
+      "ip": "37.10.127.25",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-ClassicPVP32": {
+      "ip": "37.10.125.125",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-ClassicPVP33": {
+      "ip": "37.10.125.125",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-ClassicPVP31": {
+      "ip": "37.10.125.125",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland-ClassicPVP46": {
+      "ip": "109.230.214.24",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland-ClassicPVP48": {
+      "ip": "109.230.214.24",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland-ClassicPVP47": {
+      "ip": "109.230.214.24",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland-ClassicPVP49": {
+      "ip": "109.230.214.24",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo945": {
+      "ip": "109.230.214.77",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo958": {
+      "ip": "109.230.214.77",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1024": {
+      "ip": "45.159.5.194",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1025": {
+      "ip": "45.159.5.194",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1036": {
+      "ip": "45.159.5.196",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1038": {
+      "ip": "45.159.5.196",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1031": {
+      "ip": "45.159.5.195",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1046": {
+      "ip": "45.159.5.197",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1030": {
+      "ip": "45.159.5.195",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1058": {
+      "ip": "45.159.5.199",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1051": {
+      "ip": "45.159.5.198",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1022": {
+      "ip": "45.159.5.194",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1074": {
+      "ip": "45.159.5.201",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1073": {
+      "ip": "45.159.5.201",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1039": {
+      "ip": "45.159.5.196",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1057": {
+      "ip": "45.159.5.199",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1029": {
+      "ip": "45.159.5.195",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1078": {
+      "ip": "45.159.5.202",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-ClassicPVP37": {
+      "ip": "5.101.166.247",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1023": {
+      "ip": "45.159.5.194",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1037": {
+      "ip": "45.159.5.196",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1060": {
+      "ip": "45.159.5.199",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-ClassicPVP39": {
+      "ip": "5.101.166.247",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1044": {
+      "ip": "45.159.5.197",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1043": {
+      "ip": "45.159.5.197",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1045": {
+      "ip": "45.159.5.197",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-LostIsland1032": {
+      "ip": "45.159.5.195",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1052": {
+      "ip": "45.159.5.198",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1059": {
+      "ip": "45.159.5.199",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1050": {
+      "ip": "45.159.5.198",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-ClassicPVP38": {
+      "ip": "5.101.166.247",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1053": {
+      "ip": "45.159.5.198",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1079": {
+      "ip": "45.159.5.202",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1071": {
+      "ip": "45.159.5.201",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1081": {
+      "ip": "45.159.5.202",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1080": {
+      "ip": "45.159.5.202",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1072": {
+      "ip": "45.159.5.201",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1065": {
+      "ip": "45.159.5.200",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1067": {
+      "ip": "45.159.5.200",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1066": {
+      "ip": "45.159.5.200",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland1064": {
+      "ip": "45.159.5.200",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland-SmallTribes176": {
+      "ip": "45.159.5.204",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland-SmallTribes177": {
+      "ip": "45.159.5.204",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland-SmallTribes178": {
+      "ip": "45.159.5.204",
+      "port": 27019,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-LostIsland952": {
+      "ip": "45.159.5.203",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-LostIsland-CrossArk6": {
+      "ip": "109.230.214.55",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-LostIsland-CrossArk10": {
+      "ip": "109.230.214.55",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-PVE-NA-LostIsland953": {
+      "ip": "45.159.5.203",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland-SmallTribes179": {
+      "ip": "45.159.5.204",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-LostIsland-CrossArk9": {
+      "ip": "109.230.214.55",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-LostIsland-CrossArk8": {
+      "ip": "109.230.214.55",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-GenTwo947": {
+      "ip": "46.251.238.198",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland-ClassicPVP52": {
+      "ip": "46.251.238.201",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland-ClassicPVP53": {
+      "ip": "46.251.238.201",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland-ClassicPVP54": {
+      "ip": "46.251.238.201",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland-ClassicPVP55": {
+      "ip": "46.251.238.201",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-GenTwo1001": {
+      "ip": "128.0.115.48",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo924": {
+      "ip": "46.251.238.235",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland1017": {
+      "ip": "46.251.238.239",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo931": {
+      "ip": "46.251.238.240",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland1018": {
+      "ip": "46.251.238.239",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland1019": {
+      "ip": "46.251.238.239",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-TheIsland1020": {
+      "ip": "46.251.238.239",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1101": {
+      "ip": "95.156.239.131",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1109": {
+      "ip": "95.156.239.132",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1102": {
+      "ip": "95.156.239.131",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1115": {
+      "ip": "95.156.239.133",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1114": {
+      "ip": "95.156.239.133",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1116": {
+      "ip": "95.156.239.133",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1113": {
+      "ip": "95.156.239.133",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1093": {
+      "ip": "95.156.239.130",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1121": {
+      "ip": "95.156.239.134",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1095": {
+      "ip": "95.156.239.130",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1099": {
+      "ip": "95.156.239.131",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1129": {
+      "ip": "95.156.239.135",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1122": {
+      "ip": "95.156.239.134",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1120": {
+      "ip": "95.156.239.134",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1123": {
+      "ip": "95.156.239.134",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1085": {
+      "ip": "95.156.239.185",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1092": {
+      "ip": "95.156.239.130",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1100": {
+      "ip": "95.156.239.131",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1127": {
+      "ip": "95.156.239.135",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1088": {
+      "ip": "95.156.239.185",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1086": {
+      "ip": "95.156.239.185",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1087": {
+      "ip": "95.156.239.185",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1094": {
+      "ip": "95.156.239.130",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVE-Official-LostIsland1148": {
+      "ip": "128.0.115.52",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVP-Official-LostIsland1155": {
+      "ip": "128.0.115.53",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-LostIsland1150": {
+      "ip": "128.0.115.52",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVE-Official-LostIsland1151": {
+      "ip": "128.0.115.52",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-CrystalIsles-Hardcore13": {
+      "ip": "95.156.239.138",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1108": {
+      "ip": "95.156.239.132",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1106": {
+      "ip": "95.156.239.132",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland1107": {
+      "ip": "95.156.239.132",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1141": {
+      "ip": "95.156.239.137",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1136": {
+      "ip": "95.156.239.136",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1128": {
+      "ip": "95.156.239.135",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1137": {
+      "ip": "95.156.239.136",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-LostIsland1149": {
+      "ip": "128.0.115.52",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1130": {
+      "ip": "95.156.239.135",
+      "port": 27021,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-LostIsland950": {
+      "ip": "95.156.239.138",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1135": {
+      "ip": "95.156.239.136",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1143": {
+      "ip": "95.156.239.137",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-LostIsland1157": {
+      "ip": "128.0.115.53",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1134": {
+      "ip": "95.156.239.136",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-LostIsland-CrossArk1": {
+      "ip": "95.156.239.174",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVP-Official-LostIsland1156": {
+      "ip": "128.0.115.53",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1142": {
+      "ip": "95.156.239.137",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-LostIsland1444": {
+      "ip": "95.156.239.137",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland-Hardcore14": {
+      "ip": "95.156.239.138",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-PVE-EU-LostIsland951": {
+      "ip": "95.156.239.138",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVP-Official-LostIsland1158": {
+      "ip": "128.0.115.53",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo1007": {
+      "ip": "95.156.239.173",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-LostIsland-CrossArk2": {
+      "ip": "95.156.239.174",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland-SmallTribes170": {
+      "ip": "95.156.239.181",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland-SmallTribes171": {
+      "ip": "95.156.239.181",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-LostIsland-CrossArk11": {
+      "ip": "95.156.239.174",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland-SmallTribes169": {
+      "ip": "95.156.239.181",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland-SmallTribes168": {
+      "ip": "95.156.239.181",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-LostIsland-CrossArk13": {
+      "ip": "95.156.239.174",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo1009": {
+      "ip": "46.251.238.242",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-GenTwo-SmallTribes161": {
+      "ip": "46.251.238.244",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-TheIsland140": {
+      "ip": "36.27.209.37",
+      "port": 27017,
+      "tracked": false
+    },
+    "LEGACY-The-Asia-PVE-OfficialServer508": {
+      "ip": "36.27.209.37",
+      "port": 27019,
+      "tracked": false
+    },
+    "Asia-PVP-TheIsland139": {
+      "ip": "36.27.209.37",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-ScorchedEarth150": {
+      "ip": "36.27.209.39",
+      "port": 27015,
+      "tracked": false
     }
   }
 }

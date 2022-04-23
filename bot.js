@@ -4,26 +4,42 @@ const { ToadScheduler, SimpleIntervalJob, Task } = require('toad-scheduler');
 const fs = require('fs');
 const config = require('./config.json');
 const serverList = require('./servers.json');
+const guildList = require('./guilds.json');
 const client = new Discord.Client();
 const axios = require('axios').default;
-const { v4: uuidv4 } = require('uuid');
 
 class Server {
-  constructor(name, uuid) {
+  constructor(name, ip, port) {
     this.name = name;
     this.data = null;
-    this.uuid = uuid;
+    this.uuid = name;
     this.status = 0;
+    this.ip = ip;
+    this.port = port;
     this.offlineCounter = 0;
-    this.update();
+  }
+
+  getChannelDisplayName() {
+    const statusText = (this.status === 0) ? 'Off' : 'On';
+    const names = this.name.split('-');
+    return names[names.length - 1].slice(-16) + ': ' + statusText;
   }
 
   changeStatus(status) {
     if (this.status !== status) {
       const statusText = (status === 0) ? 'offline' : 'online';
-      sendMessage(this.name + ' is now ' + statusText + '!');
-      updateChannel(this.uuid, this.name, status);
       this.status = status;
+      for (const guildID of Object.keys(guildList.guilds)) {
+        if (guildList.guilds[guildID].trackedServers[this.name]) {
+          const guild = client.guilds.cache.find((g => g.id === guildID));
+          if (guild) {
+            updateChannel(this.getChannelDisplayName(), 
+            guildList.guilds[guildID].trackedServers[this.name])
+            .catch(e => console.error(e));
+            sendMessage(this.name + ' is now ' + statusText + '!', guild.id);
+          }
+        }
+      }
     }
   }
 
@@ -31,8 +47,8 @@ class Server {
     try {
       this.data = await Gamedig.query({
         type: 'arkse',
-        host: serverList.servers[this.uuid].ip,
-        port: serverList.servers[this.uuid].port
+        host: this.ip,
+        port: this.port
       });
       this.changeStatus(1);
       this.offlineCounter = 0;
@@ -45,7 +61,10 @@ class Server {
   }
 
   async isPlayerOn(playerName) {
-    for (const player of (await this.getData()).players) {
+    if (await this.getData() === null) {
+      return false;
+    }
+    for (const player of this.data.players) {
       if (player.name === playerName) {
         return true;
       }
@@ -61,18 +80,95 @@ class Server {
   }
 }
 
+class OfficialServersUpdater {
+  constructor(serversHandler) {
+    this.ports = [27015, 27017, 27019, 27021];
+    this.progress = 0;
+    this.serversHandler = serversHandler;
+  }
+
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  queryServer(serverIP, port) {
+    return new Promise((resolve) => {
+      Gamedig.query({
+        type: 'arkse',
+        host: serverIP,
+        port: port
+      }).then(state => {
+          const name = state.name.replace(/\s-\s\(.+\)/gm, '');
+          if (name !== null) {
+            serverList.servers[name] = {
+              ip: serverIP,
+              port: port,
+              tracked: false
+            };
+            this.progress++;
+          }
+        }).catch(e => {
+          this.progress++;
+        });
+      resolve(1);
+    });
+  }
+
+  async run() {
+    try {
+      const res = await axios.get('http://arkdedicated.com/officialservers.ini');
+      const arkServers = res.data.match(/(?:[0-9]{1,3}\.){3}[0-9]{1,3}/gm);
+      const numServers = arkServers.length * this.ports.length;
+
+      console.log('Updating all official servers');
+      for (const serverIP of arkServers) {
+        for (const port of this.ports) {
+          this.queryServer(serverIP, port);
+          await this.sleep(1);
+        }
+      }
+      while (this.progress !== numServers) {
+        console.log(`Progress: ${this.progress}/${numServers}`)
+        await this.sleep(1000);
+      }
+      for (const serverName of Object.keys(this.serversHandler.servers)) {
+        const server = this.serversHandler.servers[serverName];
+        serverList.servers[server.name].tracked = true;
+        server.ip = serverList.servers[server.name].ip;
+        server.port = serverList.servers[server.name].port;
+        console.log(`${server.ip}:${server.port}`);
+        server.update();
+      }
+      this.serversHandler.saveServers();
+      this.progress = 0;
+      console.log(`Update completed!`);
+    } catch(e) {
+      console.error(e);
+    }
+  }
+}
+
 class ServersHandler {
   constructor() {
     this.servers = {};
+    this.serversUpdater = new OfficialServersUpdater(this);
     const scheduler = new ToadScheduler();
-    const task = new Task('update servers', (sh=this) => {sh.updateServers()});
-    const job = new SimpleIntervalJob({ seconds: config.queryInterval}, task);
+    const queryTask = new Task('update servers', (sh=this) => {sh.updateServers()});
+    const queryJob = new SimpleIntervalJob({ seconds: config.queryInterval}, queryTask);
+    const updateTask = new Task('update server lists', (su=this.serversUpdater) => {su.run()});
+    const updateJob = new SimpleIntervalJob({ days: config.serverListUpdateInterval}, updateTask);
 
     for (const uuid of Object.keys(serverList.servers)) {
       const serverData = serverList.servers[uuid];
-      this.servers[uuid] = new Server(serverData.name, uuid);
+      if (serverData.tracked) {
+        this.servers[uuid] = new Server(uuid, serverData.ip, serverData.port);
+      }
     }
-    scheduler.addSimpleIntervalJob(job);
+
+    scheduler.addSimpleIntervalJob(queryJob);
+    scheduler.addSimpleIntervalJob(updateJob);
+
+    this.serversUpdater.run();
   }
 
   saveServers() {
@@ -87,69 +183,41 @@ class ServersHandler {
     }
   }
 
-  getUUIDsFromName(serverName) {
+  getUUIDsFromName(serverName, tracked, guildID='') {
+    if (tracked && guildID === '') {
+      throw 'empty guild id';
+    }
     const list = [];
-    for (const server of this.getServersAsList()) {
-      if (server.name.toLowerCase().includes(serverName.toLowerCase())) {
-        list.push(server.uuid);
+    const servers = (tracked) ? this.getTrackedServersAsList(guildID) : Object.keys(serverList.servers);
+    for (const server of servers) {
+      if (server.toLowerCase().includes(serverName.toLowerCase())) {
+        list.push(server);
       }
     }
     return list;
   }
 
-  async trackServer(serverName, ip, port, guild) {
-    const uuid = uuidv4();
-    const category = guild.channels.cache.find(c => c.name == 'Tracked Servers' && c.type == "category");
-    const everyoneRole = guild.roles.everyone.id;
-    this.servers[uuid] = new Server(serverName, uuid);
-    serverList.servers[uuid] = {name: serverName, ip: ip, port: port};
-    if (category) {
-      const channel = await guild.channels.create(serverName, {
-        type: 'voice',
-        parent: category.id,
-        permissionOverwrites: [
-          {
-            id: everyoneRole,
-            deny: ['CONNECT']
-          }
-        ]
-      });
-      serverList.servers[uuid].channelID = channel.id;
-      channel.setName(getServerDisplayName(serverName, this.servers[uuid].status));
-    }
-    this.saveServers();
-  }
-
-  trackServers(servers, guild) {
-    for (const server of servers) {
-      this.trackServer(server.name, server.ip, server.port, guild);
-    }
-  }
-
-  untrackServer(serverName) {
-    let serverUUID = null;
-    for (const uuid of Object.keys(this.servers)) {
-      if (this.servers[uuid].name === serverName) {
-        serverUUID = uuid;
-        break;
-      }
-    }
-    if (serverUUID !== null) {
-      const category = client.channels.cache.find(c => c.name == 'Tracked Servers' && c.type == "category");
-      if (category) {
-        const channel = client.channels.cache.find(c => c.id === serverList.servers[serverUUID].channelID);
-        if (channel) {
-          channel.delete();
-        }
-      }
-      delete this.servers[serverUUID];
-      delete serverList.servers[serverUUID];
+  trackServer(serverName) {
+    const serverData = serverList.servers[serverName];
+    if (serverData !== undefined
+        && !serverData.tracked) {
+      serverData.tracked = true;
+      this.servers[serverName] = new Server(serverName, serverData.ip, serverData.port);
       this.saveServers();
       return true;
-    } else {
+    }
+    return false;
+  }
+
+    untrackServer(serverName) {
+      if (this.servers[serverName] !== undefined) {
+        serverList.servers[serverName].tracked = false;
+        delete this.servers[serverName];
+        this.saveServers();
+        return true;
+      }
       return false;
     }
-  }
 
   getServer(uuid) {
     if (this.servers[uuid] !== undefined) {
@@ -159,11 +227,14 @@ class ServersHandler {
   }
 
   getServersAsList() {
-    const list = [];
-    for (const uuid of Object.keys(this.servers)) {
-      list.push(this.servers[uuid]);
+    return Object.keys(serverList.servers);
+  }
+
+  getTrackedServersAsList(guildID) {
+    if (!guildID || guildID === '') {
+      throw 'empty guild id';
     }
-    return list;
+    return Object.keys(guildList.guilds[guildID].trackedServers);
   }
 
   hasServer(uuid) {
@@ -174,26 +245,29 @@ class ServersHandler {
     return this.servers[uuid].status;
   }
 
-  getAllServersStatus() {
+  getAllTrackedServersStatus(guildID) {
     const status = {};
-    for (const server of this.getServersAsList()) {
+    for (const server of this.getTrackedServersAsList(guildID)) {
       status[server.name] = this.getServerStatus(server.uuid);
     }
     return status;
   }
 }
 
-function saveConfig() {
-  fs.writeFile('./config.json', JSON.stringify(config, null, 2), err => {
+function saveGuild() {
+  fs.writeFile('./guilds.json', JSON.stringify(guildList, null, 2), err => {
     if (err) console.error(err);
   });
 }
 
-function sendMessage(message) {
-  if (config.channelID !== '') {
-    const channel = client.channels.cache.get(config.channelID);
-    if (channel !== undefined) {
-      channel.send(message);
+function sendMessage(message, guildID) {
+  if (guildList.guilds[guildID] && guildList.guilds[guildID].channelID) {
+    const channelID = guildList.guilds[guildID].channelID;
+    if (channelID !== '') {
+      const channel = client.channels.cache.get(channelID);
+      if (channel !== undefined) {
+        channel.send(message);
+      }
     }
   }
 }
@@ -202,7 +276,7 @@ function vaildateArgsLength(commandName, args, length, channel, shouldSendMsg=tr
   if (args.length !== length) {
     if (config.commands[commandName] !== undefined) {
       if (shouldSendMsg) {
-        channel.send(config.commands[commandName].usage)
+        channel.send(`${config.prefix}${commandName} ${config.commands[commandName].usage}`);
       }
     } else {
       if (shouldSendMsg) {
@@ -218,24 +292,97 @@ function vaildateArgsLength(commandName, args, length, channel, shouldSendMsg=tr
 function setNotificationChannel(msg, arg) {
   const channelID = arg.replace('<', '').replace('>', '').replace('#', '');
   if (client.channels.cache.get(channelID) !== undefined) {
-    config.channelID = channelID;
-    saveConfig();
+    guildList.guilds[msg.guild.id].channelID = channelID;
+    saveGuild();
     msg.channel.send('News channel has been set to ' + arg);
   } else {
     msg.channel.send('Invalid channel');
   }
 }
 
+async function trackServer(msg, serverName) {
+  let uuids = serversHandler.getUUIDsFromName(serverName, false);
+  if (uuids.length > 1 && uuids.length < 20) {
+    let foundExactName = false;
+    for (const uuid of uuids) {
+      if (uuid === serverName) {
+        foundExactName = true;
+        uuids = [uuid];
+      }
+    }
+    if (!foundExactName) {
+      let reply = 'Did you mean:'
+      for (const uuid of uuids) {
+        reply += `\n${uuid}`;
+      }
+      msg.channel.send(reply);
+      return;
+    }
+  } else if (uuids.length > 20) {
+    msg.channel.send('Please be more specific');
+    return;
+  }
+  if (uuids.length === 1) {
+    if (guildList.guilds[msg.guild.id]) {
+      if (!guildList.guilds[msg.guild.id].trackedServers[uuids[0]]) {
+        if (!serverList.servers[uuids[0]].tracked) {
+          serversHandler.trackServer(uuids[0]);
+        }
+        guildList.guilds[msg.guild.id].trackedServers[uuids[0]] = (await createChannel(msg.guild, 
+          serversHandler.getServer(uuids[0]).getChannelDisplayName())).id;
+        saveGuild();
+        msg.channel.send(uuids[0] + ' has been added to the tracking list');
+      } else {
+        msg.channel.send(uuids[0] + ' is already on the tracking list');
+      }
+    } else {
+      console.error('guild id not found');
+    }
+  } else {
+    msg.channel.send('Unable to find server with name ' + serverName);
+  }
+}
+
 function untrackServer(msg, serverName) {
-  if (serversHandler.untrackServer(serverName)) {
-    msg.channel.send(serverName + ' has been removed from the tracking list');
+  const uuids = serversHandler.getUUIDsFromName(serverName, true, msg.guild.id);
+  if (uuids.length > 1 && uuids.length < 20) {
+    let reply = 'Did you mean:'
+    for (const uuid of uuids) {
+      reply += `\n${uuid}`;
+    }
+    msg.channel.send(reply);
+  } else if (uuids.length > 20) {
+    msg.channel.send('Please be more specific');
+  } else if (uuids.length === 1) {
+    if (guildList.guilds[msg.guild.id]) {
+      if (guildList.guilds[msg.guild.id].trackedServers[uuids[0]]) {
+        let isTrackedOnElseWhere = false;
+        for (const guildID of Object.keys(guildList.guilds)) {
+          if (guildList.guilds[guildID].trackedServers[uuids[0]] && guildID !== msg.guild.id) {
+            isTrackedOnElseWhere = true;
+            break;
+          }
+        }
+        if(!isTrackedOnElseWhere) {
+          serversHandler.untrackServer(uuids[0]);
+        }
+        deleteChannel(guildList.guilds[msg.guild.id].trackedServers[uuids[0]]);
+        delete guildList.guilds[msg.guild.id].trackedServers[uuids[0]];
+        saveGuild();
+        msg.channel.send(uuids[0] + ' has been removed from the tracking list');
+      } else {
+        msg.channel.send(uuids[0] + ' is not tracked');
+      }
+    } else {
+      console.error('guild id not found');
+    }
   } else {
     msg.channel.send('Unable to find server with name ' + serverName);
   }
 }
 
 function listServersStatus(msg) {
-  const serversStatus = serversHandler.getAllServersStatus();
+  const serversStatus = guildList.guilds[msg.guild.id].trackedServers;  
   let list = 'Currently tracking:';
   for (const serverName of Object.keys(serversStatus)) {
     const status = (serversStatus[serverName] === 0) ? ' (Offline)' : ' (Online)';
@@ -246,16 +393,21 @@ function listServersStatus(msg) {
 
 async function stalk(msg, playerName, serverName=null) {
   const uuids = (serverName !== null) ? 
-    serversHandler.getUUIDsFromName(serverName) : Object.keys(serversHandler.servers);
+    serversHandler.getUUIDsFromName(serverName, true, msg.guild.id) : serversHandler.getTrackedServersAsList(msg.guild.id);
+  if (serverName === null && uuids.length === 0) {
+    msg.channel.send('Not tracking any server')
+    return;
+  } 
   let isOnline = false;
   if (uuids.length < 1) {
     msg.channel.send('Unknown server');
+    return;
   }
   for (const uuid of uuids) {
     if (uuid !== null) {
       isOnline = await serversHandler.getServer(uuid).isPlayerOn(playerName);
       if (isOnline) {
-        msg.channel.send(playerName + ' is currently on ' + serverList.servers[uuid].name);
+        msg.channel.send(playerName + ' is currently on ' + serversHandler.getServer(uuid).name);
         break;
       }
     }
@@ -264,13 +416,13 @@ async function stalk(msg, playerName, serverName=null) {
     if(serverName !== null) {
       msg.channel.send(playerName + ' is not on any severs containing ' + serverName);
     } else {
-      msg.channel.send(playerName + ' is not on any tracked severs');
+      msg.channel.send(playerName + ' is not on any tracked servers');
     }
   }
 }
 
 function checkServerStatus(msg, serverName) {
-  const uuids = serversHandler.getUUIDsFromName(serverName);
+  const uuids = serversHandler.getUUIDsFromName(serverName, true, msg.guild.id);
   if (uuids.length === 0) {
     msg.channel.send('Unknown Server');
     return;
@@ -283,19 +435,19 @@ function checkServerStatus(msg, serverName) {
 }
 
 async function listPlayers(msg, serverName) {
-  const uuids = serversHandler.getUUIDsFromName(serverName);
+  const uuids = serversHandler.getUUIDsFromName(serverName, true, msg.guild.id);
   if (uuids.length > 0) {
     for (const uuid of uuids) {
       let str = '';
+      const server = serversHandler.getServer(uuid);
       if (serversHandler.getServerStatus(uuid) !== 0) {
-        const server = serversHandler.getServer(uuid);
         str += '\nList of players on ' + server.name + ':';
         for (const player of (await server.getData()).players) {
           str += '\n' + player.name;
         }
         msg.channel.send(str.substring(1));
       } else {
-        msg.channel.send(serverName + ' is offline');
+        msg.channel.send(server.name + ' is offline');
       }
     }
   } else {
@@ -303,48 +455,52 @@ async function listPlayers(msg, serverName) {
   }
 }
 
-async function setupchannels(msg) {
-  let category = msg.guild.channels.cache.find(c => c.name == 'Tracked Servers' && c.type == "category");
-  if (!category) {
-    category = await msg.guild.channels.create('Tracked Servers', {type: 'category'});
-  }
-  for (const serverUUID of Object.keys(serverList.servers)) {
-    const server = serverList.servers[serverUUID];
-    if (server.channelID === undefined) {
-      try {
-        const channel = await msg.guild.channels.create(server.name, {
-          type: 'voice',
-          parent: category.id,
-          permissionOverwrites: [
-            {
-              id: msg.author.id,
-              deny: ['CONNECT']
-            }
-          ]
-        });
-        const serverObj = serversHandler.getServer(serverUUID);
-        serverList.servers[serverUUID].channelID = channel.id;
-        channel.setName(getServerDisplayName(serverObj.name, serverObj.status));
-      } catch(e) {
-        console.error(e);
+async function updateChannel(name, channelID) {
+  try {
+    if (channelID !== undefined) {
+      const channel = client.channels.cache.get(channelID);
+      if (channel !== undefined) {
+        channel.setName(name);
+        return channel;
       }
+      throw 'channel not found';
     }
-    serversHandler.saveServers();
+  } catch(e) {
+    throw e;
   }
 }
 
-function getServerDisplayName(serverName, status) {
-  const statusText = (status === 0) ? 'Off' : 'On';
-  const names = serverName.split('-');
-  return names[names.length - 1].slice(-16) + ': ' + statusText
+async function createChannel(guild, name) {
+  try {
+    let category = guild.channels.cache.find(c => c.name === 'Tracked Servers' && c.type === "category");
+    if (!category) {
+      category = await guild.channels.create('Tracked Servers', {type: 'category'});
+    }
+    const everyoneRoleID = guild.roles.everyone.id;
+    const channel = await guild.channels.create(name, {
+      type: 'voice',
+      parent: category.id,
+      permissionOverwrites: [
+        {
+          id: everyoneRoleID,
+          deny: ['CONNECT']
+        }
+      ]
+    });
+    return channel;
+  } catch(e) {
+    throw e;
+  }
 }
 
-function updateChannel(uuid, name, status) {
-  if (serverList.servers[uuid].channelID !== undefined) {
-    const channel = client.channels.cache.get(serverList.servers[uuid].channelID);
-    if (channel !== undefined) {
-      channel.setName(getServerDisplayName(name, status));
+async function deleteChannel(channelID) {
+  try {
+    const channel = client.channels.cache.find(c => c.id === channelID);
+    if (channel) {
+      await channel.delete();
     }
+  } catch(e) {
+    throw e;
   }
 }
 
@@ -359,17 +515,22 @@ async function getRates(msg) {
 
 const serversHandler = new ServersHandler();
 
-client.on('ready', () => {
+client.on('ready', async () => {
   console.log('Logged in as ' + client.user.tag);
-  for (const server of serversHandler.getServersAsList()) {
-    updateChannel(server.uuid, server.name, server.status);
-  }
+  serversHandler.updateServers();
 });
 
 client.on('message', msg => {
   if (!msg.content.startsWith(config.prefix) 
-    || msg.author.bot) return;
+    || msg.author.bot || !msg.guild) return;
   const args = msg.content.slice(1).match(/"[^"]+"|[^\s]+/gm);
+  if (!guildList.guilds[msg.guild.id]) {
+    guildList.guilds[msg.guild.id] = {
+      channelID: msg.channel.id,
+      trackedServers: {}
+    }
+    saveGuild();
+  }
   if (args === null) {
     return;
   }
@@ -381,9 +542,8 @@ client.on('message', msg => {
     if (!vaildateArgsLength(command, args, 1, msg.channel)) return;
     setNotificationChannel(msg, args[0]);
   } else if (command === 'track' && msg.member.hasPermission('ADMINISTRATOR')) {
-    if (!vaildateArgsLength(command, args, 3, msg.channel)) return;
-    serversHandler.trackServer(args[0], args[1], args[2], msg.guild);
-    msg.channel.send(args[0] + ' has been added to the tracking list');
+    if (!vaildateArgsLength(command, args, 1, msg.channel)) return;
+    trackServer(msg, args[0]);
   } else if (command === 'untrack' && msg.member.hasPermission('ADMINISTRATOR')) {
     if (!vaildateArgsLength(command, args, 1, msg.channel)) return;
     untrackServer(msg, args[0]);
@@ -398,11 +558,9 @@ client.on('message', msg => {
   } else if (command === 'status') {
     if (!vaildateArgsLength(command, args, 1, msg.channel)) return;
     checkServerStatus(msg, args[0]);
-  } else if (command === 'listplayers') {
+  } else if (['listplayers', 'lp'].includes(command)) {
     if (!vaildateArgsLength(command, args, 1, msg.channel)) return;
     listPlayers(msg, args[0]);
-  } else if (command === 'setupchannels') {
-    setupchannels(msg);
   } else if (command === 'rates') {
     getRates(msg);
   }
