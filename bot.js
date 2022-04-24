@@ -61,7 +61,7 @@ class Server {
   }
 
   async isPlayerOn(playerName) {
-    if (await this.getData() === null) {
+    if (this.status === 0 || await this.getData() === null) {
       return false;
     }
     for (const player of this.data.players) {
