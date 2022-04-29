@@ -2318,7 +2318,7 @@
     "NA-PVE-Official-TheIsland48": {
       "ip": "95.156.213.135",
       "port": 27017,
-      "tracked": false
+      "tracked": true
     },
     "NA-PVP-Official-ScorchedEarth-SmallTribes25": {
       "ip": "85.190.159.30",
@@ -2898,7 +2898,7 @@
     "NA-PVE-Official-TheCenter353": {
       "ip": "85.190.156.173",
       "port": 27017,
-      "tracked": false
+      "tracked": true
     },
     "LEGACY-PVE-NA-GenOne942": {
       "ip": "85.190.156.173",
@@ -5396,7 +5396,7 @@
       "tracked": false
     },
     "EU-PVE-Official-GenTwo991": {
-      "ip": "46.251.238.181",
+      "ip": "46.251.238.243",
       "port": 27019,
       "tracked": false
     },
@@ -6076,7 +6076,7 @@
       "tracked": false
     },
     "NA-PVE-Official-GenTwo974": {
-      "ip": "109.230.214.21",
+      "ip": "95.156.213.168",
       "port": 27015,
       "tracked": false
     },
@@ -6171,8 +6171,8 @@
       "tracked": false
     },
     "NA-PVE-Official-GenTwo1013": {
-      "ip": "109.230.214.25",
-      "port": 27021,
+      "ip": "109.230.214.41",
+      "port": 27015,
       "tracked": false
     },
     "NA-PVP-Official-GenTwo939": {
@@ -6371,8 +6371,8 @@
       "tracked": false
     },
     "EU-PVE-Official-GenTwo930": {
-      "ip": "46.251.238.197",
-      "port": 27021,
+      "ip": "46.251.238.243",
+      "port": 27015,
       "tracked": false
     },
     "EU-PVE-Official-GenTwo934": {
@@ -6601,8 +6601,8 @@
       "tracked": false
     },
     "NA-PVE-Official-GenTwo959": {
-      "ip": "37.10.126.207",
-      "port": 27021,
+      "ip": "109.230.214.41",
+      "port": 27017,
       "tracked": false
     },
     "EU-PVE-Official-GenTwo925": {
@@ -7858,6 +7858,41 @@
     "Asia-PVP-ScorchedEarth150": {
       "ip": "36.27.209.39",
       "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-TheCenter121": {
+      "ip": "183.131.206.46",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-TheCenter123": {
+      "ip": "183.131.206.46",
+      "port": 27019,
+      "tracked": false
+    },
+    "Live Beta": {
+      "ip": "37.10.126.187",
+      "port": 27015,
+      "tracked": false
+    },
+    "Asia-PVP-TheCenter122": {
+      "ip": "183.131.206.46",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo996": {
+      "ip": "95.156.213.165",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-GenTwo1014": {
+      "ip": "95.156.213.165",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-GenTwo989": {
+      "ip": "46.251.238.243",
+      "port": 27017,
       "tracked": false
     }
   }

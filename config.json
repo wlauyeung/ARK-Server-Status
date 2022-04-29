@@ -6,22 +6,85 @@
   "offlineCounterThreshold": 2,
   "commands": {
     "setchannel": {
-      "usage": "<channel_id>"
+      "admin": true,
+      "alias": [
+        "setchannel"
+      ],
+      "usage": [
+        "<channel_id>"
+      ]
     },
     "track": {
-      "usage": "<server_name>"
+      "admin": true,
+      "alias": [
+        "track"
+      ],
+      "usage": [
+        "<server_name>"
+      ]
     },
     "untrack": {
-      "usage": "<server_name>"
+      "admin": true,
+      "alias": [
+        "untrack"
+      ],
+      "usage": [
+        "<server_name>"
+      ]
     },
     "stalk": {
-      "usage": "<player_name>"
+      "admin": false,
+      "alias": [
+        "stalk"
+      ],
+      "usage": [
+        "<player_name>",
+        "<server_name> <player_name>"
+      ]
     },
     "status": {
-      "usage": "<server_name>"
+      "admin": false,
+      "alias": [
+        "status"
+      ],
+      "usage": [
+        "<server_name>"
+      ]
     },
     "listplayers": {
-      "usage": "<server_name>"
+      "admin": false,
+      "alias": [
+        "listplayers",
+        "lp"
+      ],
+      "usage": [
+        "<server_name>"
+      ]
+    },
+    "rates": {
+      "admin": false,
+      "alias": [
+        "rates"
+      ],
+      "usage": []
+    },
+    "mute": {
+      "admin": true,
+      "alias": [
+        "mute"
+      ],
+      "usage": [
+        "<server_name/all>"
+      ]
+    },
+    "unmute": {
+      "admin": true,
+      "alias": [
+        "unmute"
+      ],
+      "usage": [
+        "<server_name/all>"
+      ]
     }
   }
 }
