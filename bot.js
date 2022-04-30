@@ -25,23 +25,27 @@ class Server {
     return names[names.length - 1].slice(-16) + ': ' + statusText;
   }
 
+  updateChannel(message = null) {
+    for (const guildID of Object.keys(guildList.guilds)) {
+      if (guildList.guilds[guildID].trackedServers[this.name]) {
+        const guild = client.guilds.cache.find((g => g.id === guildID));
+        if (guild) {
+          updateChannel(this.getChannelDisplayName(), 
+          guildList.guilds[guildID].trackedServers[this.name])
+          .catch(e => console.error(e));
+          if (message) {
+            sendMessage(message, guild.id);
+          }
+        }
+      }
+    }
+  }
+
   changeStatus(status) {
     if (this.status !== status) {
       const statusText = (status === 0) ? 'offline' : 'online';
       this.status = status;
-      for (const guildID of Object.keys(guildList.guilds)) {
-        if (guildList.guilds[guildID].trackedServers[this.name] !== undefined) {
-          const guild = client.guilds.cache.find((g => g.id === guildID));
-          if (guild) {
-            updateChannel(this.getChannelDisplayName(), 
-            guildList.guilds[guildID].trackedServers[this.name].channelID)
-            .catch(e => console.error(e));
-            if (!guildList.guilds[guildID].trackedServers[this.name].muted) {
-              sendMessage(this.name + ' is now ' + statusText + '!', guild.id);
-            }
-          }
-        }
-      }
+      this.updateChannel(`${this.name} is now ${statusText}!`);
     }
   }
 
