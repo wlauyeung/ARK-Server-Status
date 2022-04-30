@@ -62,13 +62,6 @@
         "<server_name>"
       ]
     },
-    "rates": {
-      "admin": false,
-      "alias": [
-        "rates"
-      ],
-      "usage": []
-    },
     "mute": {
       "admin": true,
       "alias": [

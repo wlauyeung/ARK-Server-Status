@@ -6,7 +6,6 @@ const config = require('./config.json');
 const serverList = require('./servers.json');
 const guildList = require('./guilds.json');
 const client = new Discord.Client();
-const axios = require('axios').default;
 
 class Server {
   constructor(name, ip, port) {
@@ -20,7 +19,8 @@ class Server {
   }
 
   getChannelDisplayName() {
-    const statusText = (this.status === 0) ? 'Off' : 'On';
+    const statusText = (this.status === 0) ? 'Off' :
+      `${this.data.players.length}/${this.data.maxplayers}`;
     const names = this.name.split('-');
     return names[names.length - 1].slice(-16) + ': ' + statusText;
   }
@@ -30,9 +30,9 @@ class Server {
       if (guildList.guilds[guildID].trackedServers[this.name]) {
         const guild = client.guilds.cache.find((g => g.id === guildID));
         if (guild) {
-          updateChannel(this.getChannelDisplayName(), 
-          guildList.guilds[guildID].trackedServers[this.name])
-          .catch(e => console.error(e));
+          updateChannel(this.getChannelDisplayName(),
+            guildList.guilds[guildID].trackedServers[this.name])
+            .catch(e => console.error(e));
           if (message) {
             sendMessage(message, guild.id);
           }
@@ -41,24 +41,27 @@ class Server {
     }
   }
 
-  changeStatus(status) {
+  changeStatus(status, oldPlayerCount = 0) {
     if (this.status !== status) {
       const statusText = (status === 0) ? 'offline' : 'online';
       this.status = status;
       this.updateChannel(`${this.name} is now ${statusText}!`);
+    } else if (status === 1 && oldPlayerCount !== this.data.players.length) {
+      this.updateTracker();
     }
   }
 
   async update() {
     try {
+      const oldPlayerCount = (this.data === null) ? 0 : this.data.players.length;
       this.data = await Gamedig.query({
-        type: 'arkse',
+        type: 'minecraft',
         host: this.ip,
         port: this.port
       });
-      this.changeStatus(1);
+      this.changeStatus(1, oldPlayerCount);
       this.offlineCounter = 0;
-    } catch(e) {
+    } catch (e) {
       this.offlineCounter++;
       if (this.offlineCounter > config.offlineCounterThreshold) {
         this.changeStatus(0);
@@ -86,82 +89,12 @@ class Server {
   }
 }
 
-class OfficialServersUpdater {
-  constructor(serversHandler) {
-    this.ports = [27015, 27017, 27019, 27021];
-    this.progress = 0;
-    this.serversHandler = serversHandler;
-  }
-
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  queryServer(serverIP, port) {
-    return new Promise((resolve) => {
-      Gamedig.query({
-        type: 'arkse',
-        host: serverIP,
-        port: port
-      }).then(state => {
-          const name = state.name.replace(/\s-\s\(.+\)/gm, '');
-          if (name !== null) {
-            serverList.servers[name] = {
-              ip: serverIP,
-              port: port,
-              tracked: false
-            };
-            this.progress++;
-          }
-        }).catch(e => {
-          this.progress++;
-        });
-      resolve(1);
-    });
-  }
-
-  async run() {
-    try {
-      const res = await axios.get('http://arkdedicated.com/officialservers.ini');
-      const arkServers = res.data.match(/(?:[0-9]{1,3}\.){3}[0-9]{1,3}/gm);
-      const numServers = arkServers.length * this.ports.length;
-
-      console.log('Updating all official servers');
-      for (const serverIP of arkServers) {
-        for (const port of this.ports) {
-          this.queryServer(serverIP, port);
-          await this.sleep(1);
-        }
-      }
-      while (this.progress !== numServers) {
-        console.log(`Progress: ${this.progress}/${numServers}`)
-        await this.sleep(1000);
-      }
-      for (const serverName of Object.keys(this.serversHandler.servers)) {
-        const server = this.serversHandler.servers[serverName];
-        serverList.servers[server.name].tracked = true;
-        server.ip = serverList.servers[server.name].ip;
-        server.port = serverList.servers[server.name].port;
-        server.update();
-      }
-      this.serversHandler.saveServers();
-      this.progress = 0;
-      console.log(`Update completed!`);
-    } catch(e) {
-      console.error(e);
-    }
-  }
-}
-
 class ServersHandler {
   constructor() {
     this.servers = {};
-    this.serversUpdater = new OfficialServersUpdater(this);
     const scheduler = new ToadScheduler();
-    const queryTask = new Task('update servers', (sh=this) => {sh.updateServers()});
-    const queryJob = new SimpleIntervalJob({ seconds: config.queryInterval}, queryTask);
-    const updateTask = new Task('update server lists', (su=this.serversUpdater) => {su.run()});
-    const updateJob = new SimpleIntervalJob({ days: config.serverListUpdateInterval}, updateTask);
+    const queryTask = new Task('update servers', (sh = this) => { sh.updateServers() });
+    const queryJob = new SimpleIntervalJob({ seconds: config.queryInterval }, queryTask);
 
     for (const uuid of Object.keys(serverList.servers)) {
       const serverData = serverList.servers[uuid];
@@ -171,9 +104,6 @@ class ServersHandler {
     }
 
     scheduler.addSimpleIntervalJob(queryJob);
-    scheduler.addSimpleIntervalJob(updateJob);
-
-    this.serversUpdater.run();
   }
 
   saveServers() {
@@ -188,7 +118,7 @@ class ServersHandler {
     }
   }
 
-  getUUIDsFromName(serverName, tracked = false, guildID='') {
+  getUUIDsFromName(serverName, tracked = false, guildID = '') {
     if (tracked && guildID === '') {
       throw 'empty guild id';
     }
@@ -205,7 +135,7 @@ class ServersHandler {
   trackServer(serverName) {
     const serverData = serverList.servers[serverName];
     if (serverData !== undefined
-        && !serverData.tracked) {
+      && !serverData.tracked) {
       serverData.tracked = true;
       this.servers[serverName] = new Server(serverName, serverData.ip, serverData.port);
       this.saveServers();
@@ -214,15 +144,15 @@ class ServersHandler {
     return false;
   }
 
-    untrackServer(serverName) {
-      if (this.servers[serverName] !== undefined) {
-        serverList.servers[serverName].tracked = false;
-        delete this.servers[serverName];
-        this.saveServers();
-        return true;
-      }
-      return false;
+  untrackServer(serverName) {
+    if (this.servers[serverName] !== undefined) {
+      serverList.servers[serverName].tracked = false;
+      delete this.servers[serverName];
+      this.saveServers();
+      return true;
     }
+    return false;
+  }
 
   getServer(uuid) {
     if (this.servers[uuid] !== undefined) {
@@ -311,14 +241,14 @@ function sendMessage(message, guildID) {
   }
 }
 
-async function stalk(msg, playerName, serverName=null) {
-  const uuids = (serverName !== null) ? 
-    serversHandler.getUUIDsFromName(serverName, true, msg.guild.id) : 
+async function stalk(msg, playerName, serverName = null) {
+  const uuids = (serverName !== null) ?
+    serversHandler.getUUIDsFromName(serverName, true, msg.guild.id) :
     serversHandler.getTrackedServerNamesAsList(msg.guild.id);
   if (serverName === null && uuids.length === 0) {
     msg.channel.send('Not tracking any server')
     return;
-  } 
+  }
   let isOnline = false;
   if (uuids.length < 1) {
     msg.channel.send('Unknown server');
@@ -334,7 +264,7 @@ async function stalk(msg, playerName, serverName=null) {
     }
   }
   if (!isOnline) {
-    if(serverName !== null) {
+    if (serverName !== null) {
       msg.channel.send(playerName + ' is not on any severs containing ' + serverName);
     } else {
       msg.channel.send(playerName + ' is not on any tracked servers');
@@ -352,7 +282,7 @@ async function updateChannel(name, channelID) {
       }
       throw 'channel not found';
     }
-  } catch(e) {
+  } catch (e) {
     throw e;
   }
 }
@@ -361,7 +291,7 @@ async function createChannel(guild, name) {
   try {
     let category = guild.channels.cache.find(c => c.name === 'Tracked Servers' && c.type === "category");
     if (!category) {
-      category = await guild.channels.create('Tracked Servers', {type: 'category'});
+      category = await guild.channels.create('Tracked Servers', { type: 'category' });
     }
     const everyoneRoleID = guild.roles.everyone.id;
     const channel = await guild.channels.create(name, {
@@ -375,7 +305,7 @@ async function createChannel(guild, name) {
       ]
     });
     return channel;
-  } catch(e) {
+  } catch (e) {
     throw e;
   }
 }
@@ -386,7 +316,7 @@ async function deleteChannel(channelID) {
     if (channel) {
       await channel.delete();
     }
-  } catch(e) {
+  } catch (e) {
     throw e;
   }
 }
@@ -437,8 +367,8 @@ commandFunctions['track'] = async (args, msg) => {
           serversHandler.trackServer(uuids[0]);
         }
         guildList.guilds[msg.guild.id].trackedServers[uuids[0]] = {
-          channelID: (await createChannel(msg.guild, 
-          serversHandler.getServer(uuids[0]).getChannelDisplayName())).id,
+          channelID: (await createChannel(msg.guild,
+            serversHandler.getServer(uuids[0]).getChannelDisplayName())).id,
           muted: config.defaultMute
         };
         saveGuild();
@@ -475,7 +405,7 @@ commandFunctions['untrack'] = (args, msg) => {
             break;
           }
         }
-        if(!isTrackedOnElseWhere) {
+        if (!isTrackedOnElseWhere) {
           serversHandler.untrackServer(uuids[0]);
         }
         deleteChannel(guildList.guilds[msg.guild.id].trackedServers[uuids[0]].channelID);
@@ -534,15 +464,6 @@ commandFunctions['listplayers'] = async (args, msg) => {
     }
   } else {
     msg.channel.send('Unknown Server');
-  }
-}
-
-commandFunctions['rates'] = async (args, msg) => {
-  try {
-    const res = await axios.get('http://arkdedicated.com/dynamicconfig.ini');
-    msg.channel.send(res.data);
-  } catch(e) {
-    msg.channel.send('Unable to fetch data');
   }
 }
 
@@ -613,7 +534,7 @@ client.on('ready', async () => {
 });
 
 client.on('message', msg => {
-  if (!msg.content.startsWith(config.prefix) 
+  if (!msg.content.startsWith(config.prefix)
     || msg.author.bot || !msg.guild) return;
   const args = msg.content.slice(1).match(/"[^"]+"|[^\s]+/gm);
   if (!guildList.guilds[msg.guild.id]) {
