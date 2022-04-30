@@ -4,6 +4,7 @@
   "serverListUpdateInterval": 1,
   "queryInterval": 10,
   "offlineCounterThreshold": 2,
+  "defaultMute": false,
   "commands": {
     "setchannel": {
       "admin": true,

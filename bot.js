@@ -435,7 +435,7 @@ commandFunctions['track'] = async (args, msg) => {
         guildList.guilds[msg.guild.id].trackedServers[uuids[0]] = {
           channelID: (await createChannel(msg.guild, 
           serversHandler.getServer(uuids[0]).getChannelDisplayName())).id,
-          muted: false
+          muted: config.defaultMute
         };
         saveGuild();
         msg.channel.send(uuids[0] + ' has been added to the tracking list');
