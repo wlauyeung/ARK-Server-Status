@@ -256,37 +256,6 @@ function sendMessage(message, guildID) {
   }
 }
 
-async function stalk(msg, playerName, serverName = null) {
-  const serverNames = (serverName !== null) ?
-    serversHandler.getNamesFromStr(serverName, true, msg.guild.id) :
-    serversHandler.getTrackedServerNamesAsList(msg.guild.id);
-  if (serverName === null && serverNames.length === 0) {
-    msg.channel.send('Not tracking any server')
-    return;
-  }
-  let isOnline = false;
-  if (serverNames.length < 1) {
-    msg.channel.send('Unknown server');
-    return;
-  }
-  for (const sName of serverNames) {
-    if (sName !== null) {
-      isOnline = await serversHandler.getServer(sName).isPlayerOn(playerName);
-      if (isOnline) {
-        msg.channel.send(playerName + ' is currently on ' + serversHandler.getServer(sName).name);
-        break;
-      }
-    }
-  }
-  if (!isOnline) {
-    if (serverName !== null) {
-      msg.channel.send(playerName + ' is not on any severs containing ' + serverName);
-    } else {
-      msg.channel.send(playerName + ' is not on any tracked servers');
-    }
-  }
-}
-
 async function updateChannel(name, channelID) {
   try {
     if (channelID !== undefined) {
@@ -438,11 +407,42 @@ commandFunctions['untrack'] = (args, msg) => {
   }
 }
 
-commandFunctions['stalk'] = (args, msg) => {
-  if (args.length === 1) {
-    stalk(msg, args[0]);
-  } else {
-    stalk(msg, args[1], args[0]);
+commandFunctions['stalk'] = async (args, msg) => {
+  let serverName = null;
+  let playerName = args[0];
+
+  if (args[1] !== undefined) {
+    serverName = args[0];
+    playerName = args[1];
+  }
+
+  const serverNames = (serverName !== null) ?
+    serversHandler.getNamesFromStr(serverName, true, msg.guild.id) :
+    serversHandler.getTrackedServerNamesAsList(msg.guild.id);
+  if (serverName === null && serverNames.length === 0) {
+    msg.channel.send('Not tracking any server')
+    return;
+  }
+  let isOnline = false;
+  if (serverNames.length < 1) {
+    msg.channel.send('Unknown server');
+    return;
+  }
+  for (const sName of serverNames) {
+    if (sName !== null) {
+      isOnline = await serversHandler.getServer(sName).isPlayerOn(playerName);
+      if (isOnline) {
+        msg.channel.send(playerName + ' is currently on ' + serversHandler.getServer(sName).name);
+        break;
+      }
+    }
+  }
+  if (!isOnline) {
+    if (serverName !== null) {
+      msg.channel.send(playerName + ' is not on any severs containing ' + serverName);
+    } else {
+      msg.channel.send(playerName + ' is not on any tracked servers');
+    }
   }
 }
 
