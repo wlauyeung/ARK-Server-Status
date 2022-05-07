@@ -77,7 +77,7 @@ class Server {
               guildList.guilds[guildID].trackedServers[this.#name].channelID)
               .catch((e) => console.error(e));
           if (message &&
-             !guildList.guilds[guildID].trackServers[this.#name].muted) {
+             !guildList.guilds[guildID].trackedServers[this.#name].muted) {
             sendMessage(message, guild.id);
           }
         }
