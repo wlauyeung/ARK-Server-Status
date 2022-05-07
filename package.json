@@ -9,10 +9,12 @@
   "author": "Jacky Au Yeung",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1",
     "discord.js": "^12.5.3",
     "gamedig": "^3.0.5",
-    "toad-scheduler": "^1.4.0",
-    "uuid": "^8.3.2"
+    "toad-scheduler": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0"
   }
 }

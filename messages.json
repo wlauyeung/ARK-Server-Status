@@ -1,0 +1,48 @@
+{
+  "server": {
+    "tracker": {
+      "online": "On",
+      "offline": "Off"
+    },
+    "online": "online",
+    "offline": "offline"
+  },
+  "actions": {
+    "onStatusChange": "$SERVER_NAME is currently $STATUS",
+    "onNewsChannelChange": {
+      "success": "News channel has been set to $CHANNEL_NAME",
+      "failure": "Invalid channel"
+    },
+    "onServerSearch": {
+      "suggest": "Did you mean:",
+      "needInfo": "Please be more specific",
+      "notFound": "Unable to find server with name $SERVER_NAME",
+      "unknown": "Unknown server",
+      "alreadyExist": "$SERVER_NAME is already on the tracking list"
+    },
+    "onPlayerSearch": {
+      "found": "$PLAYER_NAME is currently on $SERVER_NAME",
+      "notFound": "$PLAYER_NAME is not on any severs containing $SERVER_NAME",
+      "notFoundGeneric": "$PLAYER_NAME is not on any tracked servers"
+    },
+    "onTrack": "$SERVER_NAME has been added to the tracking list",
+    "onUntrack": "$SERVER_NAME has been revmoed from the tracking list",
+    "onListPlayers": {
+      "header": "\nList of players on $SERVER_NAME:"
+    },
+    "onMute": {
+      "all": "Successfully muted all servers",
+      "one": "Succesfully mute $SERVER_NAME"
+    },
+    "onUnmute": {
+      "all": "Successfully unmuted all servers",
+      "one": "Succesfully unmute $SERVER_NAME"
+    }
+  },
+  "errors": {
+    "invalidGuildID": "invalid guild id",
+    "invalidCommand": "Invalid command! Usage:",
+    "invalidChannelID": "channel $CHANNEL_ID not found"
+  },
+  "trackedServerCategoryName": "Tracked Servers"
+}
