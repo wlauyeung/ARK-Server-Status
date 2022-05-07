@@ -1,6 +1,8 @@
 # ARK-Server-Status
 A Discord bot designed to track ARK servers
 
+[![ESLint](https://github.com/wlauyeung/ARK-Server-Status/actions/workflows/eslint.yml/badge.svg)](https://github.com/wlauyeung/ARK-Server-Status/actions/workflows/eslint.yml)
+
 ## Config
 | Option | Usage |
 | ------------- | ------------- |
