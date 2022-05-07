@@ -11,10 +11,10 @@ name: ESLint
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, minecraft ]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ main ]
+    branches: [ main, minecraft ]
   schedule:
     - cron: '38 8 * * 1'
 
