@@ -1,6 +1,5 @@
 {
   "prefix": "!",
-  "token": "",
   "serverListUpdateInterval": 1,
   "queryInterval": 10,
   "offlineCounterThreshold": 2,
