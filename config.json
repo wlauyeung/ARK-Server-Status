@@ -1,6 +1,5 @@
 {
   "prefix": "!",
-  "token": "",
   "queryInterval": 10,
   "offlineCounterThreshold": 2,
   "defaultMute": false,

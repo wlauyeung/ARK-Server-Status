@@ -5,33 +5,48 @@ const fs = require('fs');
 const config = require('./config.json');
 const serverList = require('./servers.json');
 const guildList = require('./guilds.json');
+const credentials = require('./credentials.json')
 const client = new Discord.Client();
 
 class Server {
+  #name
+  #data
+  #status
+  #ip
+  #port
+  #offlineCounter
+
   constructor(name, ip, port) {
-    this.name = name;
-    this.data = null;
-    this.uuid = name;
-    this.status = 0;
-    this.ip = ip;
-    this.port = port;
-    this.offlineCounter = 0;
+    this.#name = name;
+    this.#data = null;
+    this.#status = 0;
+    this.#ip = ip;
+    this.#port = port;
+    this.#offlineCounter = 0;
+  }
+
+  get name() {
+    return this.#name;
+  }
+
+  get status() {
+    return this.#status;
   }
 
   getChannelDisplayName() {
-    const statusText = (this.status === 0) ? 'Off' :
-      `${this.data.players.length}/${this.data.maxplayers}`;
-    const names = this.name.split('-');
+    const statusText = (this.#status === 0 || this.#data === null) ? 'Off' :
+      `${this.#data.raw.vanilla.players.length}/${this.#data.maxplayers}`;
+    const names = this.#name.split('-');
     return names[names.length - 1].slice(-16) + ': ' + statusText;
   }
 
-  updateChannel(message = null) {
+  #updateTracker(message = null) {
     for (const guildID of Object.keys(guildList.guilds)) {
-      if (guildList.guilds[guildID].trackedServers[this.name]) {
+      if (guildList.guilds[guildID].trackedServers[this.#name]) {
         const guild = client.guilds.cache.find((g => g.id === guildID));
         if (guild) {
           updateChannel(this.getChannelDisplayName(),
-            guildList.guilds[guildID].trackedServers[this.name])
+            guildList.guilds[guildID].trackedServers[this.#name].channelID)
             .catch(e => console.error(e));
           if (message) {
             sendMessage(message, guild.id);
@@ -41,39 +56,39 @@ class Server {
     }
   }
 
-  changeStatus(status, oldPlayerCount = 0) {
-    if (this.status !== status) {
+  #changeStatus(status, oldPlayerCount = 0) {
+    if (this.#status !== status) {
       const statusText = (status === 0) ? 'offline' : 'online';
-      this.status = status;
-      this.updateChannel(`${this.name} is now ${statusText}!`);
-    } else if (status === 1 && oldPlayerCount !== this.data.players.length) {
-      this.updateTracker();
+      this.#status = status;
+      this.#updateTracker(`${this.#name} is now ${statusText}!`);
+    } else if (status === 1 && oldPlayerCount !== this.#data.players.length) {
+      this.#updateTracker();
     }
   }
 
   async update() {
     try {
-      const oldPlayerCount = (this.data === null) ? 0 : this.data.players.length;
-      this.data = await Gamedig.query({
+      const oldPlayerCount = (this.#data === null) ? 0 : this.#data.players.length;
+      this.#data = await Gamedig.query({
         type: 'minecraft',
-        host: this.ip,
-        port: this.port
+        host: this.#ip,
+        port: this.#port
       });
-      this.changeStatus(1, oldPlayerCount);
-      this.offlineCounter = 0;
+      this.#changeStatus(1, oldPlayerCount);
+      this.#offlineCounter = 0;
     } catch (e) {
-      this.offlineCounter++;
-      if (this.offlineCounter > config.offlineCounterThreshold) {
-        this.changeStatus(0);
+      this.#offlineCounter++;
+      if (this.#offlineCounter > config.offlineCounterThreshold) {
+        this.#changeStatus(0);
       }
     }
   }
 
   async isPlayerOn(playerName) {
-    if (this.status === 0 || await this.getData() === null) {
+    if (this.#status === 0 || await this.getData() === null) {
       return false;
     }
-    for (const player of this.data.players) {
+    for (const player of this.#data.raw.vanilla.players) {
       if (player.name === playerName) {
         return true;
       }
@@ -82,24 +97,26 @@ class Server {
   }
 
   async getData() {
-    if (this.data === null) {
+    if (this.#data === null) {
       await this.update();
     }
-    return this.data;
+    return this.#data;
   }
 }
 
 class ServersHandler {
+  #servers;
+
   constructor() {
-    this.servers = {};
+    this.#servers = {};
     const scheduler = new ToadScheduler();
     const queryTask = new Task('update servers', (sh = this) => { sh.updateServers() });
     const queryJob = new SimpleIntervalJob({ seconds: config.queryInterval }, queryTask);
 
-    for (const uuid of Object.keys(serverList.servers)) {
-      const serverData = serverList.servers[uuid];
+    for (const serverName of Object.keys(serverList.servers)) {
+      const serverData = serverList.servers[serverName];
       if (serverData.tracked) {
-        this.servers[uuid] = new Server(uuid, serverData.ip, serverData.port);
+        this.#servers[serverName] = new Server(serverName, serverData.ip, serverData.port);
       }
     }
 
@@ -113,19 +130,17 @@ class ServersHandler {
   }
 
   async updateServers() {
-    for (const uuid of Object.keys(this.servers)) {
-      this.servers[uuid].update();
-    }
+    Object.keys(this.#servers).forEach(sName => this.#servers[sName].update());
   }
 
-  getUUIDsFromName(serverName, tracked = false, guildID = '') {
+  getNamesFromStr(string, tracked = false, guildID = '') {
     if (tracked && guildID === '') {
       throw 'empty guild id';
     }
     const list = [];
     const servers = (tracked) ? this.getTrackedServerNamesAsList(guildID) : Object.keys(serverList.servers);
     for (const server of servers) {
-      if (server.toLowerCase().includes(serverName.toLowerCase())) {
+      if (server.toLowerCase().includes(string.toLowerCase())) {
         list.push(server);
       }
     }
@@ -137,7 +152,7 @@ class ServersHandler {
     if (serverData !== undefined
       && !serverData.tracked) {
       serverData.tracked = true;
-      this.servers[serverName] = new Server(serverName, serverData.ip, serverData.port);
+      this.#servers[serverName] = new Server(serverName, serverData.ip, serverData.port);
       this.saveServers();
       return true;
     }
@@ -145,18 +160,18 @@ class ServersHandler {
   }
 
   untrackServer(serverName) {
-    if (this.servers[serverName] !== undefined) {
+    if (this.#servers[serverName] !== undefined) {
       serverList.servers[serverName].tracked = false;
-      delete this.servers[serverName];
+      delete this.#servers[serverName];
       this.saveServers();
       return true;
     }
     return false;
   }
 
-  getServer(uuid) {
-    if (this.servers[uuid] !== undefined) {
-      return this.servers[uuid];
+  getServer(serverName) {
+    if (this.#servers[serverName] !== undefined) {
+      return this.#servers[serverName];
     }
     return null;
   }
@@ -172,18 +187,18 @@ class ServersHandler {
     return Object.keys(guildList.guilds[guildID].trackedServers);
   }
 
-  hasServer(uuid) {
-    return this.servers[uuid] === undefined;
+  hasServer(serverName) {
+    return this.#servers[serverName] === undefined;
   }
 
-  getServerStatus(uuid) {
-    return this.servers[uuid].status;
+  getServerStatus(serverName) {
+    return this.#servers[serverName].status;
   }
 
   getAllTrackedServersStatus(guildID) {
     const status = {};
     for (const server of this.getTrackedServerNamesAsList(guildID)) {
-      status[server.name] = this.getServerStatus(server.uuid);
+      status[server.name] = this.getServerStatus(server.name);
     }
     return status;
   }
@@ -201,9 +216,9 @@ class CommandsHandler {
     };
   }
 
-  run(name, args, msg) {
-    if (this.commands[name] !== undefined) {
-      const command = this.commands[name];
+  run(commandName, args, msg) {
+    if (this.commands[commandName] !== undefined) {
+      const command = this.commands[commandName];
       let argslengs = command.settings.usage.map(usage => usage.split(' ').length);
       argslengs = (argslengs.length === 0) ? [0] : argslengs;
       if (command.settings.admin && !msg.member.hasPermission('ADMINISTRATOR')) {
@@ -214,7 +229,7 @@ class CommandsHandler {
       } else {
         let reply = 'Invalid command! Usage:';
         for (const usage of command.settings.usage) {
-          reply += `\n${config.prefix}${name} ${usage}`;
+          reply += `\n${config.prefix}${commandName} ${usage}`;
         }
         msg.channel.send(reply);
       }
@@ -242,23 +257,23 @@ function sendMessage(message, guildID) {
 }
 
 async function stalk(msg, playerName, serverName = null) {
-  const uuids = (serverName !== null) ?
-    serversHandler.getUUIDsFromName(serverName, true, msg.guild.id) :
+  const serverNames = (serverName !== null) ?
+    serversHandler.getNamesFromStr(serverName, true, msg.guild.id) :
     serversHandler.getTrackedServerNamesAsList(msg.guild.id);
-  if (serverName === null && uuids.length === 0) {
+  if (serverName === null && serverNames.length === 0) {
     msg.channel.send('Not tracking any server')
     return;
   }
   let isOnline = false;
-  if (uuids.length < 1) {
+  if (serverNames.length < 1) {
     msg.channel.send('Unknown server');
     return;
   }
-  for (const uuid of uuids) {
-    if (uuid !== null) {
-      isOnline = await serversHandler.getServer(uuid).isPlayerOn(playerName);
+  for (const sName of serverNames) {
+    if (sName !== null) {
+      isOnline = await serversHandler.getServer(sName).isPlayerOn(playerName);
       if (isOnline) {
-        msg.channel.send(playerName + ' is currently on ' + serversHandler.getServer(uuid).name);
+        msg.channel.send(playerName + ' is currently on ' + serversHandler.getServer(sName).name);
         break;
       }
     }
@@ -280,7 +295,7 @@ async function updateChannel(name, channelID) {
         channel.setName(name);
         return channel;
       }
-      throw 'channel not found';
+      throw Error(`channel ${channelID} not found`);
     }
   } catch (e) {
     throw e;
@@ -339,42 +354,42 @@ commandFunctions['setchannel'] = (args, msg) => {
 
 commandFunctions['track'] = async (args, msg) => {
   const serverName = args[0];
-  let uuids = serversHandler.getUUIDsFromName(serverName, false);
-  if (uuids.length > 1 && uuids.length < 20) {
+  let serverNames = serversHandler.getNamesFromStr(serverName, false);
+  if (serverNames.length > 1 && serverNames.length < 20) {
     let foundExactName = false;
-    for (const uuid of uuids) {
-      if (uuid === serverName) {
+    for (const serverName of serverNames) {
+      if (serverName === serverName) {
         foundExactName = true;
-        uuids = [uuid];
+        serverNames = [serverName];
       }
     }
     if (!foundExactName) {
       let reply = 'Did you mean:'
-      for (const uuid of uuids) {
-        reply += `\n${uuid}`;
+      for (const serverName of serverNames) {
+        reply += `\n${serverName}`;
       }
       msg.channel.send(reply);
       return;
     }
-  } else if (uuids.length > 20) {
+  } else if (serverNames.length > 20) {
     msg.channel.send('Please be more specific');
     return;
   }
-  if (uuids.length === 1) {
+  if (serverNames.length === 1) {
     if (guildList.guilds[msg.guild.id]) {
-      if (guildList.guilds[msg.guild.id].trackedServers[uuids[0]] === undefined) {
-        if (!serverList.servers[uuids[0]].tracked) {
-          serversHandler.trackServer(uuids[0]);
+      if (guildList.guilds[msg.guild.id].trackedServers[serverNames[0]] === undefined) {
+        if (!serverList.servers[serverNames[0]].tracked) {
+          serversHandler.trackServer(serverNames[0]);
         }
-        guildList.guilds[msg.guild.id].trackedServers[uuids[0]] = {
+        guildList.guilds[msg.guild.id].trackedServers[serverNames[0]] = {
           channelID: (await createChannel(msg.guild,
-            serversHandler.getServer(uuids[0]).getChannelDisplayName())).id,
+            serversHandler.getServer(serverNames[0]).getChannelDisplayName())).id,
           muted: config.defaultMute
         };
         saveGuild();
-        msg.channel.send(uuids[0] + ' has been added to the tracking list');
+        msg.channel.send(serverNames[0] + ' has been added to the tracking list');
       } else {
-        msg.channel.send(uuids[0] + ' is already on the tracking list');
+        msg.channel.send(serverNames[0] + ' is already on the tracking list');
       }
     } else {
       console.error('guild id not found');
@@ -386,34 +401,34 @@ commandFunctions['track'] = async (args, msg) => {
 
 commandFunctions['untrack'] = (args, msg) => {
   const serverName = args[0];
-  const uuids = serversHandler.getUUIDsFromName(serverName, true, msg.guild.id);
-  if (uuids.length > 1 && uuids.length < 20) {
+  const serverNames = serversHandler.getNamesFromStr(serverName, true, msg.guild.id);
+  if (serverNames.length > 1 && serverNames.length < 20) {
     let reply = 'Did you mean:'
-    for (const uuid of uuids) {
-      reply += `\n${uuid}`;
+    for (const serverName of serverNames) {
+      reply += `\n${serverName}`;
     }
     msg.channel.send(reply);
-  } else if (uuids.length > 20) {
+  } else if (serverNames.length > 20) {
     msg.channel.send('Please be more specific');
-  } else if (uuids.length === 1) {
+  } else if (serverNames.length === 1) {
     if (guildList.guilds[msg.guild.id]) {
-      if (guildList.guilds[msg.guild.id].trackedServers[uuids[0]] !== undefined) {
+      if (guildList.guilds[msg.guild.id].trackedServers[serverNames[0]] !== undefined) {
         let isTrackedOnElseWhere = false;
         for (const guildID of Object.keys(guildList.guilds)) {
-          if (guildList.guilds[guildID].trackedServers[uuids[0]] !== undefined && guildID !== msg.guild.id) {
+          if (guildList.guilds[guildID].trackedServers[serverNames[0]] !== undefined && guildID !== msg.guild.id) {
             isTrackedOnElseWhere = true;
             break;
           }
         }
         if (!isTrackedOnElseWhere) {
-          serversHandler.untrackServer(uuids[0]);
+          serversHandler.untrackServer(serverNames[0]);
         }
-        deleteChannel(guildList.guilds[msg.guild.id].trackedServers[uuids[0]].channelID);
-        delete guildList.guilds[msg.guild.id].trackedServers[uuids[0]];
+        deleteChannel(guildList.guilds[msg.guild.id].trackedServers[serverNames[0]].channelID);
+        delete guildList.guilds[msg.guild.id].trackedServers[serverNames[0]];
         saveGuild();
-        msg.channel.send(uuids[0] + ' has been removed from the tracking list');
+        msg.channel.send(serverNames[0] + ' has been removed from the tracking list');
       } else {
-        msg.channel.send(uuids[0] + ' is not tracked');
+        msg.channel.send(serverNames[0] + ' is not tracked');
       }
     } else {
       console.error('guild id not found');
@@ -433,28 +448,28 @@ commandFunctions['stalk'] = (args, msg) => {
 
 commandFunctions['status'] = (args, msg) => {
   const serverName = args[0];
-  const uuids = serversHandler.getUUIDsFromName(serverName, true, msg.guild.id);
-  if (uuids.length === 0) {
+  const serverNames = serversHandler.getNamesFromStr(serverName, true, msg.guild.id);
+  if (serverNames.length === 0) {
     msg.channel.send('Unknown Server');
     return;
   }
-  for (const uuid of uuids) {
-    const status = (serversHandler.getServerStatus(uuid) === 0) ? 'offline' : 'online';
+  for (const serverName of serverNames) {
+    const status = (serversHandler.getServerStatus(serverName) === 0) ? 'offline' : 'online';
     found = true;
-    msg.channel.send(serversHandler.getServer(uuid).name + ' is ' + status);
+    msg.channel.send(serversHandler.getServer(serverName).name + ' is currently ' + status);
   }
 }
 
 commandFunctions['listplayers'] = async (args, msg) => {
   const serverName = args[0];
-  const uuids = serversHandler.getUUIDsFromName(serverName, true, msg.guild.id);
-  if (uuids.length > 0) {
-    for (const uuid of uuids) {
+  const serverNames = serversHandler.getNamesFromStr(serverName, true, msg.guild.id);
+  if (serverNames.length > 0) {
+    for (const sName of serverNames) {
       let str = '';
-      const server = serversHandler.getServer(uuid);
-      if (serversHandler.getServerStatus(uuid) !== 0) {
+      const server = serversHandler.getServer(sName);
+      if (server.status === 1) {
         str += '\nList of players on ' + server.name + ':';
-        for (const player of (await server.getData()).players) {
+        for (const player of (await server.getData()).raw.vanilla.players) {
           str += '\n' + player.name;
         }
         msg.channel.send(str.substring(1));
@@ -478,7 +493,7 @@ commandFunctions['mute'] = (args, msg) => {
     saveGuild();
     msg.channel.send(`Successfully muted all servers`);
   } else {
-    const serverNames = serversHandler.getUUIDsFromName(serverName, true, msg.guild.id);
+    const serverNames = serversHandler.getNamesFromStr(serverName, true, msg.guild.id);
     if (serverNames.length === 1) {
       const server = serversHandler.getServer(serverNames[0]);
       if (!guildList.guilds[msg.guild.id].trackedServers[server.name].muted) {
@@ -505,7 +520,7 @@ commandFunctions['unmute'] = (args, msg) => {
     saveGuild();
     msg.channel.send(`Successfully unmuted all servers`);
   } else {
-    const serverNames = serversHandler.getUUIDsFromName(serverName, true, msg.guild.id);
+    const serverNames = serversHandler.getNamesFromStr(serverName, true, msg.guild.id);
     if (serverNames.length === 1) {
       const server = serversHandler.getServer(serverNames[0]);
       if (guildList.guilds[msg.guild.id].trackedServers[server.name].muted) {
@@ -554,4 +569,4 @@ client.on('message', msg => {
   commandHandler.run(command, args, msg);
 });
 
-client.login(config.token);
+client.login(credentials.token);
