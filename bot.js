@@ -593,7 +593,7 @@ commandFunctions['untrack'] = (args, msg) => {
     }
   } else {
     msg.channel.send(messages.actions.onServerSearch.notFound
-        .replace('$SERVER_NAME', serverNames[0]));
+        .replace('$SERVER_NAME', serverName));
   }
 };
 
