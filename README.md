@@ -21,5 +21,5 @@ A Discord bot designed to track Minecraft servers
 | `untrack` | Remove a server from the tracking list. | `<server_name>` |
 | `stalk` | Check whether a player is currently on servers containing `<server_name>`. | `<server_name> <player_name>` OR `<player_name>` |
 | `status` | Quick check the status of a server. | `<server_name>` |
-| `mute` | Mute all or a server(s). | `all` OR `<server_name>` |
-| `unmute` | Unmute all or a server(s). | `all` OR `<server_name>` |
+| `mute` | Mute all or a server. | `all` OR `<server_name>` |
+| `unmute` | Unmute all or a server. | `all` OR `<server_name>` |
