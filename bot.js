@@ -92,13 +92,14 @@ class Server {
    */
   #changeStatus(status, oldPlayerCount = 0) {
     if (this.#status !== status) {
-      const statusText = (status === 0) ? messages.server.offline :
-        messages.server.online;
       this.#status = status;
+      const statusText = (this.#status === 0) ? messages.server.offline :
+        messages.server.online;
       this.#updateTracker(messages.actions.onStatusChange
           .replace('$SERVER_NAME', this.#name)
           .replace('$STATUS', statusText));
-    } else if (status === 1 && oldPlayerCount !== this.#data.players.length) {
+    } else if (status === 1 && oldPlayerCount !==
+      this.#data.raw.vanilla.players.length) {
       this.#updateTracker();
     }
   }
@@ -109,7 +110,7 @@ class Server {
   async update() {
     try {
       const oldPlayerCount = (this.#data === null) ? 0 :
-        this.#data.players.length;
+        this.#data.raw.vanilla.players.length;
       this.#data = await Gamedig.query({
         type: 'minecraft',
         host: this.#ip,
@@ -119,7 +120,7 @@ class Server {
       this.#offlineCounter = 0;
     } catch (e) {
       this.#offlineCounter++;
-      if (this.#offlineCounter > config.offlineCounterThreshold) {
+      if (this.#offlineCounter === config.offlineCounterThreshold) {
         this.#changeStatus(0);
       }
     }
