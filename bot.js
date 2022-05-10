@@ -116,7 +116,7 @@ class Server {
       this.#offlineCounter = 0;
     } catch (e) {
       this.#offlineCounter++;
-      if (this.#offlineCounter > config.offlineCounterThreshold) {
+      if (this.#offlineCounter === config.offlineCounterThreshold) {
         this.#changeStatus(0);
       }
     }
