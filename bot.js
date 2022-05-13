@@ -856,6 +856,16 @@ commandFunctions['unmute'] = (args, msg) => {
   }
 };
 
+commandFunctions['help'] = (args, msg) => {
+  let reply = 'The list of available commands:```';
+  for (const commandInfo of Object.keys(config.commands)) {
+    reply += `\n\n${commandInfo}: ${config.commands[commandInfo].desc}` +
+    `\n    usage: ${config.commands[commandInfo].usage}`;
+  }
+  reply += '```';
+  msg.channel.send(reply);
+};
+
 for (const commandName of Object.keys(config.commands)) {
   const commandConfig = config.commands[commandName];
   for (const alias of commandConfig.alias) {
