@@ -1,11 +1,12 @@
 {
   "prefix": "!",
   "queryInterval": 10,
-  "offlineCounterThreshold": 2,
+  "offlineCounterThreshold": 3,
   "defaultMute": false,
   "commands": {
     "setchannel": {
       "admin": true,
+      "desc": "Set the notification channel",
       "alias": [
         "setchannel"
       ],
@@ -15,6 +16,7 @@
     },
     "track": {
       "admin": true,
+      "desc": "Add a server to the tracking list",
       "alias": [
         "track"
       ],
@@ -24,6 +26,7 @@
     },
     "untrack": {
       "admin": true,
+      "desc": "Remove a server from the tracking list",
       "alias": [
         "untrack"
       ],
@@ -33,6 +36,7 @@
     },
     "stalk": {
       "admin": false,
+      "desc": "Look for a player on a tracked server(s)",
       "alias": [
         "stalk"
       ],
@@ -43,6 +47,7 @@
     },
     "status": {
       "admin": false,
+      "desc": "Check the status of a server",
       "alias": [
         "status"
       ],
@@ -52,6 +57,7 @@
     },
     "listplayers": {
       "admin": false,
+      "desc": "List all online players on a server",
       "alias": [
         "listplayers",
         "lp"
@@ -62,6 +68,7 @@
     },
     "mute": {
       "admin": true,
+      "desc": "Mute all or a server",
       "alias": [
         "mute"
       ],
@@ -71,12 +78,21 @@
     },
     "unmute": {
       "admin": true,
+      "desc": "Unmute all or a server",
       "alias": [
         "unmute"
       ],
       "usage": [
         "<server_name/all>"
       ]
+    },
+    "help": {
+      "admin": false,
+      "desc": "Display all available commands",
+      "alias": [
+        "help"
+      ],
+      "usage": []
     }
   }
 }
