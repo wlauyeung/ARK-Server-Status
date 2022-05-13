@@ -486,6 +486,10 @@ class CommandsHandler {
         }
         msg.channel.send(reply);
       }
+    } else {
+      msg.channel.send(
+          'Invalid command. Below is the list of available commands.');
+      this.commands['help'].func([], msg);
     }
   }
 }
@@ -857,12 +861,14 @@ commandFunctions['unmute'] = (args, msg) => {
 };
 
 commandFunctions['help'] = (args, msg) => {
-  let reply = 'The list of available commands:```';
-  for (const commandInfo of Object.keys(config.commands)) {
-    reply += `\n\n${commandInfo}: ${config.commands[commandInfo].desc}` +
-    `\n    usage: ${config.commands[commandInfo].usage}`;
+  let reply = 'The list of available commands:';
+  for (const commandName of Object.keys(config.commands)) {
+    const command = config.commands[commandName];
+    reply += `\`\`\`\n\n${commandName}: ${command.desc}` +
+    `\n    usage: ${config.prefix}${commandName} ` +
+    `${command.usage}` +
+    `\n    alias: ${command.alias.reduce((p, c) => p + `, ${c}`)}\`\`\``;
   }
-  reply += '```';
   msg.channel.send(reply);
 };
 
