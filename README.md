@@ -1,6 +1,8 @@
 # Minecraft-Server-Status
 A Discord bot designed to track Minecraft servers
 
+[![ESLint](https://github.com/wlauyeung/ARK-Server-Status/actions/workflows/eslint.yml/badge.svg)](https://github.com/wlauyeung/ARK-Server-Status/actions/workflows/eslint.yml)
+
 ## Config
 | Option | Usage |
 | ------------- | ------------- |
@@ -10,6 +12,7 @@ A Discord bot designed to track Minecraft servers
 | `offlineCounterThreshold` | The threshold for how many offline queries a server can get before considered as offline. |
 | `defaultMute` | Whether a new channel should be muted by default. |
 | `commands.[commandName].admin` | Whether this command requires administrator privilege. |
+| `commands.[commandName].desc` | The description of the command. |
 | `commands.[commandName].alias` | All the aliases of the command. |
 | `commands.[commandName].usage` | All the arguments of the command. |
 
@@ -23,3 +26,4 @@ A Discord bot designed to track Minecraft servers
 | `status` | Quick check the status of a server. | `<server_name>` |
 | `mute` | Mute all or a server. | `all` OR `<server_name>` |
 | `unmute` | Unmute all or a server. | `all` OR `<server_name>` |
+| `help` | Display the list of available commands | No arguments needed |
