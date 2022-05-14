@@ -482,13 +482,12 @@ class CommandsHandler {
       } else {
         let reply = messages.errors.invalidCommand;
         for (const usage of command.settings.usage) {
-          reply += `\n${config.prefix}${commandName} ${usage}`;
+          reply += `\n${config.prefix} ${commandName} ${usage}`;
         }
         msg.channel.send(reply);
       }
     } else {
-      msg.channel.send(
-          'Invalid command. Below is the list of available commands.');
+      msg.channel.send(messages.errors.invalidCommand);
       this.commands['help'].func([], msg);
     }
   }
@@ -861,13 +860,14 @@ commandFunctions['unmute'] = (args, msg) => {
 };
 
 commandFunctions['help'] = (args, msg) => {
-  let reply = 'The list of available commands:';
+  let reply = messages.actions.onHelpCommand.listCommands;
   for (const commandName of Object.keys(config.commands)) {
     const command = config.commands[commandName];
     reply += `\`\`\`\n\n${commandName}: ${command.desc}` +
-    `\n    usage: ${config.prefix}${commandName} ` +
-    `${command.usage}` +
-    `\n    alias: ${command.alias.reduce((p, c) => p + `, ${c}`)}\`\`\``;
+    `\n    ${messages.actions.onHelpCommand.usage}: ` +
+    `${config.prefix} ${commandName} ` + `${command.usage}` +
+    `\n    ${messages.actions.onHelpCommand.alias}: ` +
+    `${command.alias.reduce((p, c) => p + `, ${c}`)}\`\`\``;
   }
   msg.channel.send(reply);
 };
@@ -888,7 +888,7 @@ client.on('ready', async () => {
 client.on('message', (msg) => {
   if (!msg.content.startsWith(config.prefix) ||
     msg.author.bot || !msg.guild) return;
-  const args = msg.content.slice(1).match(/"[^"]+"|[^\s]+/gm);
+  const args = msg.content.slice(3).match(/"[^"]+"|[^\s]+/gm);
   if (!guildList.guilds[msg.guild.id]) {
     guildList.guilds[msg.guild.id] = {
       channelID: msg.channel.id,
@@ -899,9 +899,7 @@ client.on('message', (msg) => {
   if (args === null) {
     return;
   }
-  for (let i = 0; i < args.length; i++) {
-    args[i] = args[i].replaceAll('"', '');
-  }
+  args.forEach((arg) => arg.replaceAll('"', ''));
   const command = args.shift().toLowerCase();
   commandHandler.run(command, args, msg);
 });
