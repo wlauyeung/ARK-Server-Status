@@ -823,7 +823,7 @@ client.on('ready', async () => {
 client.on('messageCreate', (msg) => {
   if (!msg.content.startsWith(config.prefix) ||
     msg.author.bot || !msg.guild) return;
-  const args = msg.content.slice(3).match(/"[^"]+"|[^\s]+/gm);
+  const args = msg.content.slice(4).match(/"[^"]+"|[^\s]+/gm);
   if (!guildList.guilds[msg.guild.id]) {
     guildList.guilds[msg.guild.id] = {
       channelID: msg.channel.id,
