@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const {Client, Intents} = require('discord.js');
 const Gamedig = require('gamedig');
 const {ToadScheduler, SimpleIntervalJob, Task} = require('toad-scheduler');
 const fs = require('fs');
@@ -7,7 +7,12 @@ const serverList = require('./servers.json');
 const guildList = require('./guilds.json');
 const credentials = require('./credentials.json');
 const messages = require('./messages.json');
-const client = new Discord.Client();
+const client = new Client({
+  intents: [
+    Intents.FLAGS.GUILD_MESSAGES,
+    Intents.FLAGS.GUILDS,
+  ],
+});
 
 /**
  * The server class
@@ -307,6 +312,14 @@ class ServersHandler {
   }
 
   /**
+   * Returns the list of servers that this handler is tracking.
+   * @return {Server[]} The list containing all tracked servers in this handler.
+   */
+  getServers() {
+    return this.#servers;
+  }
+
+  /**
    * Returns all the server names in serverList.
    * @return {String[]} A list of server names.
    */
@@ -400,7 +413,7 @@ class CommandsHandler {
         usage.split(' ').length);
       argslengs = (argslengs.length === 0) ? [0] : argslengs;
       if (command.settings.admin &&
-        !msg.member.hasPermission('ADMINISTRATOR')) {
+        !msg.member.permissions.has('ADMINISTRATOR')) {
         return;
       }
       if (argslengs.includes(args.length)) {
@@ -408,10 +421,13 @@ class CommandsHandler {
       } else {
         let reply = messages.errors.invalidCommand;
         for (const usage of command.settings.usage) {
-          reply += `\n${config.prefix}${commandName} ${usage}`;
+          reply += `\n${config.prefix} ${commandName} ${usage}`;
         }
         msg.channel.send(reply);
       }
+    } else {
+      msg.channel.send(messages.errors.invalidCommand);
+      this.commands['help'].func([], msg);
     }
   }
 }
@@ -475,14 +491,14 @@ async function createChannel(guild, name) {
   try {
     let category = guild.channels.cache.find((c) =>
       c.name === messages.trackedServerCategoryName &&
-      c.type === 'category');
+      c.type === 'GUILD_CATEGORY');
     if (!category) {
       category = await guild.channels
-          .create(messages.trackedServerCategoryName, {type: 'category'});
+          .create(messages.trackedServerCategoryName, {type: 'GUILD_CATEGORY'});
     }
     const everyoneRoleID = guild.roles.everyone.id;
     const channel = await guild.channels.create(name, {
-      type: 'voice',
+      type: 'GUILD_VOICE',
       parent: category.id,
       permissionOverwrites: [
         {
@@ -773,6 +789,24 @@ commandFunctions['unmute'] = (args, msg) => {
   }
 };
 
+commandFunctions['help'] = (args, msg) => {
+  let reply = messages.actions.onHelpCommand.listCommands;
+  for (const commandName of Object.keys(config.commands)) {
+    const command = config.commands[commandName];
+    reply += `\`\`\`\n\n${commandName}: ${command.desc}` +
+        `\n  ${messages.actions.onHelpCommand.usage}: `;
+    if (command.usage.length === 0) {
+      reply += `\n    ${config.prefix} ${commandName} `;
+    }
+    for (const usage of command.usage) {
+      reply += `\n    ${config.prefix} ${commandName} ` + `${usage}`;
+    }
+    reply += `\n  ${messages.actions.onHelpCommand.alias}: ` +
+        `${command.alias.reduce((p, c) => p + `, ${c}`)}\`\`\``;
+  }
+  msg.channel.send(reply);
+};
+
 for (const commandName of Object.keys(config.commands)) {
   const commandConfig = config.commands[commandName];
   for (const alias of commandConfig.alias) {
@@ -786,10 +820,10 @@ client.on('ready', async () => {
   serversHandler.updateServers();
 });
 
-client.on('message', (msg) => {
+client.on('messageCreate', (msg) => {
   if (!msg.content.startsWith(config.prefix) ||
     msg.author.bot || !msg.guild) return;
-  const args = msg.content.slice(1).match(/"[^"]+"|[^\s]+/gm);
+  const args = msg.content.slice(3).match(/"[^"]+"|[^\s]+/gm);
   if (!guildList.guilds[msg.guild.id]) {
     guildList.guilds[msg.guild.id] = {
       channelID: msg.channel.id,
@@ -800,9 +834,7 @@ client.on('message', (msg) => {
   if (args === null) {
     return;
   }
-  for (let i = 0; i < args.length; i++) {
-    args[i] = args[i].replaceAll('"', '');
-  }
+  args.forEach((arg) => arg.replaceAll('"', ''));
   const command = args.shift().toLowerCase();
   commandHandler.run(command, args, msg);
 });

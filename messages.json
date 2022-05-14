@@ -37,11 +37,16 @@
     "onUnmute": {
       "all": "Successfully unmuted all servers",
       "one": "Succesfully unmute $SERVER_NAME"
+    },
+    "onHelpCommand": {
+      "listCommands": "The list of available commands:",
+      "usage": "usage",
+      "alias": "alias"
     }
   },
   "errors": {
     "invalidGuildID": "invalid guild id",
-    "invalidCommand": "Invalid command! Usage:",
+    "invalidCommand": "Invalid command!",
     "invalidChannelID": "channel $CHANNEL_ID not found"
   },
   "trackedServerCategoryName": "Tracked Servers"

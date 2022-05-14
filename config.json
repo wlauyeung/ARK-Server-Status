@@ -1,5 +1,5 @@
 {
-  "prefix": "!",
+  "prefix": "!mss",
   "queryInterval": 10,
   "offlineCounterThreshold": 3,
   "defaultMute": false,
@@ -36,7 +36,7 @@
     },
     "stalk": {
       "admin": false,
-      "desc": "Look for a player on a tracked server(s)",
+      "desc": "Look for a player on a server",
       "alias": [
         "stalk"
       ],
@@ -57,7 +57,7 @@
     },
     "listplayers": {
       "admin": false,
-      "desc": "List all online players on a server",
+      "desc": "List all players on a server",
       "alias": [
         "listplayers",
         "lp"
@@ -88,7 +88,7 @@
     },
     "help": {
       "admin": false,
-      "desc": "Display all available commands",
+      "desc": "Display all available commands with usages",
       "alias": [
         "help"
       ],
