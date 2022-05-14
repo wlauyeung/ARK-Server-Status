@@ -87,7 +87,7 @@
     },
     "unmute": {
       "admin": true,
-      "desc": "Unmute all or a sesrver",
+      "desc": "Unmute all or a server",
       "alias": [
         "unmute"
       ],
