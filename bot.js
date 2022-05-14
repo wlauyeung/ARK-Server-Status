@@ -864,10 +864,15 @@ commandFunctions['help'] = (args, msg) => {
   for (const commandName of Object.keys(config.commands)) {
     const command = config.commands[commandName];
     reply += `\`\`\`\n\n${commandName}: ${command.desc}` +
-    `\n    ${messages.actions.onHelpCommand.usage}: ` +
-    `${config.prefix} ${commandName} ` + `${command.usage}` +
-    `\n    ${messages.actions.onHelpCommand.alias}: ` +
-    `${command.alias.reduce((p, c) => p + `, ${c}`)}\`\`\``;
+        `\n  ${messages.actions.onHelpCommand.usage}: `;
+    if (command.usage.length === 0) {
+      reply += `\n    ${config.prefix} ${commandName} `;
+    }
+    for (const usage of command.usage) {
+      reply += `\n    ${config.prefix} ${commandName} ` + `${usage}`;
+    }
+    reply += `\n  ${messages.actions.onHelpCommand.alias}: ` +
+        `${command.alias.reduce((p, c) => p + `, ${c}`)}\`\`\``;
   }
   msg.channel.send(reply);
 };

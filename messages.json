@@ -43,8 +43,8 @@
     },
     "onHelpCommand": {
       "listCommands": "The list of available commands:",
-      "usage": "usage:",
-      "alias": "alias:"
+      "usage": "usage",
+      "alias": "alias"
     }
   },
   "errors": {
