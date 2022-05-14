@@ -25,6 +25,7 @@ class Server {
   #ip;
   #port;
   #offlineCounter;
+  #isTrackerSynced;
 
   /**
    * Adds two numbers together.
@@ -39,6 +40,7 @@ class Server {
     this.#ip = ip;
     this.#port = port;
     this.#offlineCounter = 0;
+    this.#isTrackerSynced = true;
   }
 
   /**
@@ -79,9 +81,13 @@ class Server {
       if (guildList.guilds[guildID].trackedServers[this.#name]) {
         const guild = client.guilds.cache.find(((g) => g.id === guildID));
         if (guild) {
-          updateChannel(this.getChannelDisplayName(),
-              guildList.guilds[guildID].trackedServers[this.#name].channelID)
-              .catch((e) => console.error(e));
+          try {
+            updateChannel(this.getChannelDisplayName(),
+                guildList.guilds[guildID].trackedServers[this.#name].channelID);
+            this.#isTrackerSynced = true;
+          } catch (e) {
+            this.#isTrackerSynced = false;
+          }
           if (message &&
              !guildList.guilds[guildID].trackedServers[this.#name].muted) {
             sendMessage(message, guildID);
@@ -98,12 +104,14 @@ class Server {
    */
   #changeStatus(status) {
     if (this.#status !== status) {
-      const statusText = (status === 0) ? messages.server.offline :
-        messages.server.online;
       this.#status = status;
+      const statusText = (this.#status === 0) ? messages.server.offline :
+          messages.server.online;
       this.#updateTracker(messages.actions.onStatusChange
           .replace('$SERVER_NAME', this.#name)
           .replace('$STATUS', statusText));
+    } else if (!this.#isTrackerSynced) {
+      this.#updateTracker();
     }
   }
 
@@ -117,14 +125,16 @@ class Server {
         host: this.#ip,
         port: this.#port,
       });
-      this.#changeStatus(1);
-      this.#offlineCounter = 0;
     } catch (e) {
       this.#offlineCounter++;
+      this.#data = null;
       if (this.#offlineCounter === config.offlineCounterThreshold) {
         this.#changeStatus(0);
       }
+      return;
     }
+    this.#changeStatus(1);
+    this.#offlineCounter = 0;
   }
 
   /**
@@ -137,7 +147,7 @@ class Server {
     if (this.#status === 0 || await this.getData() === null) {
       return false;
     }
-    for (const player of this.#data.players) {
+    for (const player of this.getPlayersList()) {
       if (player.name === playerName) {
         return true;
       }
@@ -154,6 +164,23 @@ class Server {
       await this.update();
     }
     return this.#data;
+  }
+
+  /**
+   * Get the list of all online players.
+   * @return {String[]} A list containing all online players.
+   */
+  getPlayersList() {
+    return (this.#data === null || this.#data.raw.vanilla === undefined) ?
+        [] : this.#data.raw.vanilla.players;
+  }
+
+  /**
+   * Get the maxinum number of players.
+   * @return {int} The threshold of online players for this server.
+   */
+  getMaxPlayers() {
+    return (this.#data === null) ? 0 : this.#data.maxplayers;
   }
 }
 
@@ -781,7 +808,7 @@ commandFunctions['listplayers'] = async (args, msg) => {
       if (server.status === 1) {
         str += messages.actions.onListPlayers.header
             .replace('$SERVER_NAME', sName);
-        for (const player of (await server.getData()).players) {
+        for (const player of server.getPlayersList()) {
           str += '\n' + player.name;
         }
         msg.channel.send(str.substring(1));
