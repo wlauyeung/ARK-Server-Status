@@ -13,6 +13,7 @@ A Discord bot designed to track ARK servers
 | `offlineCounterThreshold` | The threshold for how many offline queries a server can get before considered as offline. |
 | `defaultMute` | Whether a new channel should be muted by default. |
 | `commands.[commandName].admin` | Whether this command requires administrator privilege. |
+| `commands.[commandName].desc` | The description of the command. |
 | `commands.[commandName].alias` | All the aliases of the command. |
 | `commands.[commandName].usage` | All the arguments of the command. |
 
@@ -27,3 +28,4 @@ A Discord bot designed to track ARK servers
 | `rates` | When the rates of official servers. | No arguments needed |
 | `mute` | Mute all or a server. | `all` OR `<server_name>` |
 | `unmute` | Unmute all or a server. | `all` OR `<server_name>` |
+| `help` | Display the list of available commands | No arguments needed |
