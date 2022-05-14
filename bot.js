@@ -102,8 +102,6 @@ class Server {
    * @param {int} oldPlayerCount The previous player count.
    */
   #changeStatus(status, oldPlayerCount = 0) {
-    console.log(`[${this.#name}] updating this.#status=${this.#status} to` +
-      ` status=${status} and oldPlayerCount=${oldPlayerCount}}]`);
     if (this.#status !== status) {
       this.#status = status;
       const statusText = (this.#status === 0) ? messages.server.offline :
@@ -111,7 +109,6 @@ class Server {
       this.#updateTracker(messages.actions.onStatusChange
           .replace('$SERVER_NAME', this.#name)
           .replace('$STATUS', statusText));
-      console.log('status change successful');
     } else if ((status === 1 && oldPlayerCount !==
       this.getPlayersList().length) ||
       !this.#isTrackerSynced) {
@@ -137,12 +134,10 @@ class Server {
       if (this.#offlineCounter === config.offlineCounterThreshold) {
         this.#changeStatus(0);
       }
-      console.log('update failed');
       return;
     }
     this.#changeStatus(1, oldPlayerCount);
     this.#offlineCounter = 0;
-    console.log('update successful');
   }
 
   /**
