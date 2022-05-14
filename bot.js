@@ -169,7 +169,6 @@ class Server {
     return this.#data;
   }
 
-
   /**
    * Get the list of all online players.
    * @return {String[]} A list containing all online players.
