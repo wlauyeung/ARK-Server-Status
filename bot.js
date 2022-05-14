@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const {Client, Intents} = require('discord.js');
 const Gamedig = require('gamedig');
 const {ToadScheduler, SimpleIntervalJob, Task} = require('toad-scheduler');
 const fs = require('fs');
@@ -7,7 +7,12 @@ const serverList = require('./servers.json');
 const guildList = require('./guilds.json');
 const credentials = require('./credentials.json');
 const messages = require('./messages.json');
-const client = new Discord.Client();
+const client = new Client({
+  intents: [
+    Intents.FLAGS.GUILD_MESSAGES,
+    Intents.FLAGS.GUILDS,
+  ],
+});
 const axios = require('axios').default;
 
 /**
@@ -474,7 +479,7 @@ class CommandsHandler {
         usage.split(' ').length);
       argslengs = (argslengs.length === 0) ? [0] : argslengs;
       if (command.settings.admin &&
-        !msg.member.hasPermission('ADMINISTRATOR')) {
+        !msg.member.permissions.has('ADMINISTRATOR')) {
         return;
       }
       if (argslengs.includes(args.length)) {
@@ -552,14 +557,14 @@ async function createChannel(guild, name) {
   try {
     let category = guild.channels.cache.find((c) =>
       c.name === messages.trackedServerCategoryName &&
-      c.type === 'category');
+      c.type === 'GUILD_CATEGORY');
     if (!category) {
       category = await guild.channels
-          .create(messages.trackedServerCategoryName, {type: 'category'});
+          .create(messages.trackedServerCategoryName, {type: 'GUILD_CATEGORY'});
     }
     const everyoneRoleID = guild.roles.everyone.id;
     const channel = await guild.channels.create(name, {
-      type: 'voice',
+      type: 'GUILD_VOICE',
       parent: category.id,
       permissionOverwrites: [
         {
@@ -890,7 +895,7 @@ client.on('ready', async () => {
   serversHandler.updateServers();
 });
 
-client.on('message', (msg) => {
+client.on('messageCreate', (msg) => {
   if (!msg.content.startsWith(config.prefix) ||
     msg.author.bot || !msg.guild) return;
   const args = msg.content.slice(3).match(/"[^"]+"|[^\s]+/gm);
