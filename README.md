@@ -29,3 +29,4 @@ A Discord bot designed to track ARK servers
 | `mute` | Mute all or a server. | `all` OR `<server_name>` |
 | `unmute` | Unmute all or a server. | `all` OR `<server_name>` |
 | `help` | Display the list of available commands | No arguments needed |
+| `uptime` | Check the uptime percentage of a server | `<server_name>` |
