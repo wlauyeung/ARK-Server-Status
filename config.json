@@ -102,6 +102,17 @@
         "help"
       ],
       "usage": []
+    },
+    "uptime": {
+      "admin": false,
+      "desc": "Check the uptime percentage of a server",
+      "alias": [
+        "uptime",
+        "ut"
+      ],
+      "usage": [
+        "<server_name>"
+      ]
     }
   }
 }

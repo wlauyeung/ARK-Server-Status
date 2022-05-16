@@ -45,7 +45,8 @@
       "listCommands": "The list of available commands:",
       "usage": "usage",
       "alias": "alias"
-    }
+    },
+    "onUptimeCommand": "$SERVER_NAME's uptime is $UP_TIME%"
   },
   "errors": {
     "invalidGuildID": "invalid guild id",

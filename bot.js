@@ -16,6 +16,194 @@ const client = new Client({
 const axios = require('axios').default;
 
 /**
+ * A class that handles all guild operations.
+ */
+class GuildsHandler {
+  /**
+   * Returns true if a guild with guildID exists and
+   * false otherwise.
+   * @param {String} guildID The ID of the guild.
+   * @return {boolean} True if exists false otherwise.
+   */
+  static hasGuild(guildID) {
+    return (guildList.guilds[guildID] !== undefined);
+  }
+
+  /**
+   * Returns the guild with guildID if it exists.
+   * @param {String} guildID The ID of the guild.
+   * @return {Object} The infomation about a guild
+   * if it exists and undefined if it doesn't.
+   */
+  static getGuild(guildID) {
+    return guildList.guilds[guildID];
+  }
+
+  /**
+   * Adds a guild.
+   * @param {String} guildID The ID of the guild.
+   * @param {String} channelID The ID of the news channel.
+   */
+  static async addGuild(guildID, channelID) {
+    guildList.guilds[guildID] = {
+      channelID: channelID,
+      trackedServers: {},
+    };
+    return (await this.#saveGuild());
+  }
+
+  /**
+   * Gets the list of all registered guild IDs.
+   * @return {String[]} The list of all registered guild IDs.
+   */
+  static getGuildIDs() {
+    return Object.keys(guildList.guilds);
+  }
+
+  /**
+   * Updates the news channel ID to channel ID in guild with
+   * ID guildID.
+   * Caller should make sure guildID maps to an existing guild.
+   * (See GuildHandler.hasGuild())
+   * @param {Stirng} guildID The ID of the guild.
+   * @param {String} channelID The ID of the channel.
+   * @return {boolean} True if successful and false otherwise.
+   */
+  static async updateGuildChannelID(guildID, channelID) {
+    guildList.guilds[guildID].channelID = channelID;
+    return (await this.#saveGuild());
+  }
+
+  /**
+   * Updates A tracked server's data in a guild.
+   * Caller should make sure guildID maps to an existing guild.
+   * (See GuildHandler.hasGuild())
+   * @param {String} guildID The ID of the guild.
+   * @param {String} serverName The name of the tracked server.
+   * @param {String} channelID (OPTIONAL) The channel ID to be updated.
+   * @param {boolean} muted  (OPTIONAL) The muted status to be updated.
+   * @return {boolean} True if successful and false otherwise.
+   */
+  static async updateGuildTrackedServerInfo(guildID, serverName,
+      channelID, muted) {
+    if (channelID === undefined && muted === undefined) {
+      return true;
+    }
+    const trackedServer = guildList.guilds[guildID].trackedServers[serverName];
+    if (trackedServer === undefined) {
+      return false;
+    }
+    if (channelID !== undefined) {
+      trackedServer.channelID = channelID;
+    }
+    if (muted !== undefined) {
+      trackedServer.muted = muted;
+    }
+    return (await this.#saveGuild());
+  }
+
+  /**
+   * Adds a tracked server to a guild.
+   * Caller should make sure guildID maps to an existing guild.
+   * (See GuildHandler.hasGuild())
+   * @param {String} guildID The ID of the guild.
+   * @param {String} serverName The tracked server's name.
+   * @param {String} channelID The channel ID of the server's
+   * tracker.
+   * @return {boolean} True if successful and false otherwise.
+   */
+  static async addGuildTrackedServer(guildID, serverName, channelID) {
+    guildList.guilds[guildID].trackedServers[serverName] = {
+      channelID: channelID,
+      muted: config.defaultMute,
+    };
+    return (await this.#saveGuild());
+  }
+
+  /**
+   * Removes a tracked server from a guild.
+   * Caller should make sure guildID maps to an existing guild.
+   * (See GuildHandler.hasGuild())
+   * @param {String} guildID The ID of the guild.
+   * @param {String} serverName The tracked server's name.
+   * @return {boolean} True if successful and false otherwise.
+   */
+  static async removeGuildTrackedServer(guildID, serverName) {
+    delete guildList.guilds[guildID].trackedServers[serverName];
+    return (await this.#saveGuild());
+  }
+
+  /**
+   * Mutes a tracked server form a guild.
+   * Caller should make sure guildID maps to an existing guild.
+   * (See GuildHandler.hasGuild())
+   * @param {String} guildID The ID of the guild.
+   * @param {String} serverName The tracked server's name.
+   * @param {boolean} muted The new status.
+   * @param {boolean} save (OPTIONAL) Hard save or not.
+   * @return {boolean} True if successful and false otherwise.
+   */
+  static async setTrackedServerMuteStatus(guildID, serverName, muted,
+      save = true) {
+    const trackedServer = guildList.guilds[guildID].trackedServers[serverName];
+    if (trackedServer === undefined) {
+      return false;
+    }
+    if (trackedServer.muted !== muted) {
+      trackedServer.muted = muted;
+      if (save) {
+        return (await this.#saveGuild());
+      }
+    }
+    return true;
+  }
+
+  /**
+   * Mutes all the tracked servers of a guild.
+   * Caller should make sure guildID maps to an existing guild.
+   * (See GuildHandler.hasGuild())
+   * @param {String} guildID The ID of the guild.
+   * @param {boolean} muted The new status.
+   * @return {boolean} True if successful and false otherwise.
+   */
+  static async setAllTrackedServersMuteStatus(guildID, muted) {
+    const serverNames = this.getAllTrackedServerNames(guildID);
+    for (const serverName of serverNames) {
+      this.setTrackedServerMuteStatus(guildID, serverName, muted, false);
+    }
+    return (await this.#saveGuild());
+  }
+
+  /**
+   * Gets the names of all tracked servers of a guild.
+   * Caller should make sure guildID maps to an existing guild.
+   * (See GuildHandler.hasGuild())
+   * @param {String} guildID The ID of the guild.
+   * @return {String[]} A list of server names.
+   */
+  static getAllTrackedServerNames(guildID) {
+    return Object.keys(guildList.guilds[guildID].trackedServers);
+  }
+
+  /**
+   * Saves the current guild data to ./guilds.json
+   * @return {Promise} Returns true if successful and false otherwise.
+   */
+  static #saveGuild() {
+    return new Promise((resolve, reject) => {
+      fs.writeFile('./guilds.json',
+          JSON.stringify(guildList, null, 2), (err) => {
+            if (err) {
+              resolve(false);
+            } else {
+              resolve(true);
+            }
+          });
+    });
+  }
+};
+
+/**
  * The server class
  */
 class Server {
@@ -26,6 +214,8 @@ class Server {
   #port;
   #offlineCounter;
   #isTrackerSynced;
+  #upticks;
+  #downtics;
 
   /**
    * Adds two numbers together.
@@ -41,6 +231,8 @@ class Server {
     this.#port = port;
     this.#offlineCounter = 0;
     this.#isTrackerSynced = true;
+    this.#upticks = 0;
+    this.#downtics = 0;
   }
 
   /**
@@ -77,19 +269,20 @@ class Server {
    * is updated.
    */
   #updateTracker(message = null) {
-    for (const guildID of Object.keys(guildList.guilds)) {
-      if (guildList.guilds[guildID].trackedServers[this.#name]) {
+    for (const guildID of GuildsHandler.getGuildIDs()) {
+      const guildInfo = GuildsHandler.getGuild(guildID);
+      if (guildInfo.trackedServers[this.#name]) {
         const guild = client.guilds.cache.find(((g) => g.id === guildID));
         if (guild) {
           try {
             updateChannel(this.getChannelDisplayName(),
-                guildList.guilds[guildID].trackedServers[this.#name].channelID);
+                guildInfo.trackedServers[this.#name].channelID);
             this.#isTrackerSynced = true;
           } catch (e) {
             this.#isTrackerSynced = false;
           }
           if (message &&
-             !guildList.guilds[guildID].trackedServers[this.#name].muted) {
+             !guildInfo.trackedServers[this.#name].muted) {
             sendMessage(message, guildID);
           }
         }
@@ -127,6 +320,7 @@ class Server {
       });
     } catch (e) {
       this.#offlineCounter++;
+      this.#downtics++;
       this.#data = null;
       if (this.#offlineCounter === config.offlineCounterThreshold) {
         this.#changeStatus(0);
@@ -135,6 +329,7 @@ class Server {
     }
     this.#changeStatus(1);
     this.#offlineCounter = 0;
+    this.#upticks++;
   }
 
   /**
@@ -181,6 +376,15 @@ class Server {
    */
   getMaxPlayers() {
     return (this.#data === null) ? 0 : this.#data.maxplayers;
+  }
+
+  /**
+   * Get the uptime percentage of this server.
+   * @return {Number} Uptime percentage.
+   */
+  getUpTimePercentage() {
+    if (this.#upticks + this.#downtics === 0) return 0;
+    return this.#upticks / (this.#upticks + this.#downtics);
   }
 }
 
@@ -429,7 +633,7 @@ class ServersHandler {
     if (!guildID || guildID === '') {
       throw Error(messages.errors.invalidGuildID);
     }
-    return Object.keys(guildList.guilds[guildID].trackedServers);
+    return GuildsHandler.getAllTrackedServerNames(guildID);
   }
 
   /**
@@ -526,22 +730,14 @@ class CommandsHandler {
 }
 
 /**
- * Saves the current guild data to ./guilds.json
- */
-function saveGuild() {
-  fs.writeFile('./guilds.json', JSON.stringify(guildList, null, 2), (err) => {
-    if (err) console.error(err);
-  });
-}
-
-/**
  * Sends a message message to the Discord server with guild id guilID.
  * @param {String} message The message.
  * @param {String} guildID The guild ID of a Discord server.
  */
 function sendMessage(message, guildID) {
-  if (guildList.guilds[guildID] && guildList.guilds[guildID].channelID) {
-    const channelID = guildList.guilds[guildID].channelID;
+  if (GuildsHandler.hasGuild(guildID)) {
+    const guildInfo = GuildsHandler.getGuild(guildID);
+    const channelID = guildInfo.channelID;
     if (channelID !== '') {
       const channel = client.channels.cache.get(channelID);
       if (channel !== undefined) {
@@ -608,7 +804,7 @@ async function createChannel(guild, name) {
 
 /**
  * Deletes an existing channel with ID channelID.
- * @param {*} channelID The ID of the channel to be deleted.
+ * @param {String} channelID The ID of the channel to be deleted.
  */
 async function deleteChannel(channelID) {
   try {
@@ -629,8 +825,7 @@ commandFunctions['setchannel'] = (args, msg) => {
   const arg = args[0];
   const channelID = arg.replace('<', '').replace('>', '').replace('#', '');
   if (client.channels.cache.get(channelID) !== undefined) {
-    guildList.guilds[msg.guild.id].channelID = channelID;
-    saveGuild();
+    GuildsHandler.updateGuildChannelID(msg.guild.id, channelID);
     msg.channel.send(
         messages.actions.onNewsChannelChange.success.replace('$CHANNEL_NAME',
             arg));
@@ -663,19 +858,17 @@ commandFunctions['track'] = async (args, msg) => {
     return;
   }
   if (serverNames.length === 1) {
-    if (guildList.guilds[msg.guild.id]) {
-      if (guildList.guilds[msg.guild.id]
-          .trackedServers[serverNames[0]] === undefined) {
+    if (GuildsHandler.hasGuild(msg.guild.id)) {
+      const guildInfo = GuildsHandler.getGuild(msg.guild.id);
+      if (guildInfo.trackedServers[serverNames[0]] === undefined) {
         if (!serverList.servers[serverNames[0]].tracked) {
           serversHandler.trackServer(serverNames[0]);
         }
-        guildList.guilds[msg.guild.id].trackedServers[serverNames[0]] = {
-          channelID: (await createChannel(msg.guild,
-              serversHandler.getServer(serverNames[0])
-                  .getChannelDisplayName())).id,
-          muted: config.defaultMute,
-        };
-        saveGuild();
+        const trackerCID = (await createChannel(msg.guild,
+            serversHandler.getServer(serverNames[0])
+                .getChannelDisplayName())).id;
+        GuildsHandler.addGuildTrackedServer(
+            msg.guild.id, serverNames[0], trackerCID);
         msg.channel.send(
             messages.actions.onTrack.replace('$SERVER_NAME', serverNames[0]));
       } else {
@@ -706,12 +899,12 @@ commandFunctions['untrack'] = (args, msg) => {
   } else if (serverNames.length > 20) {
     msg.channel.send(messages.actions.onServerSearch.needInfo);
   } else if (serverNames.length === 1) {
-    if (guildList.guilds[msg.guild.id]) {
-      if (guildList.guilds[msg.guild.id]
-          .trackedServers[serverNames[0]] !== undefined) {
+    if (GuildsHandler.hasGuild(msg.guild.id)) {
+      const guildInfo = GuildsHandler.getGuild(msg.guild.id);
+      if (guildInfo.trackedServers[serverNames[0]] !== undefined) {
         let isTrackedOnElseWhere = false;
-        for (const guildID of Object.keys(guildList.guilds)) {
-          if (guildList.guilds[guildID].trackedServers[serverNames[0]] !==
+        for (const guildID of GuildsHandler.getGuildIDs()) {
+          if (GuildsHandler.getGuild(guildID).trackedServers[serverNames[0]] !==
             undefined && guildID !== msg.guild.id) {
             isTrackedOnElseWhere = true;
             break;
@@ -720,10 +913,8 @@ commandFunctions['untrack'] = (args, msg) => {
         if (!isTrackedOnElseWhere) {
           serversHandler.untrackServer(serverNames[0]);
         }
-        deleteChannel(guildList.guilds[msg.guild.id]
-            .trackedServers[serverNames[0]].channelID);
-        delete guildList.guilds[msg.guild.id].trackedServers[serverNames[0]];
-        saveGuild();
+        deleteChannel(guildInfo.trackedServers[serverNames[0]].channelID);
+        GuildsHandler.removeGuildTrackedServer(msg.guild.id, serverNames[0]);
         msg.channel.send(messages.actions.onUntrack
             .replace('$SERVER_NAME', serverNames[0]));
       } else {
@@ -835,22 +1026,14 @@ commandFunctions['rates'] = async (args, msg) => {
 commandFunctions['mute'] = (args, msg) => {
   const serverName = args[0];
   if (serverName === 'all') {
-    Object.keys(guildList.guilds[msg.guild.id].trackedServers).forEach((sn) => {
-      if (!guildList.guilds[msg.guild.id].trackedServers[sn].muted) {
-        guildList.guilds[msg.guild.id].trackedServers[sn].muted = true;
-      }
-    });
-    saveGuild();
+    GuildsHandler.setAllTrackedServersMuteStatus(msg.guild.id, true);
     msg.channel.send(messages.actions.onMute.all);
   } else {
     const serverNames = serversHandler
         .getNamesFromStr(serverName, true, msg.guild.id);
     if (serverNames.length === 1) {
       const server = serversHandler.getServer(serverNames[0]);
-      if (!guildList.guilds[msg.guild.id].trackedServers[server.name].muted) {
-        guildList.guilds[msg.guild.id].trackedServers[server.name].muted = true;
-        saveGuild();
-      }
+      GuildsHandler.setTrackedServerMuteStatus(msg.guild.id, server.name, true);
       msg.channel.send(messages.actions.onMute.one
           .replace('$SERVER_NAME', server.name));
     } else if (serverNames.length > 1) {
@@ -864,23 +1047,15 @@ commandFunctions['mute'] = (args, msg) => {
 commandFunctions['unmute'] = (args, msg) => {
   const serverName = args[0];
   if (serverName === 'all') {
-    Object.keys(guildList.guilds[msg.guild.id].trackedServers).forEach((sn) => {
-      if (guildList.guilds[msg.guild.id].trackedServers[sn].muted) {
-        guildList.guilds[msg.guild.id].trackedServers[sn].muted = false;
-      }
-    });
-    saveGuild();
+    GuildsHandler.setAllTrackedServersMuteStatus(msg.guild.id, false);
     msg.channel.send(messages.actions.onUnmute.all);
   } else {
     const serverNames = serversHandler
         .getNamesFromStr(serverName, true, msg.guild.id);
     if (serverNames.length === 1) {
       const server = serversHandler.getServer(serverNames[0]);
-      if (guildList.guilds[msg.guild.id].trackedServers[server.name].muted) {
-        guildList.guilds[msg.guild.id]
-            .trackedServers[server.name].muted = false;
-        saveGuild();
-      }
+      GuildsHandler.setTrackedServerMuteStatus(
+          msg.guild.id, server.name, false);
       msg.channel.send(messages.actions.onUnmute.one
           .replace('$SERVER_NAME', server.name));
     } else if (serverNames.length > 1) {
@@ -909,6 +1084,23 @@ commandFunctions['help'] = (args, msg) => {
   msg.channel.send(reply);
 };
 
+commandFunctions['uptime'] = (args, msg) => {
+  const serverName = args[0];
+  const serverNames = serversHandler.getNamesFromStr(
+      serverName, true, msg.guild.id);
+  if (serverNames.length === 0) {
+    msg.channel.send(messages.actions.onServerSearch.notFound
+        .replace('$SERVER_NAME', serverName));
+  } else if (serverNames.length > 1) {
+    msg.channel.send(messages.actions.onServerSearch.needInfo);
+  } else {
+    const server = serversHandler.getServer(serverNames[0]);
+    msg.channel.send(messages.actions.onUptimeCommand
+        .replace('$SERVER_NAME', server.name)
+        .replace('$UP_TIME', server.getUpTimePercentage().toFixed(4) * 100));
+  }
+};
+
 for (const commandName of Object.keys(config.commands)) {
   const commandConfig = config.commands[commandName];
   for (const alias of commandConfig.alias) {
@@ -925,13 +1117,9 @@ client.on('ready', async () => {
 client.on('messageCreate', (msg) => {
   if (!msg.content.startsWith(`${config.prefix} `) ||
     msg.author.bot || !msg.guild) return;
-  const args = msg.content.slice(3).match(/"[^"]+"|[^\s]+/gm);
-  if (!guildList.guilds[msg.guild.id]) {
-    guildList.guilds[msg.guild.id] = {
-      channelID: msg.channel.id,
-      trackedServers: {},
-    };
-    saveGuild();
+  const args = msg.content.slice(4).match(/"[^"]+"|[^\s]+/gm);
+  if (!GuildsHandler.hasGuild(msg.guild.id)) {
+    GuildsHandler.addGuild(msg.guild.id, msg.channel.id);
   }
   if (args === null) {
     return;
