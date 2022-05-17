@@ -366,8 +366,8 @@ class Server {
    * @return {String[]} A list containing all online players.
    */
   getPlayersList() {
-    return (this.#data === null || this.#data.raw.vanilla === undefined) ?
-        [] : this.#data.raw.vanilla.players;
+    return (this.#data === null || this.#data.players === undefined) ?
+        [] : this.#data.players;
   }
 
   /**
@@ -384,7 +384,7 @@ class Server {
    */
   getUpTimePercentage() {
     if (this.#upticks + this.#downtics === 0) return 0;
-    return this.#upticks / (this.#upticks + this.#downtics);
+    return (this.#upticks / (this.#upticks + this.#downtics)).toFixed(4);
   }
 }
 
@@ -1097,7 +1097,7 @@ commandFunctions['uptime'] = (args, msg) => {
     const server = serversHandler.getServer(serverNames[0]);
     msg.channel.send(messages.actions.onUptimeCommand
         .replace('$SERVER_NAME', server.name)
-        .replace('$UP_TIME', server.getUpTimePercentage().toFixed(4) * 100));
+        .replace('$UP_TIME', server.getUpTimePercentage() * 100));
   }
 };
 
