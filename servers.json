@@ -256,12 +256,12 @@
       "tracked": false
     },
     "EU-PVP-Official-Ragnarok-SmallTribes34": {
-      "ip": "31.214.160.243",
+      "ip": "31.214.160.5",
       "port": 27015,
       "tracked": false
     },
     "EU-PVP-Official-TheCenter-SmallTribes35": {
-      "ip": "31.214.160.243",
+      "ip": "31.214.160.5",
       "port": 27017,
       "tracked": false
     },
@@ -4301,8 +4301,8 @@
       "tracked": false
     },
     "NA-PVE-Official-GenTwo978": {
-      "ip": "95.156.213.132",
-      "port": 27017,
+      "ip": "95.156.213.175",
+      "port": 27015,
       "tracked": false
     },
     "Land of Dragons - Island": {
@@ -6246,8 +6246,8 @@
       "tracked": false
     },
     "NA-PVE-Official-GenTwo962": {
-      "ip": "37.10.126.192",
-      "port": 27019,
+      "ip": "95.156.213.172",
+      "port": 27015,
       "tracked": false
     },
     "NA-PVE-Official-GenTwo963": {
@@ -6271,8 +6271,8 @@
       "tracked": false
     },
     "NA-PVE-Official-GenTwo971": {
-      "ip": "45.159.5.203",
-      "port": 27019,
+      "ip": "95.156.213.174",
+      "port": 27015,
       "tracked": false
     },
     "EU-PVP-Official-GenTwo899": {
@@ -6506,13 +6506,13 @@
       "tracked": false
     },
     "NA-PVE-Official-GenTwo994": {
-      "ip": "109.230.214.75",
-      "port": 27019,
+      "ip": "95.156.213.173",
+      "port": 27015,
       "tracked": false
     },
     "NA-PVE-Official-GenTwo995": {
-      "ip": "109.230.214.78",
-      "port": 27017,
+      "ip": "109.230.214.53",
+      "port": 27015,
       "tracked": false
     },
     "EU-PVP-Official-GenTwo-SmallTribes156": {
@@ -6596,8 +6596,8 @@
       "tracked": false
     },
     "NA-PVP-GenTwo-CrossArk14": {
-      "ip": "37.10.126.207",
-      "port": 27019,
+      "ip": "109.230.214.53",
+      "port": 27017,
       "tracked": false
     },
     "NA-PVE-Official-GenTwo959": {
@@ -6616,8 +6616,8 @@
       "tracked": false
     },
     "EU-PVE-Official-GenTwo1008": {
-      "ip": "46.251.238.232",
-      "port": 27019,
+      "ip": "185.9.107.19",
+      "port": 27017,
       "tracked": false
     },
     "EU-PVE-Official-GenTwo990": {
@@ -6641,8 +6641,8 @@
       "tracked": false
     },
     "NA-PVE-Official-GenTwo965": {
-      "ip": "37.10.126.208",
-      "port": 27019,
+      "ip": "95.156.213.170",
+      "port": 27015,
       "tracked": false
     },
     "NA-PVE-Official-GenTwo972": {
@@ -7511,13 +7511,13 @@
       "tracked": false
     },
     "OC-PVE-Official-GenTwo1001": {
-      "ip": "128.0.115.48",
-      "port": 27019,
+      "ip": "128.0.115.130",
+      "port": 27017,
       "tracked": false
     },
     "EU-PVE-Official-GenTwo924": {
-      "ip": "46.251.238.235",
-      "port": 27019,
+      "ip": "185.9.107.19",
+      "port": 27015,
       "tracked": false
     },
     "EU-PVP-Official-TheIsland1017": {
@@ -7893,6 +7893,21 @@
     "EU-PVE-Official-GenTwo989": {
       "ip": "46.251.238.243",
       "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-GenTwo-SmallTribes155": {
+      "ip": "37.10.127.184",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-CrystalIsles844": {
+      "ip": "95.156.213.171",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVP-Official-GenTwo984": {
+      "ip": "128.0.115.130",
+      "port": 27015,
       "tracked": false
     }
   }

@@ -724,7 +724,6 @@ class CommandsHandler {
       }
     } else {
       msg.channel.send(messages.errors.invalidCommand);
-      this.commands['help'].func([], msg);
     }
   }
 }

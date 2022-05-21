@@ -50,7 +50,7 @@
   },
   "errors": {
     "invalidGuildID": "invalid guild id",
-    "invalidCommand": "Invalid command!",
+    "invalidCommand": "Invalid command. Please enter `!ss help` to see the list of available commands",
     "invalidChannelID": "channel $CHANNEL_ID not found"
   },
   "trackedServerCategoryName": "Tracked Servers"
