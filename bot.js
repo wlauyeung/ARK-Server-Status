@@ -863,14 +863,14 @@ class CommandsHandler {
       if (argslengs.includes(args.length)) {
         command.func(args, msg);
       } else {
-        let reply = messages.errors.invalidCommand;
+        let reply = messages.actions.onCommand.invalidUsage;
         for (const usage of command.settings.usage) {
-          reply += `\n${config.prefix} ${commandName} ${usage}`;
+          reply += `\n\`${config.prefix} ${commandName} ${usage}\``;
         }
         msg.channel.send(reply);
       }
     } else {
-      msg.channel.send(messages.errors.invalidCommand);
+      msg.channel.send(messages.actions.onCommand.invalidCommand);
     }
   }
 }
@@ -1280,14 +1280,16 @@ client.on('ready', async () => {
 client.on('messageCreate', (msg) => {
   if (!msg.content.startsWith(`${config.prefix} `) ||
     msg.author.bot || !msg.guild) return;
-  const args = msg.content.slice(4).match(/"[^"]+"|[^\s]+/gm);
+  const args = msg.content.slice(4).match(/"[^"]+"|[^" ]+/gm);
   if (!GuildsHandler.hasGuild(msg.guild.id)) {
     GuildsHandler.addGuild(msg.guild.id, msg.channel.id);
   }
   if (args === null) {
     return;
   }
-  args.forEach((arg) => arg.replaceAll('"', ''));
+  for (let i = 0; i < args.length; i++) {
+    args[i] = args[i].replaceAll('"', '');
+  }
   const command = args.shift().toLowerCase();
   commandHandler.run(command, args, msg);
 });

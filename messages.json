@@ -13,6 +13,10 @@
       "success": "News channel has been set to $CHANNEL_NAME",
       "failure": "Invalid channel"
     },
+    "onCommand": {
+      "invalidCommand": "Invalid command. Please enter `!ss help` to see the list of available commands",
+      "invalidUsage": "Invalid usage. Please follow the formats below to execute this command properly"
+    },
     "onServerSearch": {
       "suggest": "Did you mean:",
       "needInfo": "Please be more specific",
@@ -56,7 +60,6 @@
   },
   "errors": {
     "invalidGuildID": "invalid guild id",
-    "invalidCommand": "Invalid command. Please enter `!ss help` to see the list of available commands",
     "invalidChannelID": "channel $CHANNEL_ID not found"
   },
   "trackedServerCategoryName": "Tracked Servers"
