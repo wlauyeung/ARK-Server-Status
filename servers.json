@@ -2318,7 +2318,7 @@
     "NA-PVE-Official-TheIsland48": {
       "ip": "95.156.213.135",
       "port": 27017,
-      "tracked": true
+      "tracked": false
     },
     "NA-PVP-Official-ScorchedEarth-SmallTribes25": {
       "ip": "85.190.159.30",

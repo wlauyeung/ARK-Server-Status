@@ -46,7 +46,13 @@
       "usage": "usage",
       "alias": "alias"
     },
-    "onUptimeCommand": "$SERVER_NAME's uptime is $UP_TIME%"
+    "onUptimeCommand": "$SERVER_NAME's uptime is $UP_TIME%",
+    "onGlobalStalk": {
+      "notFound": "Unable to find $PLAYER_NAME on any server",
+      "found": "$PLAYER_NAME is currently on $SERVER_NAME",
+      "inProg": "Querying data. This might take a while...",
+      "timestamp": "Using data gathered on $TIME"
+    }
   },
   "errors": {
     "invalidGuildID": "invalid guild id",

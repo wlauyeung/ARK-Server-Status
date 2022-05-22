@@ -4,6 +4,8 @@
   "queryInterval": 10,
   "offlineCounterThreshold": 3,
   "defaultMute": false,
+  "gsCooldown": 60, 
+  "gsTimeout": 10,
   "commands": {
     "setchannel": {
       "admin": true,
@@ -112,6 +114,17 @@
       ],
       "usage": [
         "<server_name>"
+      ]
+    },
+    "globalstalk": {
+      "admin": false,
+      "desc": "Stalk a player from all available servers",
+      "alias": [
+        "globalstalk",
+        "gs"
+      ],
+      "usage": [
+        "<player_name>"
       ]
     }
   }

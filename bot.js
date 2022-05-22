@@ -16,6 +16,20 @@ const client = new Client({
 const axios = require('axios').default;
 
 /**
+ * A worker that is able to sleep
+ */
+class Worker {
+  /**
+   * Sleep for ms milliseconds.
+   * @param {int} ms Milliseconds.
+   * @return {Promise} A promise.
+   */
+  _sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+}
+
+/**
  * A class that handles all guild operations.
  */
 class GuildsHandler {
@@ -389,9 +403,9 @@ class Server {
 }
 
 /**
- * A class that updates the server list.
+ * A worker that updates the server list.
  */
-class OfficialServersUpdater {
+class OfficialServersUpdater extends Worker {
   static #ports = [27015, 27017, 27019, 27021];
   #progress;
   #serversHandler;
@@ -401,17 +415,9 @@ class OfficialServersUpdater {
    * @param {ServersHandler} serversHandler The ServerHandler.
    */
   constructor(serversHandler) {
+    super();
     this.#progress = 0;
     this.#serversHandler = serversHandler;
-  }
-
-  /**
-   * Sleep for ms milliseconds.
-   * @param {int} ms Milliseconds.
-   * @return {Promise} A promise.
-   */
-  #sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   /**
@@ -457,12 +463,12 @@ class OfficialServersUpdater {
       for (const serverIP of arkServers) {
         for (const port of OfficialServersUpdater.#ports) {
           this.queryServer(serverIP, port);
-          await this.#sleep(1);
+          await this._sleep(1);
         }
       }
       while (this.#progress !== numServers) {
         console.log(`Progress: ${this.#progress}/${numServers}`);
-        await this.#sleep(1000);
+        await this._sleep(1000);
       }
       for (const serverName of Object.keys(this.#serversHandler.getServers())) {
         const server = this.#serversHandler.getServer(serverName);
@@ -477,6 +483,139 @@ class OfficialServersUpdater {
     } catch (e) {
       throw e;
     }
+  }
+}
+
+/**
+ * A worker that finds an user globally.
+ */
+class GlobalStalker extends Worker {
+  #servers;
+  #lastUpdated;
+  #progress;
+  #updating;
+
+  /**
+   * Initalize a global stalker.
+   */
+  constructor() {
+    super();
+    this.#servers = {};
+    this.#lastUpdated = 0;
+    this.#updating = false;
+  }
+
+  /**
+   * Compares the last updated time plus the cooldown duration with
+   * the current time.
+   * @return {boolean} Returns true if the worker
+   * is on cooldown and false otherwise.
+   */
+  isOnCooldown() {
+    return Date.now() < this.#lastUpdated + (config.gsCooldown * 1000);
+  }
+
+  /**
+   * Quickly finds whether a player is on or not.
+   * @param {String} serverName The server's name.
+   * @param {String} playerName The player's name.
+   * @return {boolean} True if the player is on that server and
+   * false otherwise.
+   */
+  isPlayerOnServer(serverName, playerName) {
+    if (this.#servers[serverName]) {
+      for (const player of this.#servers[serverName].players) {
+        if (player.name === playerName) {
+          return true;
+        }
+      }
+      return false;
+    }
+    return false;
+  }
+
+  /**
+   * Queries a server.
+   * @param {String} ip The IP of the server.
+   * @param {int} port The port of the server.
+   */
+  async query(ip, port) {
+    return new Promise((resolve, reject) => {
+      Gamedig.query({
+        type: 'arkse',
+        host: ip,
+        port: port,
+      }).then((state) => {
+        this.#progress++;
+        const name = state.name.replace(/\s-\s\(.+\)/gm, '');
+        if (name !== null) {
+          this.#servers[name] = state.players;
+        }
+        resolve();
+      }).catch((e) => {
+        this.#progress++;
+        resolve();
+      });
+    });
+  }
+
+  /**
+   * Queries for new data.
+   */
+  async #update() {
+    const serversInfo = serversHandler.getAllServersInfo();
+    const serverNames = Object.keys(serversInfo);
+    this.#updating = true;
+    this.#progress = 0;
+    this.#servers = {};
+    for (const sn of serverNames) {
+      this.query(serversInfo[sn].ip, serversInfo[sn].port);
+      await this._sleep(1);
+    }
+    while (this.#progress < serverNames.length) {
+      await this._sleep(500);
+    }
+    this.#lastUpdated = Date.now();
+    this.#updating = false;
+  }
+
+  /**
+   * Get the updating stauts.
+   */
+  get updating() {
+    return this.#updating;
+  }
+
+  /**
+   * Get the timestamp of the last update.
+   */
+  get timestamp() {
+    return new Date(this.#lastUpdated);
+  }
+
+  /**
+   * Finds the server that a player is current on.
+   * @param {String} playerName The name of the player.
+   * @return {Promise} The name of the server that the player is on.
+   */
+  async find(playerName) {
+    let count = 0;
+    if (!this.isOnCooldown() && !this.#updating) {
+      await this.#update();
+    }
+    while (this.#updating && count <= config.gsTimeout * 1000) {
+      await this._sleep(250);
+      count += 250;
+    }
+    for (const serverName of Object.keys(this.#servers)) {
+      const players = this.#servers[serverName];
+      for (const player of players) {
+        if (player.name === playerName) {
+          return serverName;
+        }
+      }
+    }
+    return null;
   }
 }
 
@@ -669,6 +808,14 @@ class ServersHandler {
     }
     return status;
   }
+
+  /**
+   * Get all server info stored in servers.json.
+   * @return {Object} A list of servers along with their info.
+   */
+  getAllServersInfo() {
+    return serverList.servers;
+  }
 }
 
 /**
@@ -818,6 +965,7 @@ async function deleteChannel(channelID) {
 
 const serversHandler = new ServersHandler();
 const commandHandler = new CommandsHandler();
+const globalStalker = new GlobalStalker();
 const commandFunctions = {};
 
 commandFunctions['setchannel'] = (args, msg) => {
@@ -1098,6 +1246,22 @@ commandFunctions['uptime'] = (args, msg) => {
         .replace('$SERVER_NAME', server.name)
         .replace('$UP_TIME', server.getUpTimePercentage() * 100));
   }
+};
+
+commandFunctions['globalstalk'] = async (args, msg) => {
+  msg.channel.send(messages.actions.onGlobalStalk.inProg);
+  const playerName = args[0];
+  const server = await globalStalker.find(playerName);
+  msg.channel.send(messages.actions.onGlobalStalk.timestamp
+      .replace('$TIME', globalStalker.timestamp));
+  if (server === null) {
+    msg.channel.send(messages.actions.onGlobalStalk.notFound
+        .replace('$PLAYER_NAME', playerName));
+    return;
+  }
+  msg.channel.send(messages.actions.onGlobalStalk.found
+      .replace('$PLAYER_NAME', playerName)
+      .replace('$SERVER_NAME', server));
 };
 
 for (const commandName of Object.keys(config.commands)) {
