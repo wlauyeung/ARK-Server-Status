@@ -1,8 +1,8 @@
 {
   "server": {
     "tracker": {
-      "online": "On",
-      "offline": "Off"
+      "online": "🟢",
+      "offline": "🔴"
     },
     "online": "online",
     "offline": "offline"
