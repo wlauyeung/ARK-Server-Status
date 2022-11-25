@@ -629,13 +629,14 @@ class GlobalStalker extends Worker {
    * update otherwise.
    */
   async waitForUpdate() {
+    const pullInterval = 250;
     let count = 0;
     if (!this.isOnCooldown() && !this.#updating) {
       await this.#update();
     }
     while (this.#updating && count <= config.gsTimeout * 1000) {
-      await this._sleep(250);
-      count += 250;
+      await this._sleep(pullInterval);
+      count += pullInterval;
     }
   }
 }

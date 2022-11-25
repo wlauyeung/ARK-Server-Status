@@ -11,6 +11,8 @@ A Discord bot designed to track ARK servers
 | `queryInterval` | The interval in seconds which the bot query all the servers. |
 | `offlineCounterThreshold` | The threshold for how many offline queries a server can get before considered as offline. |
 | `defaultMute` | Whether a new server should be muted by default. |
+| `gsCooldown` | The cooldown for a global stalker update in seconds. |
+| `gsTimeout` | The timeout for a global stalker update in seconds. |
 | `commands.[commandName].admin` | Whether this command requires administrator privilege. |
 | `commands.[commandName].desc` | The description of the command. |
 | `commands.[commandName].alias` | All the aliases of the command. |
@@ -30,3 +32,4 @@ A Discord bot designed to track ARK servers
 | `help` | Display the list of available commands | No arguments needed |
 | `uptime` | Check the uptime percentage of a server | `<server_name>` |
 | `globalstalk` | Look for a player across all official servers | `<player_name>` |
+| `playercount` | Display the number of online players on the offical network | No arguments needed |
