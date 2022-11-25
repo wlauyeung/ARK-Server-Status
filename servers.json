@@ -366,8 +366,8 @@
       "tracked": false
     },
     "EU-PVE-Official-GenOne643": {
-      "ip": "85.190.155.80",
-      "port": 27021,
+      "ip": "31.214.205.24",
+      "port": 27015,
       "tracked": false
     },
     "EU-PVP-Official-TheIsland11": {
@@ -801,7 +801,7 @@
       "tracked": false
     },
     "EU-PVP-Official-Valguero-Conquest44": {
-      "ip": "5.101.166.118",
+      "ip": "46.251.238.109",
       "port": 27017,
       "tracked": false
     },
@@ -2956,17 +2956,17 @@
       "tracked": false
     },
     "NA-PVP-Official-Valguero565": {
-      "ip": "85.190.152.73",
+      "ip": "37.10.125.124",
       "port": 27015,
       "tracked": false
     },
     "NA-PVP-Official-Valguero566": {
-      "ip": "85.190.152.73",
+      "ip": "37.10.125.124",
       "port": 27017,
       "tracked": false
     },
     "NA-PVP-Official-Valguero567": {
-      "ip": "85.190.152.73",
+      "ip": "37.10.125.124",
       "port": 27019,
       "tracked": false
     },
@@ -3016,22 +3016,22 @@
       "tracked": false
     },
     "NA-PVE-Official-Ragnarok721": {
-      "ip": "85.190.152.250",
+      "ip": "37.10.126.246",
       "port": 27015,
       "tracked": false
     },
     "NA-PVP-Official-Ragnarok722": {
-      "ip": "85.190.152.250",
+      "ip": "37.10.126.246",
       "port": 27017,
       "tracked": false
     },
     "NA-PVP-Official-Valguero723": {
-      "ip": "85.190.152.250",
+      "ip": "37.10.126.246",
       "port": 27019,
       "tracked": false
     },
     "NA-PVP-Official-TheIsland724": {
-      "ip": "85.190.152.250",
+      "ip": "37.10.126.246",
       "port": 27021,
       "tracked": false
     },
@@ -3056,17 +3056,17 @@
       "tracked": false
     },
     "LEGACY-NA-PVE-Ragnarok50": {
-      "ip": "85.190.152.253",
+      "ip": "37.10.127.187",
       "port": 27015,
       "tracked": false
     },
     "LEGACY-NA-PVE-Isolated-Ragnarok51": {
-      "ip": "85.190.152.253",
+      "ip": "37.10.127.187",
       "port": 27017,
       "tracked": false
     },
     "NA-PVP-Official-GenOne617": {
-      "ip": "85.190.152.253",
+      "ip": "37.10.127.187",
       "port": 27019,
       "tracked": false
     },
@@ -4776,8 +4776,8 @@
       "tracked": false
     },
     "EU-PVE-Official-GenTwo926": {
-      "ip": "46.251.238.178",
-      "port": 27019,
+      "ip": "185.9.107.10",
+      "port": 27017,
       "tracked": false
     },
     "EU-PVE-Official-CrystalIsles874": {
@@ -5816,22 +5816,22 @@
       "tracked": false
     },
     "PVP-Official-TheIsland-ARKpocalypse1": {
-      "ip": "46.251.238.103",
+      "ip": "46.251.238.245",
       "port": 27015,
       "tracked": false
     },
     "PVP-Official-TheCenter-ARKpocalypse2": {
-      "ip": "46.251.238.103",
+      "ip": "46.251.238.245",
       "port": 27017,
       "tracked": false
     },
     "PVP-Official-Extinction-ARKpocalypse6": {
-      "ip": "46.251.238.103",
+      "ip": "46.251.238.245",
       "port": 27019,
       "tracked": false
     },
     "PVP-Official-GenOne-ARKpocalypse8": {
-      "ip": "46.251.238.103",
+      "ip": "46.251.238.245",
       "port": 27021,
       "tracked": false
     },
@@ -5981,13 +5981,13 @@
       "tracked": false
     },
     "EU-PVP-Official-TheIsland-Conquest38": {
-      "ip": "5.101.166.247",
-      "port": 27017,
+      "ip": "85.190.155.140",
+      "port": 27015,
       "tracked": false
     },
     "EU-PVP-Official-TheCenter-Conquest39": {
-      "ip": "5.101.166.247",
-      "port": 27019,
+      "ip": "85.190.155.140",
+      "port": 27017,
       "tracked": false
     },
     "NA-PVP-Official-TheIsland-Conquest28": {
@@ -6006,8 +6006,8 @@
       "tracked": false
     },
     "NA-PVP-Official-TheCenter-Conquest31": {
-      "ip": "37.10.125.125",
-      "port": 27015,
+      "ip": "85.190.158.65",
+      "port": 27017,
       "tracked": false
     },
     "NA-PVP-Official-Ragnarok-Conquest32": {
@@ -6263,7 +6263,7 @@
     "NA-PVE-Official-GenTwo969": {
       "ip": "37.10.126.193",
       "port": 27017,
-      "tracked": true
+      "tracked": false
     },
     "NA-PVE-Official-GenTwo970": {
       "ip": "95.156.213.166",
@@ -6551,8 +6551,8 @@
       "tracked": false
     },
     "EU-PVE-Official-GenTwo988": {
-      "ip": "46.251.238.230",
-      "port": 27021,
+      "ip": "185.9.107.10",
+      "port": 27015,
       "tracked": false
     },
     "OC-PVE-Official-GenTwo999": {
@@ -6601,8 +6601,8 @@
       "tracked": false
     },
     "NA-PVE-Official-GenTwo959": {
-      "ip": "109.230.214.41",
-      "port": 27017,
+      "ip": "45.159.5.203",
+      "port": 27019,
       "tracked": false
     },
     "EU-PVE-Official-GenTwo925": {
@@ -7791,8 +7791,8 @@
       "tracked": false
     },
     "EU-PVE-Official-GenTwo1007": {
-      "ip": "95.156.239.173",
-      "port": 27017,
+      "ip": "185.9.107.8",
+      "port": 27015,
       "tracked": false
     },
     "EU-PVP-LostIsland-CrossArk2": {
@@ -7908,6 +7908,836 @@
     "OC-PVP-Official-GenTwo984": {
       "ip": "128.0.115.130",
       "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth-Conquest40": {
+      "ip": "85.190.155.140",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-Conquest42": {
+      "ip": "5.101.166.118",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-Conquest41": {
+      "ip": "5.101.166.118",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest6": {
+      "ip": "85.190.154.31",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest5": {
+      "ip": "85.190.154.31",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest4": {
+      "ip": "85.190.154.31",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest8": {
+      "ip": "85.190.154.33",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest9": {
+      "ip": "85.190.154.33",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest7": {
+      "ip": "85.190.154.33",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest10": {
+      "ip": "5.101.166.5",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest11": {
+      "ip": "5.101.166.5",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest13": {
+      "ip": "5.101.166.5",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest12": {
+      "ip": "5.101.166.5",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest16": {
+      "ip": "85.190.157.171",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest3": {
+      "ip": "85.190.154.30",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest2": {
+      "ip": "85.190.154.30",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-Conquest1": {
+      "ip": "85.190.154.30",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest15": {
+      "ip": "85.190.157.171",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest14": {
+      "ip": "85.190.157.171",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest21": {
+      "ip": "85.190.152.9",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest20": {
+      "ip": "85.190.152.9",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest22": {
+      "ip": "85.190.152.9",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest18": {
+      "ip": "85.190.156.28",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest17": {
+      "ip": "85.190.156.28",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest19": {
+      "ip": "85.190.156.28",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest25": {
+      "ip": "37.10.127.67",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest26": {
+      "ip": "37.10.127.67",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest23": {
+      "ip": "37.10.127.67",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-Conquest24": {
+      "ip": "37.10.127.67",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-Conquest30": {
+      "ip": "85.190.158.65",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth-Conquest32": {
+      "ip": "85.190.158.65",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-ScorchedEarth-Conquest29": {
+      "ip": "85.190.158.55",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-Conquest27": {
+      "ip": "85.190.158.55",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-Conquest28": {
+      "ip": "85.190.158.55",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheIsland-Conquest33": {
+      "ip": "95.156.213.148",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-TheCenter-Conquest34": {
+      "ip": "95.156.213.148",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration-Conquest49": {
+      "ip": "37.10.127.25",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-Conquest48": {
+      "ip": "37.10.127.25",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-Conquest47": {
+      "ip": "37.10.127.25",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Ragnarok-Conquest50": {
+      "ip": "37.10.125.125",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-Conquest51": {
+      "ip": "37.10.125.125",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Valguero-Conquest52": {
+      "ip": "37.10.125.125",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Aberration-Conquest53": {
+      "ip": "37.10.125.125",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland-Conquest62": {
+      "ip": "109.230.214.24",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles-Conquest63": {
+      "ip": "109.230.214.24",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-LostIsland-Conquest61": {
+      "ip": "109.230.214.24",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-CrystalIsles-Conquest64": {
+      "ip": "109.230.214.24",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LDL-Fjordur-SmallTribes219": {
+      "ip": "46.251.238.103",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LDL-Fjordur-SmallTribes218": {
+      "ip": "46.251.238.103",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-LDL-TheIsland-SmallTribes217": {
+      "ip": "46.251.238.103",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-LDL-TheIsland-SmallTribes216": {
+      "ip": "46.251.238.103",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration-Conquest46": {
+      "ip": "46.251.238.109",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Valguero-Conquest45": {
+      "ip": "46.251.238.109",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-ScorchedEarth-Conquest37": {
+      "ip": "5.101.166.247",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheCenter-Conquest36": {
+      "ip": "5.101.166.247",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-TheIsland-Conquest35": {
+      "ip": "5.101.166.247",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-Conquest43": {
+      "ip": "46.251.238.109",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-LostIsland-Conquest57": {
+      "ip": "46.251.238.201",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Aberration-Conquest56": {
+      "ip": "46.251.238.201",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-Conquest55": {
+      "ip": "46.251.238.201",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Ragnarok-Conquest54": {
+      "ip": "46.251.238.201",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-LDL-TheIsland-SmallTribes209": {
+      "ip": "109.230.214.41",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LDL-Fjordur-SmallTribes211": {
+      "ip": "109.230.214.41",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-LDL-Fjordur-SmallTribes210": {
+      "ip": "109.230.214.41",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-LDL-TheIsland-SmallTribes208": {
+      "ip": "109.230.214.41",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-SmallTribes200": {
+      "ip": "37.10.127.185",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-SmallTribes202": {
+      "ip": "37.10.127.185",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-SmallTribes201": {
+      "ip": "37.10.127.185",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-SmallTribes203": {
+      "ip": "37.10.127.185",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-LDL-TheIsland1296": {
+      "ip": "37.10.126.245",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-LDL-TheIsland1297": {
+      "ip": "37.10.126.245",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LDL-Fjordur1298": {
+      "ip": "37.10.126.245",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1167": {
+      "ip": "45.159.5.12",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1169": {
+      "ip": "45.159.5.12",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1183": {
+      "ip": "45.159.5.15",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1175": {
+      "ip": "45.159.5.13",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1172": {
+      "ip": "45.159.5.13",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1187": {
+      "ip": "45.159.5.16",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1170": {
+      "ip": "45.159.5.12",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1188": {
+      "ip": "45.159.5.16",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1163": {
+      "ip": "45.159.5.11",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-LDL-Fjordur1299": {
+      "ip": "37.10.126.245",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur1234": {
+      "ip": "45.159.5.16",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1164": {
+      "ip": "45.159.5.11",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1168": {
+      "ip": "45.159.5.12",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1162": {
+      "ip": "45.159.5.11",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1165": {
+      "ip": "45.159.5.11",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1173": {
+      "ip": "45.159.5.13",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur1246": {
+      "ip": "45.159.5.18",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur1247": {
+      "ip": "45.159.5.18",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur1248": {
+      "ip": "45.159.5.18",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Fjordur-CrossArk8": {
+      "ip": "45.159.5.20",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Fjordur-CrossArk10": {
+      "ip": "45.159.5.20",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1178": {
+      "ip": "45.159.5.14",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur1245": {
+      "ip": "45.159.5.18",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1184": {
+      "ip": "45.159.5.15",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur1238": {
+      "ip": "45.159.5.17",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1174": {
+      "ip": "45.159.5.13",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur1240": {
+      "ip": "45.159.5.17",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur1239": {
+      "ip": "45.159.5.17",
+      "port": 27017,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1179": {
+      "ip": "45.159.5.14",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1177": {
+      "ip": "45.159.5.14",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur1241": {
+      "ip": "45.159.5.17",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1180": {
+      "ip": "45.159.5.14",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1182": {
+      "ip": "45.159.5.15",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1185": {
+      "ip": "45.159.5.15",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-SmallTribes184": {
+      "ip": "45.159.5.19",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVE-Official-Fjordur1189": {
+      "ip": "45.159.5.16",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-SmallTribes187": {
+      "ip": "45.159.5.19",
+      "port": 27021,
+      "tracked": false
+    },
+    "NA-OfflineRaidProtection-Fjordur-CrossArk6": {
+      "ip": "45.159.5.20",
+      "port": 27015,
+      "tracked": false
+    },
+    "NA-PVP-Fjordur-CrossArk9": {
+      "ip": "45.159.5.20",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-SmallTribes186": {
+      "ip": "45.159.5.19",
+      "port": 27019,
+      "tracked": false
+    },
+    "NA-PVP-Official-Fjordur-SmallTribes185": {
+      "ip": "45.159.5.19",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1201": {
+      "ip": "31.214.205.39",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1190": {
+      "ip": "31.214.205.52",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1191": {
+      "ip": "31.214.205.52",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1197": {
+      "ip": "31.214.205.37",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1192": {
+      "ip": "31.214.205.52",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur1268": {
+      "ip": "31.214.205.3",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1202": {
+      "ip": "31.214.205.39",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1198": {
+      "ip": "31.214.205.37",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1213": {
+      "ip": "31.214.205.38",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1212": {
+      "ip": "31.214.205.38",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1211": {
+      "ip": "31.214.205.38",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1210": {
+      "ip": "31.214.205.38",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1193": {
+      "ip": "31.214.205.52",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur1271": {
+      "ip": "31.214.205.3",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1207": {
+      "ip": "31.214.205.40",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-SmallTribes195": {
+      "ip": "31.214.205.5",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-SmallTribes193": {
+      "ip": "31.214.205.5",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-SmallTribes194": {
+      "ip": "31.214.205.5",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-SmallTribes192": {
+      "ip": "31.214.205.5",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1216": {
+      "ip": "31.214.205.2",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1200": {
+      "ip": "31.214.205.39",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Fjordur-CrossArk1": {
+      "ip": "31.214.205.6",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Fjordur-CrossArk2": {
+      "ip": "31.214.205.6",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1203": {
+      "ip": "31.214.205.39",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1195": {
+      "ip": "31.214.205.37",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur1275": {
+      "ip": "31.214.205.4",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1215": {
+      "ip": "31.214.205.2",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1196": {
+      "ip": "31.214.205.37",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1206": {
+      "ip": "31.214.205.40",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur1286": {
+      "ip": "31.214.205.2",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1217": {
+      "ip": "31.214.205.2",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1205": {
+      "ip": "31.214.205.40",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVE-Official-Fjordur1208": {
+      "ip": "31.214.205.40",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur1270": {
+      "ip": "31.214.205.3",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur1278": {
+      "ip": "31.214.205.4",
+      "port": 27021,
+      "tracked": false
+    },
+    "OC-PVE-Official-Fjordur1218": {
+      "ip": "128.0.115.114",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur1277": {
+      "ip": "31.214.205.4",
+      "port": 27019,
+      "tracked": false
+    },
+    "OC-PVP-Official-Fjordur1220": {
+      "ip": "128.0.115.114",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-SmallTribes204": {
+      "ip": "31.214.160.6",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur1269": {
+      "ip": "31.214.205.3",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur1276": {
+      "ip": "31.214.205.4",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVE-Official-CrystalIsles884": {
+      "ip": "128.0.115.115",
+      "port": 27015,
+      "tracked": false
+    },
+    "OC-PVE-Official-Fjordur1219": {
+      "ip": "128.0.115.114",
+      "port": 27017,
+      "tracked": false
+    },
+    "OC-PVP-Official-Fjordur1221": {
+      "ip": "128.0.115.114",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Fjordur-CrossArk11": {
+      "ip": "31.214.205.6",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Fjordur-CrossArk13": {
+      "ip": "31.214.205.6",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-SmallTribes205": {
+      "ip": "31.214.160.6",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-LDL-TheIsland1289": {
+      "ip": "31.214.205.23",
+      "port": 27017,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-SmallTribes206": {
+      "ip": "31.214.160.6",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-Fjordur-SmallTribes207": {
+      "ip": "31.214.160.6",
+      "port": 27021,
+      "tracked": false
+    },
+    "EU-PVP-Official-LDL-TheIsland1288": {
+      "ip": "31.214.205.23",
+      "port": 27015,
+      "tracked": false
+    },
+    "EU-PVP-Official-LDL-Fjordur1290": {
+      "ip": "31.214.205.23",
+      "port": 27019,
+      "tracked": false
+    },
+    "EU-PVP-Official-LDL-Fjordur1291": {
+      "ip": "31.214.205.23",
+      "port": 27021,
       "tracked": false
     }
   }

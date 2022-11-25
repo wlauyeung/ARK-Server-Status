@@ -56,7 +56,8 @@
       "found": "$PLAYER_NAME is currently on $SERVER_NAME",
       "inProg": "Querying data. This might take a while...",
       "timestamp": "Using data gathered on $TIME"
-    }
+    },
+    "onPCCommand": "There are $PLAYER_COUNT players currenly on the offical network."
   },
   "errors": {
     "invalidGuildID": "invalid guild id",

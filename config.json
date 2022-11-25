@@ -126,6 +126,15 @@
       "usage": [
         "<player_name>"
       ]
+    },
+    "playercount": {
+      "admin": false,
+      "desc": "Gives the playercount of the entire network",
+      "alias": [
+        "playercount",
+        "pc"
+      ],
+      "usage": []
     }
   }
 }

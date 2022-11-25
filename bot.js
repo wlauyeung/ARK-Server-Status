@@ -494,6 +494,7 @@ class GlobalStalker extends Worker {
   #lastUpdated;
   #progress;
   #updating;
+  #playercount;
 
   /**
    * Initalize a global stalker.
@@ -501,6 +502,7 @@ class GlobalStalker extends Worker {
   constructor() {
     super();
     this.#servers = {};
+    this.#playercount = 0;
     this.#lastUpdated = 0;
     this.#updating = false;
   }
@@ -535,6 +537,15 @@ class GlobalStalker extends Worker {
   }
 
   /**
+   * Gives the player count of the entire official network.
+   * @returns the player count of the entire official network.
+   */
+  async getPlayerCount() {
+    await this.waitForUpdate();
+    return this.#playercount;
+  }
+
+  /**
    * Queries a server.
    * @param {String} ip The IP of the server.
    * @param {int} port The port of the server.
@@ -550,6 +561,7 @@ class GlobalStalker extends Worker {
         const name = state.name.replace(/\s-\s\(.+\)/gm, '');
         if (name !== null) {
           this.#servers[name] = state.players;
+          this.#playercount += state.players.length;
         }
         resolve();
       }).catch((e) => {
@@ -568,6 +580,7 @@ class GlobalStalker extends Worker {
     this.#updating = true;
     this.#progress = 0;
     this.#servers = {};
+    this.#playercount = 0;
     for (const sn of serverNames) {
       this.query(serversInfo[sn].ip, serversInfo[sn].port);
       await this._sleep(1);
@@ -599,14 +612,7 @@ class GlobalStalker extends Worker {
    * @return {Promise} The name of the server that the player is on.
    */
   async find(playerName) {
-    let count = 0;
-    if (!this.isOnCooldown() && !this.#updating) {
-      await this.#update();
-    }
-    while (this.#updating && count <= config.gsTimeout * 1000) {
-      await this._sleep(250);
-      count += 250;
-    }
+    await this.waitForUpdate();
     for (const serverName of Object.keys(this.#servers)) {
       const players = this.#servers[serverName];
       for (const player of players) {
@@ -616,6 +622,21 @@ class GlobalStalker extends Worker {
       }
     }
     return null;
+  }
+
+  /**
+   * If an update is ongoing then wait for the update to complete and starts a new
+   * update otherwise.
+   */
+  async waitForUpdate() {
+    let count = 0;
+    if (!this.isOnCooldown() && !this.#updating) {
+      await this.#update();
+    }
+    while (this.#updating && count <= config.gsTimeout * 1000) {
+      await this._sleep(250);
+      count += 250;
+    }
   }
 }
 
@@ -1263,6 +1284,13 @@ commandFunctions['globalstalk'] = async (args, msg) => {
       .replace('$PLAYER_NAME', playerName)
       .replace('$SERVER_NAME', server));
 };
+
+commandFunctions['playercount'] = async (args, msg) => {
+  msg.channel.send(messages.actions.onGlobalStalk.inProg);
+  const pc = await globalStalker.getPlayerCount();
+  msg.channel.send(messages.actions.onPCCommand
+    .replace('$PLAYER_COUNT', pc));
+}
 
 for (const commandName of Object.keys(config.commands)) {
   const commandConfig = config.commands[commandName];
