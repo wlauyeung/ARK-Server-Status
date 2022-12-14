@@ -57,7 +57,7 @@
       "inProg": "Querying data. This might take a while...",
       "timestamp": "Using data gathered on $TIME"
     },
-    "onPCCommand": "There are $PLAYER_COUNT players currenly on the offical network."
+    "onPCCommand": "There are $PLAYER_COUNT players currently on the official network"
   },
   "errors": {
     "invalidGuildID": "invalid guild id",

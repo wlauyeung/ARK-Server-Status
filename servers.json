@@ -6171,8 +6171,8 @@
       "tracked": false
     },
     "NA-PVE-Official-GenTwo1013": {
-      "ip": "109.230.214.41",
-      "port": 27015,
+      "ip": "109.230.214.53",
+      "port": 27019,
       "tracked": false
     },
     "NA-PVP-Official-GenTwo939": {
@@ -6941,12 +6941,12 @@
       "tracked": false
     },
     "Asia-PVP-TheIsland132": {
-      "ip": "183.131.206.49",
+      "ip": "183.131.200.25",
       "port": 27019,
       "tracked": false
     },
     "Asia-PVP-TheIsland131": {
-      "ip": "183.131.206.49",
+      "ip": "183.131.200.25",
       "port": 27017,
       "tracked": false
     },
@@ -7016,7 +7016,7 @@
       "tracked": false
     },
     "Asia-PVP-Valguero158": {
-      "ip": "183.131.206.47",
+      "ip": "183.131.200.23",
       "port": 27021,
       "tracked": false
     },
@@ -7026,12 +7026,12 @@
       "tracked": false
     },
     "Asia-PVP-TheCenter128": {
-      "ip": "183.131.206.48",
+      "ip": "183.131.200.24",
       "port": 27017,
       "tracked": false
     },
     "Asia-PVP-TheCenter125": {
-      "ip": "183.131.206.47",
+      "ip": "183.131.200.23",
       "port": 27017,
       "tracked": false
     },
@@ -7076,7 +7076,7 @@
       "tracked": false
     },
     "Asia-PVE-Aberration161": {
-      "ip": "183.131.206.48",
+      "ip": "183.131.200.24",
       "port": 27021,
       "tracked": false
     },
@@ -7086,7 +7086,7 @@
       "tracked": false
     },
     "Asia-PVP-TheCenter126": {
-      "ip": "183.131.206.47",
+      "ip": "183.131.200.23",
       "port": 27019,
       "tracked": false
     },
@@ -7096,12 +7096,12 @@
       "tracked": false
     },
     "Asia-PVP-TheCenter129": {
-      "ip": "183.131.206.48",
+      "ip": "183.131.200.24",
       "port": 27019,
       "tracked": false
     },
     "Asia-PVP-TheCenter127": {
-      "ip": "183.131.206.48",
+      "ip": "183.131.200.24",
       "port": 27015,
       "tracked": false
     },
@@ -7111,7 +7111,7 @@
       "tracked": false
     },
     "Asia-PVP-TheCenter124": {
-      "ip": "183.131.206.47",
+      "ip": "183.131.200.23",
       "port": 27015,
       "tracked": false
     },
@@ -7156,7 +7156,7 @@
       "tracked": false
     },
     "Asia-PVP-TheIsland130": {
-      "ip": "183.131.206.49",
+      "ip": "183.131.200.25",
       "port": 27015,
       "tracked": false
     },
@@ -7486,8 +7486,8 @@
       "tracked": false
     },
     "LEGACY-PVE-EU-GenTwo947": {
-      "ip": "46.251.238.198",
-      "port": 27021,
+      "ip": "31.214.205.24",
+      "port": 27017,
       "tracked": false
     },
     "EU-PVP-Official-LostIsland-ClassicPVP52": {
@@ -7861,12 +7861,12 @@
       "tracked": false
     },
     "Asia-PVP-TheCenter121": {
-      "ip": "183.131.206.46",
+      "ip": "183.131.200.22",
       "port": 27015,
       "tracked": false
     },
     "Asia-PVP-TheCenter123": {
-      "ip": "183.131.206.46",
+      "ip": "183.131.200.22",
       "port": 27019,
       "tracked": false
     },
@@ -7876,7 +7876,7 @@
       "tracked": false
     },
     "Asia-PVP-TheCenter122": {
-      "ip": "183.131.206.46",
+      "ip": "183.131.200.22",
       "port": 27017,
       "tracked": false
     },

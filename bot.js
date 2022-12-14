@@ -505,6 +505,8 @@ class GlobalStalker extends Worker {
     this.#playercount = 0;
     this.#lastUpdated = 0;
     this.#updating = false;
+
+    setInterval((b=this) => b.update(), 5 * config.gsCooldown * 1000);
   }
 
   /**
@@ -541,7 +543,7 @@ class GlobalStalker extends Worker {
    * @returns the player count of the entire official network.
    */
   async getPlayerCount() {
-    await this.waitForUpdate();
+    await this.#waitForUpdate();
     return this.#playercount;
   }
 
@@ -550,7 +552,7 @@ class GlobalStalker extends Worker {
    * @param {String} ip The IP of the server.
    * @param {int} port The port of the server.
    */
-  async query(ip, port) {
+  async #query(ip, port) {
     return new Promise((resolve, reject) => {
       Gamedig.query({
         type: 'arkse',
@@ -574,7 +576,8 @@ class GlobalStalker extends Worker {
   /**
    * Queries for new data.
    */
-  async #update() {
+  async update() {
+    if (this.#updating) return;
     const serversInfo = serversHandler.getAllServersInfo();
     const serverNames = Object.keys(serversInfo);
     this.#updating = true;
@@ -582,12 +585,13 @@ class GlobalStalker extends Worker {
     this.#servers = {};
     this.#playercount = 0;
     for (const sn of serverNames) {
-      this.query(serversInfo[sn].ip, serversInfo[sn].port);
+      this.#query(serversInfo[sn].ip, serversInfo[sn].port);
       await this._sleep(1);
     }
     while (this.#progress < serverNames.length) {
       await this._sleep(500);
     }
+    client.user.setActivity(`${this.#playercount} players`, { type: 'WATCHING' });
     this.#lastUpdated = Date.now();
     this.#updating = false;
   }
@@ -612,7 +616,7 @@ class GlobalStalker extends Worker {
    * @return {Promise} The name of the server that the player is on.
    */
   async find(playerName) {
-    await this.waitForUpdate();
+    await this.#waitForUpdate();
     for (const serverName of Object.keys(this.#servers)) {
       const players = this.#servers[serverName];
       for (const player of players) {
@@ -628,11 +632,11 @@ class GlobalStalker extends Worker {
    * If an update is ongoing then wait for the update to complete and starts a new
    * update otherwise.
    */
-  async waitForUpdate() {
+  async #waitForUpdate() {
     const pullInterval = 250;
     let count = 0;
     if (!this.isOnCooldown() && !this.#updating) {
-      await this.#update();
+      await this.update();
     }
     while (this.#updating && count <= config.gsTimeout * 1000) {
       await this._sleep(pullInterval);
