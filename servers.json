@@ -2318,7 +2318,7 @@
     "NA-PVE-Official-TheIsland48": {
       "ip": "95.156.213.135",
       "port": 27017,
-      "tracked": false
+      "tracked": true
     },
     "NA-PVP-Official-ScorchedEarth-SmallTribes25": {
       "ip": "85.190.159.30",
@@ -4276,22 +4276,22 @@
       "tracked": false
     },
     "Asia-PVP-Official-Ragnarok-ARKpocalypse4": {
-      "ip": "36.27.209.170",
+      "ip": "36.27.209.21",
       "port": 27015,
       "tracked": false
     },
     "Asia-PVP-Official-Aberration-ARKpocalypse5": {
-      "ip": "36.27.209.170",
+      "ip": "36.27.209.21",
       "port": 27017,
       "tracked": false
     },
     "Asia-PVP-Official-Extinction-ARKpocalypse6": {
-      "ip": "36.27.209.170",
+      "ip": "36.27.209.21",
       "port": 27019,
       "tracked": false
     },
     "Asia-PVP-Official-GenOne-ARKpocalypse8": {
-      "ip": "36.27.209.170",
+      "ip": "36.27.209.21",
       "port": 27021,
       "tracked": false
     },

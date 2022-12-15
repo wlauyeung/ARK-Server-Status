@@ -14,7 +14,7 @@
         "setchannel"
       ],
       "usage": [
-        "<channel_id>"
+        "channel_id"
       ]
     },
     "track": {
@@ -24,7 +24,7 @@
         "track"
       ],
       "usage": [
-        "<server_name>"
+        "server_name"
       ]
     },
     "untrack": {
@@ -34,7 +34,7 @@
         "untrack"
       ],
       "usage": [
-        "<server_name>"
+        "server_name"
       ]
     },
     "stalk": {
@@ -44,8 +44,8 @@
         "stalk"
       ],
       "usage": [
-        "<player_name>",
-        "<server_name> <player_name>"
+        "player_name",
+        "server_name player_name"
       ]
     },
     "status": {
@@ -55,7 +55,7 @@
         "status"
       ],
       "usage": [
-        "<server_name>"
+        "server_name"
       ]
     },
     "listplayers": {
@@ -66,7 +66,7 @@
         "lp"
       ],
       "usage": [
-        "<server_name>"
+        "server_name"
       ]
     },
     "rates": {
@@ -84,7 +84,7 @@
         "mute"
       ],
       "usage": [
-        "<server_name/all>"
+        "server_name"
       ]
     },
     "unmute": {
@@ -94,7 +94,7 @@
         "unmute"
       ],
       "usage": [
-        "<server_name/all>"
+        "server_name"
       ]
     },
     "help": {
@@ -113,7 +113,7 @@
         "ut"
       ],
       "usage": [
-        "<server_name>"
+        "server_name"
       ]
     },
     "globalstalk": {
@@ -124,7 +124,7 @@
         "gs"
       ],
       "usage": [
-        "<player_name>"
+        "player_name"
       ]
     },
     "playercount": {

@@ -1,4 +1,4 @@
-const {Client, Intents} = require('discord.js');
+const {Client, GatewayIntentBits, Events, PermissionsBitField, ChannelType} = require('discord.js');
 const Gamedig = require('gamedig');
 const {ToadScheduler, SimpleIntervalJob, Task} = require('toad-scheduler');
 const fs = require('fs');
@@ -9,8 +9,9 @@ const credentials = require('./credentials.json');
 const messages = require('./messages.json');
 const client = new Client({
   intents: [
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILDS,
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent
   ],
 });
 const axios = require('axios').default;
@@ -893,10 +894,10 @@ class CommandsHandler {
         for (const usage of command.settings.usage) {
           reply += `\n\`${config.prefix} ${commandName} ${usage}\``;
         }
-        msg.channel.send(reply);
+        msg.reply(reply);
       }
     } else {
-      msg.channel.send(messages.actions.onCommand.invalidCommand);
+      msg.reply(messages.actions.onCommand.invalidCommand);
     }
   }
 }
@@ -952,19 +953,20 @@ async function createChannel(guild, name) {
   try {
     let category = guild.channels.cache.find((c) =>
       c.name === messages.trackedServerCategoryName &&
-      c.type === 'GUILD_CATEGORY');
+      c.type === ChannelType.GuildCategory);
     if (!category) {
       category = await guild.channels
-          .create(messages.trackedServerCategoryName, {type: 'GUILD_CATEGORY'});
+        .create({name: messages.trackedServerCategoryName, type: ChannelType.GuildCategory});
     }
     const everyoneRoleID = guild.roles.everyone.id;
-    const channel = await guild.channels.create(name, {
-      type: 'GUILD_VOICE',
+    const channel = await guild.channels.create({
+      name: name,
+      type: ChannelType.GuildVoice,
       parent: category.id,
       permissionOverwrites: [
         {
           id: everyoneRoleID,
-          deny: ['CONNECT'],
+          deny: [PermissionsBitField.Flags.Connect],
         },
       ],
     });
@@ -990,7 +992,7 @@ async function deleteChannel(channelID) {
 }
 
 const serversHandler = new ServersHandler();
-const commandHandler = new CommandsHandler();
+const commandsHandler = new CommandsHandler();
 const globalStalker = new GlobalStalker();
 const commandFunctions = {};
 
@@ -999,11 +1001,11 @@ commandFunctions['setchannel'] = (args, msg) => {
   const channelID = arg.replace('<', '').replace('>', '').replace('#', '');
   if (client.channels.cache.get(channelID) !== undefined) {
     GuildsHandler.updateGuildChannelID(msg.guild.id, channelID);
-    msg.channel.send(
+    msg.reply(
         messages.actions.onNewsChannelChange.success.replace('$CHANNEL_NAME',
             arg));
   } else {
-    msg.channel.send(messages.actions.onNewsChannelChange.failure);
+    msg.reply(messages.actions.onNewsChannelChange.failure);
   }
 };
 
@@ -1023,11 +1025,11 @@ commandFunctions['track'] = async (args, msg) => {
       for (const serverName of serverNames) {
         reply += `\n${serverName}`;
       }
-      msg.channel.send(reply);
+      msg.reply(reply);
       return;
     }
   } else if (serverNames.length > 20) {
-    msg.channel.send(messages.actions.onServerSearch.needInfo);
+    msg.reply(messages.actions.onServerSearch.needInfo);
     return;
   }
   if (serverNames.length === 1) {
@@ -1042,10 +1044,10 @@ commandFunctions['track'] = async (args, msg) => {
                 .getChannelDisplayName())).id;
         GuildsHandler.addGuildTrackedServer(
             msg.guild.id, serverNames[0], trackerCID);
-        msg.channel.send(
+        msg.reply(
             messages.actions.onTrack.replace('$SERVER_NAME', serverNames[0]));
       } else {
-        msg.channel.send(
+        msg.reply(
             messages.actions.onServerSearch.alreadyExist
                 .replace('$SERVER_NAME', serverNames[0]));
       }
@@ -1053,7 +1055,7 @@ commandFunctions['track'] = async (args, msg) => {
       throw Error(messages.errors.invalidGuildID);
     }
   } else {
-    msg.channel.send(
+    msg.reply(
         messages.actions.onServerSearch.notFound
             .replace('$SERVER_NAME', serverName));
   }
@@ -1068,9 +1070,9 @@ commandFunctions['untrack'] = (args, msg) => {
     for (const serverName of serverNames) {
       reply += `\n${serverName}`;
     }
-    msg.channel.send(reply);
+    msg.reply(reply);
   } else if (serverNames.length > 20) {
-    msg.channel.send(messages.actions.onServerSearch.needInfo);
+    msg.reply(messages.actions.onServerSearch.needInfo);
   } else if (serverNames.length === 1) {
     if (GuildsHandler.hasGuild(msg.guild.id)) {
       const guildInfo = GuildsHandler.getGuild(msg.guild.id);
@@ -1088,17 +1090,17 @@ commandFunctions['untrack'] = (args, msg) => {
         }
         deleteChannel(guildInfo.trackedServers[serverNames[0]].channelID);
         GuildsHandler.removeGuildTrackedServer(msg.guild.id, serverNames[0]);
-        msg.channel.send(messages.actions.onUntrack
+        msg.reply(messages.actions.onUntrack
             .replace('$SERVER_NAME', serverNames[0]));
       } else {
-        msg.channel.send(messages.actions.onServerSearch.notFound
+        msg.reply(messages.actions.onServerSearch.notFound
             .replace('$SERVER_NAME', serverNames[0]));
       }
     } else {
       throw Error(messages.errors.invalidGuildID);
     }
   } else {
-    msg.channel.send(messages.actions.onServerSearch.notFound
+    msg.reply(messages.actions.onServerSearch.notFound
         .replace('$SERVER_NAME', serverName));
   }
 };
@@ -1117,14 +1119,14 @@ commandFunctions['stalk'] = async (args, msg) => {
     serversHandler.getTrackedServerNamesAsList(msg.guild.id);
   let isOnline = false;
   if (serverNames.length < 1) {
-    msg.channel.send(messages.actions.onServerSearch.unknown);
+    msg.reply(messages.actions.onServerSearch.unknown);
     return;
   }
   for (const sName of serverNames) {
     if (sName !== null) {
       isOnline = await serversHandler.getServer(sName).isPlayerOn(playerName);
       if (isOnline) {
-        msg.channel.send(messages.actions.onPlayerSearch.found
+        msg.reply(messages.actions.onPlayerSearch.found
             .replace('$PLAYER_NAME', playerName)
             .replace('$SERVER_NAME', sName));
         break;
@@ -1133,11 +1135,11 @@ commandFunctions['stalk'] = async (args, msg) => {
   }
   if (!isOnline) {
     if (serverName !== null) {
-      msg.channel.send(messages.actions.onPlayerSearch.notFound
+      msg.reply(messages.actions.onPlayerSearch.notFound
           .replace('$PLAYER_NAME', playerName)
           .replace('$SERVER_NAME', serverName));
     } else {
-      msg.channel.send(messages.actions.onPlayerSearch.notFoundGeneric
+      msg.reply(messages.actions.onPlayerSearch.notFoundGeneric
           .replace('$PLAYER_NAME', playerName));
     }
   }
@@ -1148,14 +1150,14 @@ commandFunctions['status'] = (args, msg) => {
   const serverNames = serversHandler
       .getNamesFromStr(serverName, true, msg.guild.id);
   if (serverNames.length === 0) {
-    msg.channel.send('Unknown Server');
+    msg.reply('Unknown Server');
     return;
   }
   for (const sName of serverNames) {
     const status = (serversHandler.getServerStatus(sName) === 0) ?
       messages.server.offline : messages.server.online;
     found = true;
-    msg.channel.send(messages.actions.onStatusChange
+    msg.reply(messages.actions.onStatusChange
         .replace('$SERVER_NAME', sName)
         .replace('$STATUS', status));
   }
@@ -1175,24 +1177,24 @@ commandFunctions['listplayers'] = async (args, msg) => {
         for (const player of server.getPlayersList()) {
           str += '\n' + player.name;
         }
-        msg.channel.send(str.substring(1));
+        msg.reply(str.substring(1));
       } else {
-        msg.channel.send(messages.actions.onStatusChange
+        msg.reply(messages.actions.onStatusChange
             .replace('$SERVER_NAME', server.name)
             .replace('$STATUS', 'offline'));
       }
     }
   } else {
-    msg.channel.send(messages.actions.onServerSearch.unknown);
+    msg.reply(messages.actions.onServerSearch.unknown);
   }
 };
 
 commandFunctions['rates'] = async (args, msg) => {
   try {
     const res = await axios.get('http://arkdedicated.com/dynamicconfig.ini');
-    msg.channel.send(res.data);
+    msg.reply(res.data);
   } catch (e) {
-    msg.channel.send(messages.actions.onGetRates.failure);
+    msg.reply(messages.actions.onGetRates.failure);
   }
 };
 
@@ -1200,19 +1202,19 @@ commandFunctions['mute'] = (args, msg) => {
   const serverName = args[0];
   if (serverName === 'all') {
     GuildsHandler.setAllTrackedServersMuteStatus(msg.guild.id, true);
-    msg.channel.send(messages.actions.onMute.all);
+    msg.reply(messages.actions.onMute.all);
   } else {
     const serverNames = serversHandler
         .getNamesFromStr(serverName, true, msg.guild.id);
     if (serverNames.length === 1) {
       const server = serversHandler.getServer(serverNames[0]);
       GuildsHandler.setTrackedServerMuteStatus(msg.guild.id, server.name, true);
-      msg.channel.send(messages.actions.onMute.one
+      msg.reply(messages.actions.onMute.one
           .replace('$SERVER_NAME', server.name));
     } else if (serverNames.length > 1) {
-      msg.channel.send(messages.actions.onServerSearch.needInfo);
+      msg.reply(messages.actions.onServerSearch.needInfo);
     } else {
-      msg.channel.send(messages.actions.onServerSearch.unknown);
+      msg.reply(messages.actions.onServerSearch.unknown);
     }
   }
 };
@@ -1221,7 +1223,7 @@ commandFunctions['unmute'] = (args, msg) => {
   const serverName = args[0];
   if (serverName === 'all') {
     GuildsHandler.setAllTrackedServersMuteStatus(msg.guild.id, false);
-    msg.channel.send(messages.actions.onUnmute.all);
+    msg.reply(messages.actions.onUnmute.all);
   } else {
     const serverNames = serversHandler
         .getNamesFromStr(serverName, true, msg.guild.id);
@@ -1229,12 +1231,12 @@ commandFunctions['unmute'] = (args, msg) => {
       const server = serversHandler.getServer(serverNames[0]);
       GuildsHandler.setTrackedServerMuteStatus(
           msg.guild.id, server.name, false);
-      msg.channel.send(messages.actions.onUnmute.one
+      msg.reply(messages.actions.onUnmute.one
           .replace('$SERVER_NAME', server.name));
     } else if (serverNames.length > 1) {
-      msg.channel.send(messages.actions.onServerSearch.needInfo);
+      msg.reply(messages.actions.onServerSearch.needInfo);
     } else {
-      msg.channel.send(messages.actions.onServerSearch.unknown);
+      msg.reply(messages.actions.onServerSearch.unknown);
     }
   }
 };
@@ -1254,7 +1256,7 @@ commandFunctions['help'] = (args, msg) => {
     reply += `\n  ${messages.actions.onHelpCommand.alias}: ` +
         `${command.alias.reduce((p, c) => p + `, ${c}`)}\`\`\``;
   }
-  msg.channel.send(reply);
+  msg.reply(reply);
 };
 
 commandFunctions['uptime'] = (args, msg) => {
@@ -1262,20 +1264,20 @@ commandFunctions['uptime'] = (args, msg) => {
   const serverNames = serversHandler.getNamesFromStr(
       serverName, true, msg.guild.id);
   if (serverNames.length === 0) {
-    msg.channel.send(messages.actions.onServerSearch.notFound
+    msg.reply(messages.actions.onServerSearch.notFound
         .replace('$SERVER_NAME', serverName));
   } else if (serverNames.length > 1) {
-    msg.channel.send(messages.actions.onServerSearch.needInfo);
+    msg.reply(messages.actions.onServerSearch.needInfo);
   } else {
     const server = serversHandler.getServer(serverNames[0]);
-    msg.channel.send(messages.actions.onUptimeCommand
+    msg.reply(messages.actions.onUptimeCommand
         .replace('$SERVER_NAME', server.name)
         .replace('$UP_TIME', server.getUpTimePercentage() * 100));
   }
 };
 
 commandFunctions['globalstalk'] = async (args, msg) => {
-  msg.channel.send(messages.actions.onGlobalStalk.inProg);
+  msg.reply(messages.actions.onGlobalStalk.inProg);
   const playerName = args[0];
   const server = await globalStalker.find(playerName);
   msg.channel.send(messages.actions.onGlobalStalk.timestamp
@@ -1291,7 +1293,7 @@ commandFunctions['globalstalk'] = async (args, msg) => {
 };
 
 commandFunctions['playercount'] = async (args, msg) => {
-  msg.channel.send(messages.actions.onGlobalStalk.inProg);
+  msg.reply(messages.actions.onGlobalStalk.inProg);
   const pc = await globalStalker.getPlayerCount();
   msg.channel.send(messages.actions.onPCCommand
     .replace('$PLAYER_COUNT', pc));
@@ -1300,7 +1302,7 @@ commandFunctions['playercount'] = async (args, msg) => {
 for (const commandName of Object.keys(config.commands)) {
   const commandConfig = config.commands[commandName];
   for (const alias of commandConfig.alias) {
-    commandHandler.addCommand(alias, commandConfig,
+    commandsHandler.addCommand(alias, commandConfig,
         commandFunctions[commandName]);
   }
 }
@@ -1324,7 +1326,20 @@ client.on('messageCreate', (msg) => {
     args[i] = args[i].replaceAll('"', '');
   }
   const command = args.shift().toLowerCase();
-  commandHandler.run(command, args, msg);
+  commandsHandler.run(command, args, msg);
 });
+
+client.on(Events.InteractionCreate, async interaction => {
+	if (!interaction.isChatInputCommand()) return;
+	const command = commandFunctions[interaction.commandName];
+	if (!command) return;
+  const args = interaction.options.data.map(o => o.value);
+	try {
+		await commandsHandler.run(interaction.commandName, args, interaction);
+	} catch (error) {
+		console.error(error);
+		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+	}
+}); 
 
 client.login(credentials.token);
